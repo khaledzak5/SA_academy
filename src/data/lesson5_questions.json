@@ -1,0 +1,554 @@
+{
+  "questions": [
+    {
+      "question_number": 1,
+      "type": "multiple_choice",
+      "question": "ما هي الأقواس التي تُستخدم عند تعريف القوائم المتداخلة في بايثون؟",
+      "hint": "فكر في الأقواس المستخدمة لكل من القائمة الخارجية والقوائم الداخلية.",
+      "answer_data": {
+        "options": [
+          "A) أقواس مربعة []",
+          "B) أقواس دائرية ()",
+          "C) أقواس متعرجة {}",
+          "D) أقواس الزاوية <>"
+        ],
+        "correct_answer": "A) أقواس مربعة []"
+      }
+    },
+    {
+      "question_number": 2,
+      "type": "true_false",
+      "question": "تُستخدم القوائم المتداخلة لإنشاء مصفوفات أحادية البعد.",
+      "hint": "فكر في بُعد المصفوفة التي يمكن إنشاؤها باستخدام قائمة داخل قائمة.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 3,
+      "type": "multiple_choice",
+      "question": "إذا كان لدينا القائمة \n`list = [[1, 2], [3, 4]]`\nفماذا سيتم طباعته عند تنفيذ الأمر \n`print(list[1][0])`؟",
+      "hint": "الفهرس الأول يشير إلى القائمة الداخلية، والفهرس الثاني يشير إلى العنصر داخلها.",
+      "answer_data": {
+        "options": [
+          "A) 1",
+          "B) 2",
+          "C) 3",
+          "D) 4"
+        ],
+        "correct_answer": "C) 3"
+      }
+    },
+    {
+      "question_number": 4,
+      "type": "true_false",
+      "question": "يبدأ الترقيم في القائمة من 1 وليس من 0.",
+      "hint": "تذكر قاعدة الفهرسة الأساسية في بايثون.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 5,
+      "type": "multiple_choice",
+      "question": "ما هو الأمر الذي يعطينا القيمة `d` من القائمة \n`list = [[1, 2, 'd'], [3, 4]]`؟",
+      "hint": "اذهب إلى القائمة الداخلية الصحيحة، ثم إلى العنصر الصحيح داخلها.",
+      "answer_data": {
+        "options": [
+          "A) `print(list[0][2])`",
+          "B) `print(list[1][2])`",
+          "C) `print(list[2][0])`",
+          "D) `print(list[2][1])`"
+        ],
+        "correct_answer": "A) `print(list[0][2])`"
+      }
+    },
+    {
+      "question_number": 6,
+      "type": "true_false",
+      "question": "يمكن أن تحتوي القائمة المتداخلة على أنواع مختلفة من البيانات.",
+      "hint": "هل القائمة في بايثون تقيد نوع البيانات؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 7,
+      "type": "multiple_choice",
+      "question": "للتكرار على جميع العناصر في القوائم المتداخلة، ما هو الهيكل البرمجي الذي يجب استخدامه؟",
+      "hint": "فكر في استخدام حلقة `for` داخل حلقة `for` أخرى.",
+      "answer_data": {
+        "options": [
+          "A) حلقة واحدة `while`",
+          "B) حلقة `for` واحدة",
+          "C) حلقتان `for` متداخلتان",
+          "D) دالة `print()` فقط"
+        ],
+        "correct_answer": "C) حلقتان `for` متداخلتان"
+      }
+    },
+    {
+      "question_number": 8,
+      "type": "true_false",
+      "question": "تتم فهرسة كل عنصر في القائمة المتداخلة بفهرس واحد.",
+      "hint": "كم فهرسًا نحتاج للوصول إلى عنصر داخل قائمة داخل قائمة؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 9,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ المقطع البرمجي التالي؟\n`my_list = [[1, 2], [3, 4]]`\n`print(my_list[0])`",
+      "hint": "ماذا يمثل الفهرس 0 في القائمة الخارجية؟",
+      "answer_data": {
+        "options": [
+          "A) 1",
+          "B) [1, 2]",
+          "C) 3",
+          "D) [3, 4]"
+        ],
+        "correct_answer": "B) [1, 2]"
+      }
+    },
+    {
+      "question_number": 10,
+      "type": "true_false",
+      "question": "الكلمة `nested` في `nested list` تعني أن القوائم يمكن أن تحتوي على عناصر من نفس النوع فقط.",
+      "hint": "ماذا يعني مصطلح 'متداخل' في هذا السياق؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 11,
+      "type": "multiple_choice",
+      "question": "إذا كان لدينا \n`list = [['apple', 'banana'], ['orange', 'grape']]`\nكيف نصل إلى كلمة 'grape'؟",
+      "hint": "حدد الفهرس الصحيح للقائمة الداخلية والفهرس الصحيح للعنصر 'grape'.",
+      "answer_data": {
+        "options": [
+          "A) `list[1][1]`",
+          "B) `list[0][1]`",
+          "C) `list[1][0]`",
+          "D) `list[0][0]`"
+        ],
+        "correct_answer": "A) `list[1][1]`"
+      }
+    },
+    {
+      "question_number": 12,
+      "type": "true_false",
+      "question": "يمكن تغيير حجم القائمة المتداخلة أثناء تنفيذ المقطع البرمجي.",
+      "hint": "هل القوائم في بايثون قابلة للتعديل؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 13,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود:\n`my_list = [[1, 2], [3, 4]]`\n`for row in my_list:`\n  `for item in row:`\n    `print(item)`",
+      "hint": "تتبع كيفية عمل الحلقات المتداخلة.",
+      "answer_data": {
+        "options": [
+          "A) 1 2 3 4",
+          "B) 1 3 2 4",
+          "C) [1, 2] [3, 4]",
+          "D) 1 2"
+        ],
+        "correct_answer": "A) 1 2 3 4"
+      }
+    },
+    {
+      "question_number": 14,
+      "type": "true_false",
+      "question": "القوائم المتداخلة هي الطريقة الوحيدة لتمثيل هياكل البيانات المعقدة في بايثون.",
+      "hint": "هل توجد هياكل بيانات أخرى مثل القواميس أو المجموعات؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 15,
+      "type": "multiple_choice",
+      "question": "ما هو الغرض من `[1]` في التعبير `my_list[1]`؟",
+      "hint": "فكر في الفهرس الذي يشير إلى العنصر في القائمة الرئيسية.",
+      "answer_data": {
+        "options": [
+          "A) الوصول إلى القائمة الداخلية الأولى",
+          "B) الوصول إلى القائمة الداخلية الثانية",
+          "C) الوصول إلى العنصر الأول في القائمة الداخلية الأولى",
+          "D) الوصول إلى العنصر الأول في القائمة الداخلية الثانية"
+        ],
+        "correct_answer": "B) الوصول إلى القائمة الداخلية الثانية"
+      }
+    },
+    {
+      "question_number": 16,
+      "type": "true_false",
+      "question": "يمكن أن تحتوي القائمة على قائمة أخرى كعنصر من عناصرها.",
+      "hint": "هذا هو التعريف الأساسي للقائمة المتداخلة.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 17,
+      "type": "multiple_choice",
+      "question": "للوصول إلى القيمة `b` من القائمة \n`list = [['a', 'b'], ['c', 'd']]`\nما هو الأمر الصحيح؟",
+      "hint": "تتبع الفهرس الأول والثاني.",
+      "answer_data": {
+        "options": [
+          "A) `list[0][0]`",
+          "B) `list[0][1]`",
+          "C) `list[1][0]`",
+          "D) `list[1][1]`"
+        ],
+        "correct_answer": "B) `list[0][1]`"
+      }
+    },
+    {
+      "question_number": 18,
+      "type": "true_false",
+      "question": "في القوائم المتداخلة، الفهرس الأول يشير دائمًا إلى الصف، والفهرس الثاني يشير دائمًا إلى العمود.",
+      "hint": "فكر في التمثيل الشائع للقوائم المتداخلة كمصفوفة.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 19,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود:\n`matrix = [[10, 20], [30, 40]]`\n`print(matrix[1][1])`",
+      "hint": "حدد القائمة الداخلية الثانية، ثم العنصر الثاني داخلها.",
+      "answer_data": {
+        "options": [
+          "A) 10",
+          "B) 20",
+          "C) 30",
+          "D) 40"
+        ],
+        "correct_answer": "D) 40"
+      }
+    },
+    {
+      "question_number": 20,
+      "type": "true_false",
+      "question": "يمكن استخدام القوائم المتداخلة لتمثيل البيانات في جداول.",
+      "hint": "فكر في الصفوف والأعمدة.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 21,
+      "type": "multiple_choice",
+      "question": "ماذا يحدث عند محاولة الوصول إلى عنصر خارج نطاق فهرس القائمة المتداخلة؟",
+      "hint": "فكر في نوع الخطأ الذي يحدث عند تجاوز حدود القائمة.",
+      "answer_data": {
+        "options": [
+          "A) لا شيء يحدث",
+          "B) يتم إرجاع قيمة خالية (None)",
+          "C) يتم إرجاع خطأ `IndexError`",
+          "D) يتم إرجاع خطأ `TypeError`"
+        ],
+        "correct_answer": "C) يتم إرجاع خطأ `IndexError`"
+      }
+    },
+    {
+      "question_number": 22,
+      "type": "true_false",
+      "question": "يُعد التكرار المتداخل (nested loop) الطريقة الأكثر شيوعًا لمعالجة العناصر في مصفوفة ثنائية الأبعاد.",
+      "hint": "هل هناك طريقة أفضل للتكرار على كل صف وعمود؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 23,
+      "type": "multiple_choice",
+      "question": "إذا كان لدينا \n`list = [[1, 2], ['a', 'b'], [3, 4]]`\nفماذا سيتم طباعته عند تنفيذ \n`print(list[1][0])`؟",
+      "hint": "حدد الفهرس الأول (القائمة الداخلية الثانية) ثم الفهرس الثاني (العنصر الأول في تلك القائمة).",
+      "answer_data": {
+        "options": [
+          "A) 1",
+          "B) 'a'",
+          "C) 'b'",
+          "D) 3"
+        ],
+        "correct_answer": "B) 'a'"
+      }
+    },
+    {
+      "question_number": 24,
+      "type": "true_false",
+      "question": "يمكن إضافة عناصر أو إزالتها من القائمة المتداخلة أثناء تنفيذ البرنامج.",
+      "hint": "فكر في خاصية القوائم كـ'قابلة للتغيير'.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 25,
+      "type": "multiple_choice",
+      "question": "أي من العبارات التالية تصف `list[0][1]` بشكل صحيح؟",
+      "hint": "فكر في ترتيب الوصول إلى العناصر.",
+      "answer_data": {
+        "options": [
+          "A) العنصر الأول في القائمة الأولى",
+          "B) العنصر الثاني في القائمة الأولى",
+          "C) العنصر الأول في القائمة الثانية",
+          "D) العنصر الثاني في القائمة الثانية"
+        ],
+        "correct_answer": "B) العنصر الثاني في القائمة الأولى"
+      }
+    },
+    {
+      "question_number": 26,
+      "type": "true_false",
+      "question": "يجب أن تكون جميع القوائم الداخلية في القائمة المتداخلة بنفس الطول.",
+      "hint": "هل يمكن أن تحتوي القائمة على قوائم داخلية بأطوال مختلفة؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 27,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود:\n`list = [['a'], ['b'], ['c']]`\n`for row in list:`\n  `print(row[0])`",
+      "hint": "تتبع كيفية عمل حلقة `for` على كل قائمة داخلية.",
+      "answer_data": {
+        "options": [
+          "A) ['a'] ['b'] ['c']",
+          "B) a b c",
+          "C) a",
+          "D) خطأ برمجي"
+        ],
+        "correct_answer": "B) a b c"
+      }
+    },
+    {
+      "question_number": 28,
+      "type": "true_false",
+      "question": "يمكن أن تحتوي القائمة المتداخلة على قوائم وأرقام ونصوص في نفس الوقت.",
+      "hint": "هل القوائم في بايثون تسمح بتعدد أنواع البيانات؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 29,
+      "type": "multiple_choice",
+      "question": "ما هو الغرض من استخدام `[row][col]` في سياق القوائم المتداخلة؟",
+      "hint": "فكر في الوصول إلى عنصر في مصفوفة ثنائية الأبعاد.",
+      "answer_data": {
+        "options": [
+          "A) تحديد الصف",
+          "B) تحديد العمود",
+          "C) تحديد العنصر",
+          "D) تحديد القائمة"
+        ],
+        "correct_answer": "C) تحديد العنصر"
+      }
+    },
+    {
+      "question_number": 30,
+      "type": "true_false",
+      "question": "إذا كان لدينا \n`list = [[1, 2], [3, 4]]`\nفإن `list[0][1]` يمثل العنصر `2`.",
+      "hint": "تأكد من الفهرسة الصحيحة.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 31,
+      "type": "multiple_choice",
+      "question": "أي من الأوامر التالية يضيف عنصرًا جديدًا إلى نهاية قائمة داخلية في قائمة متداخلة؟",
+      "hint": "استخدم الطريقة الصحيحة لإضافة عنصر إلى نهاية القائمة.",
+      "answer_data": {
+        "options": [
+          "A) `list[0].add('new_item')`",
+          "B) `list[0].append('new_item')`",
+          "C) `list[0].insert('new_item')`",
+          "D) `list[0].extend('new_item')`"
+        ],
+        "correct_answer": "B) `list[0].append('new_item')`"
+      }
+    },
+    {
+      "question_number": 32,
+      "type": "true_false",
+      "question": "يمكن للقائمة المتداخلة أن تحتوي على قوائم وقواميس في نفس الوقت.",
+      "hint": "هل يمكن للقائمة أن تحتوي على أنواع بيانات مختلطة؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 33,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود:\n`list = [[1, 2], [3, 4], [5, 6]]`\n`list[1][0] = 9`\n`print(list)`",
+      "hint": "تتبع التغيير الذي يحدث على القيمة في القائمة الداخلية.",
+      "answer_data": {
+        "options": [
+          "A) `[[1, 2], [3, 9], [5, 6]]`",
+          "B) `[[1, 2], [9, 4], [5, 6]]`",
+          "C) `[[1, 2], 9, [5, 6]]`",
+          "D) `[[1, 2], [3, 4], [5, 6]]`"
+        ],
+        "correct_answer": "B) `[[1, 2], [9, 4], [5, 6]]`"
+      }
+    },
+    {
+      "question_number": 34,
+      "type": "true_false",
+      "question": "لا يمكن الوصول إلى العناصر في القائمة المتداخلة إلا باستخدام الحلقات.",
+      "hint": "هل يمكن الوصول إلى العناصر مباشرة باستخدام الفهارس؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 35,
+      "type": "multiple_choice",
+      "question": "أي من الأوامر التالية يضيف قائمة جديدة إلى القائمة المتداخلة؟",
+      "hint": "استخدم الطريقة الصحيحة لإضافة قائمة كعنصر جديد.",
+      "answer_data": {
+        "options": [
+          "A) `list.insert([7, 8])`",
+          "B) `list.add([7, 8])`",
+          "C) `list.append([7, 8])`",
+          "D) `list.update([7, 8])`"
+        ],
+        "correct_answer": "C) `list.append([7, 8])`"
+      }
+    },
+    {
+      "question_number": 36,
+      "type": "true_false",
+      "question": "القائمة المتداخلة هي قائمة تحتوي على قائمة أخرى كعنصر من عناصرها.",
+      "hint": "هذا هو التعريف الأساسي للقائمة المتداخلة.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 37,
+      "type": "multiple_choice",
+      "question": "إذا كان لدينا \n`list = [[10], [20], [30]]`\nفما هو الأمر الذي يغير القيمة 20 إلى 25؟",
+      "hint": "حدد الفهرس الصحيح للقائمة الداخلية والفهرس الصحيح للعنصر داخلها.",
+      "answer_data": {
+        "options": [
+          "A) `list[1][0] = 25`",
+          "B) `list[0][1] = 25`",
+          "C) `list[1][1] = 25`",
+          "D) `list[0][0] = 25`"
+        ],
+        "correct_answer": "A) `list[1][0] = 25`"
+      }
+    },
+    {
+      "question_number": 38,
+      "type": "true_false",
+      "question": "لا يمكن أن تحتوي القائمة المتداخلة على أي عناصر أخرى غير القوائم.",
+      "hint": "هل يمكن للقائمة أن تحتوي على أعداد ونصوص أيضًا؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 39,
+      "type": "multiple_choice",
+      "question": "ما هو الأمر الذي يحذف العنصر `2` من القائمة \n`list = [[1, 2], [3, 4]]`؟",
+      "hint": "تذكر الطريقة الصحيحة لحذف عنصر من قائمة.",
+      "answer_data": {
+        "options": [
+          "A) `del list[0][1]`",
+          "B) `del list[1][0]`",
+          "C) `del list[0][2]`",
+          "D) `del list[1][1]`"
+        ],
+        "correct_answer": "A) `del list[0][1]`"
+      }
+    },
+    {
+      "question_number": 40,
+      "type": "true_false",
+      "question": "تُستخدم القوائم المتداخلة بشكل شائع في تطبيقات الذكاء الاصطناعي لتمثيل شبكات عصبية.",
+      "hint": "هل يمكن استخدامها لتمثيل البيانات المعقدة في هذا المجال؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 41,
+      "type": "multiple_choice",
+      "question": "إذا كان لدينا \n`list = [[1, 2, 3], [4, 5, 6]]`\nفماذا سيتم طباعته عند تنفيذ \n`print(len(list))`؟",
+      "hint": "ما هو عدد العناصر في القائمة الخارجية؟",
+      "answer_data": {
+        "options": [
+          "A) 2",
+          "B) 3",
+          "C) 6",
+          "D) 1"
+        ],
+        "correct_answer": "A) 2"
+      }
+    },
+    {
+      "question_number": 42,
+      "type": "true_false",
+      "question": "يمكن الوصول إلى جميع عناصر القائمة المتداخلة باستخدام حلقة `for` واحدة.",
+      "hint": "كم حلقة نحتاج للوصول إلى كل عنصر على حدة؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 43,
+      "type": "multiple_choice",
+      "question": "ما هي نتيجة تشغيل هذا الكود:\n`list = [[1, 2, 3], [4, 5, 6]]`\n`print(list[0][2])`",
+      "hint": "اذهب إلى القائمة الأولى، ثم إلى العنصر الثالث.",
+      "answer_data": {
+        "options": [
+          "A) 1",
+          "B) 2",
+          "C) 3",
+          "D) 4"
+        ],
+        "correct_answer": "C) 3"
+      }
+    },
+    {
+      "question_number": 44,
+      "type": "true_false",
+      "question": "يُعد الفهرس السالب طريقة للوصول إلى العناصر من نهاية القائمة.",
+      "hint": "فكر في خاصية الفهرسة السالبة في بايثون.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 45,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود:\n`list = [[10, 20], [30, 40]]`\n`print(list[-1])`",
+      "hint": "ماذا يمثل الفهرس `-1`؟",
+      "answer_data": {
+        "options": [
+          "A) 10",
+          "B) 40",
+          "C) [10, 20]",
+          "D) [30, 40]"
+        ],
+        "correct_answer": "D) [30, 40]"
+      }
+    },
+    {
+      "question_number": 46,
+      "type": "true_false",
+      "question": "يمكن استخدام `pop()` لإزالة عنصر من قائمة داخلية في قائمة متداخلة.",
+      "hint": "هل يمكن تطبيق دوال القائمة على القوائم الداخلية؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 47,
+      "type": "multiple_choice",
+      "question": "ما هو الأمر الذي يحذف القائمة الداخلية الأولى من القائمة المتداخلة \n`list = [[1, 2], [3, 4]]`؟",
+      "hint": "تذكر الطريقة الصحيحة لحذف قائمة كاملة.",
+      "answer_data": {
+        "options": [
+          "A) `list.remove(0)`",
+          "B) `del list[0]`",
+          "C) `list.pop(1)`",
+          "D) `del list[0][0]`"
+        ],
+        "correct_answer": "B) `del list[0]`"
+      }
+    },
+    {
+      "question_number": 48,
+      "type": "true_false",
+      "question": "إذا كان لدينا \n`list = [['a', 'b', 'c'], ['d', 'e', 'f']]`\nفإن `len(list[0])` ستعطينا 3.",
+      "hint": "ما هو طول القائمة الداخلية الأولى؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 49,
+      "type": "multiple_choice",
+      "question": "ما هو الأمر الذي يغير القيمة `b` إلى `z` في القائمة \n`list = [[1, 'a'], [2, 'b']]`؟",
+      "hint": "حدد الفهرس الصحيح للقائمة الداخلية والفهرس الصحيح للعنصر 'b'.",
+      "answer_data": {
+        "options": [
+          "A) `list[0][1] = 'z'`",
+          "B) `list[1][1] = 'z'`",
+          "C) `list[1][0] = 'z'`",
+          "D) `list[0][0] = 'z'`"
+        ],
+        "correct_answer": "B) `list[1][1] = 'z'`"
+      }
+    },
+    {
+      "question_number": 50,
+      "type": "true_false",
+      "question": "تعتبر القوائم المتداخلة طريقة فعالة لتنظيم البيانات المعقدة في بايثون.",
+      "hint": "هل استخدامها يسهل الوصول إلى البيانات وإدارتها؟",
+      "answer_data": { "correct_answer": true }
+    }
+  ]
+}

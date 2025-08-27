@@ -1,0 +1,664 @@
+{
+  "questions": [
+    {
+      "question_number": 1,
+      "type": "multiple_choice",
+      "question": "ما هو هيكل البيانات الذي يتكون كل عنصر فيه من زوج من القيم يسمى مفتاح وقيمة؟",
+      "hint": "فكر في هيكل البيانات الذي لا يعتمد على الفهارس الرقمية للوصول إلى عناصره.",
+      "answer_data": {
+        "options": [
+          "A) القائمة (List)",
+          "B) الصف (Tuple)",
+          "C) القاموس (Dictionary)",
+          "D) المصفوفة (Array)"
+        ],
+        "correct_answer": "C) القاموس (Dictionary)"
+      }
+    },
+    {
+      "question_number": 2,
+      "type": "true_false",
+      "question": "يمكن الوصول إلى عناصر القاموس باستخدام رقم الفهرس.",
+      "hint": "هل القاموس يعتمد على الترتيب أم على مُعَرّف فريد لكل عنصر؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 3,
+      "type": "multiple_choice",
+      "question": "ما هي الأقواس التي تستخدم عند تعريف القاموس في بايثون؟",
+      "hint": "تختلف هذه الأقواس عن تلك المستخدمة في القوائم والصفوف.",
+      "answer_data": {
+        "options": [
+          "A) أقواس مربعة []",
+          "B) أقواس دائرية ()",
+          "C) أقواس متعرجة {}",
+          "D) أقواس الزاوية <>"
+        ],
+        "correct_answer": "C) أقواس متعرجة {}"
+      }
+    },
+    {
+      "question_number": 4,
+      "type": "true_false",
+      "question": "يعتبر القاموس (Dictionary) هيكل بيانات غير قابل للتعديل.",
+      "hint": "فكر في إمكانية إضافة أو تغيير أو حذف العناصر بعد إنشاء القاموس.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 5,
+      "type": "multiple_choice",
+      "question": "ما هي الطريقة الصحيحة لتعريف قاموس فارغ؟",
+      "hint": "هناك طريقتان، إحداهما تستخدم الأقواس والأخرى تستخدم دالة.",
+      "answer_data": {
+        "options": [
+          "A) `myDict = []`",
+          "B) `myDict = {}`",
+          "C) `myDict = ()`",
+          "D) `myDict = dict[]`"
+        ],
+        "correct_answer": "B) `myDict = {}`"
+      }
+    },
+    {
+      "question_number": 6,
+      "type": "true_false",
+      "question": "لا يمكن أن يحتوي القاموس على عنصرين بنفس المفتاح.",
+      "hint": "هل يُسمح بوجود مفتاحين متشابهين في القاموس؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 7,
+      "type": "multiple_choice",
+      "question": "ما هو الأمر المستخدم للوصول إلى قيمة 'Riyadh' من القاموس `ArabGulf = {'Saudi Arabia': 'Riyadh', 'Oman': 'Muscat'}`؟",
+      "hint": "فكر في طريقة الوصول إلى القيمة باستخدام مفتاحها.",
+      "answer_data": {
+        "options": [
+          "A) `ArabGulf[0]`",
+          "B) `ArabGulf['Saudi Arabia']`",
+          "C) `ArabGulf.value('Riyadh')`",
+          "D) `ArabGulf.get(0)`"
+        ],
+        "correct_answer": "B) `ArabGulf['Saudi Arabia']`"
+      }
+    },
+    {
+      "question_number": 8,
+      "type": "true_false",
+      "question": "تُستخدم النقطتان الرأسيتان (:) للفصل بين المفتاح والقيمة في القاموس.",
+      "hint": "تذكر الرمز الذي يفصل بين كل عنصر من عناصر القاموس.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 9,
+      "type": "multiple_choice",
+      "question": "أي من الدوال التالية تستخدم لإرجاع جميع القيم الموجودة في القاموس؟",
+      "hint": "اسم الدالة يشير إلى ما تفعله باللغة الإنجليزية.",
+      "answer_data": {
+        "options": [
+          "A) `dictName.get()`",
+          "B) `dictName.keys()`",
+          "C) `dictName.values()`",
+          "D) `dictName.update()`"
+        ],
+        "correct_answer": "C) `dictName.values()`"
+      }
+    },
+    {
+      "question_number": 10,
+      "type": "true_false",
+      "question": "الكلمة `del` يمكنها حذف عنصر واحد من القاموس أو القاموس بأكمله.",
+      "hint": "هل يمكن استخدام نفس الكلمة لحذف أجزاء مختلفة من القاموس؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 11,
+      "type": "multiple_choice",
+      "question": "أي من الأوامر التالية يضيف زوجًا جديدًا من المفتاح والقيمة إلى القاموس `my_dict`؟",
+      "hint": "فكر في كيفية تعيين قيمة جديدة لمفتاح جديد.",
+      "answer_data": {
+        "options": [
+          "A) `my_dict.add('key', 'value')`",
+          "B) `my_dict['new_key'] = 'new_value'`",
+          "C) `my_dict.append('new_key', 'new_value')`",
+          "D) `my_dict.insert('new_key', 'new_value')`"
+        ],
+        "correct_answer": "B) `my_dict['new_key'] = 'new_value'`"
+      }
+    },
+    {
+      "question_number": 12,
+      "type": "true_false",
+      "question": "يمكن أن تتنوع قيم المفاتيح في القاموس لتحتوي على أي نوع من أنواع البيانات.",
+      "hint": "هل يمكن للمفتاح أن يكون رقمًا أو نصًا أو أي نوع آخر؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 13,
+      "type": "multiple_choice",
+      "question": "أي من الدوال التالية ترجع قيمة خالية (None) إذا لم يتم العثور على المفتاح في القاموس؟",
+      "hint": "هذه الدالة هي طريقة آمنة للوصول إلى العناصر.",
+      "answer_data": {
+        "options": [
+          "A) `dictName.values()`",
+          "B) `dictName.keys()`",
+          "C) `dictName.clear()`",
+          "D) `dictName.get(x)`"
+        ],
+        "correct_answer": "D) `dictName.get(x)`"
+      }
+    },
+    {
+      "question_number": 14,
+      "type": "true_false",
+      "question": "يتم الوصول إلى عناصر القائمة بواسطة رقم الفهرس، بينما يتم الوصول إلى عناصر القاموس من خلال مفاتيحه.",
+      "hint": "هذا هو الاختلاف الرئيسي بين القائمتين.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 15,
+      "type": "multiple_choice",
+      "question": "ما هي نتيجة تشغيل الأمر `print(Students)` بعد تنفيذ المقطع البرمجي التالي؟\n`Students = {'Khalid': 'Science', 'Sara': 'Maths', 'Ali': 'English Language'}`\n`Students['Ali'] = 'Social Studies'`",
+      "hint": "فكر في كيفية تأثير الأمر على قيمة أحد المفاتيح الموجودة مسبقًا.",
+      "answer_data": {
+        "options": [
+          "A) `{'Khalid': 'Science', 'Sara': 'Maths', 'Ali': 'English Language'}`",
+          "B) `{'Khalid': 'Science', 'Sara': 'Maths', 'Ali': 'Social Studies'}`",
+          "C) `NameError`",
+          "D) `TypeError`"
+        ],
+        "correct_answer": "B) `{'Khalid': 'Science', 'Sara': 'Maths', 'Ali': 'Social Studies'}`"
+      }
+    },
+    {
+      "question_number": 16,
+      "type": "true_false",
+      "question": "يتم استخدام الأقواس المتعرجة {} عند تعريف القاموس، وتستخدم النقطتان الرأسيتان للفصل بين المفتاح والقيمة.",
+      "hint": "تذكر الرموز المستخدمة في بناء القاموس.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 17,
+      "type": "multiple_choice",
+      "question": "أي من الدوال التالية تستخدم لإرجاع جميع المفاتيح الموجودة في القاموس؟",
+      "hint": "اسم الدالة يشير إلى ما تفعله باللغة الإنجليزية.",
+      "answer_data": {
+        "options": [
+          "A) `dictName.get()`",
+          "B) `dictName.values()`",
+          "C) `dictName.keys()`",
+          "D) `dictName.items()`"
+        ],
+        "correct_answer": "C) `dictName.keys()`"
+      }
+    },
+    {
+      "question_number": 18,
+      "type": "true_false",
+      "question": "يمكن استخدام دالة `dictName.clear()` لإزالة جميع عناصر القاموس.",
+      "hint": "هل هناك دالة تقوم بتفريغ القاموس من محتواه؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 19,
+      "type": "multiple_choice",
+      "question": "ما هو نوع الخطأ الذي سيحدث عند محاولة طباعة قاموس تم حذفه بالكامل باستخدام `del`؟",
+      "hint": "فكر في معنى كلمة 'NameError'.",
+      "answer_data": {
+        "options": [
+          "A) `TypeError`",
+          "B) `ValueError`",
+          "C) `KeyError`",
+          "D) `NameError`"
+        ],
+        "correct_answer": "D) `NameError`"
+      }
+    },
+    {
+      "question_number": 20,
+      "type": "true_false",
+      "question": "تُستخدم القوائم في الحالات التي تحتاج إلى تخزين بيانات دون الحاجة إلى تغييرها.",
+      "hint": "هذا الوصف ينطبق على هيكل بيانات آخر.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 21,
+      "type": "multiple_choice",
+      "question": "ماذا يحدث عند استخدام دالة `update()` مع مفتاح موجود بالفعل في القاموس؟",
+      "hint": "فكر في وظيفة الدالة `update`.",
+      "answer_data": {
+        "options": [
+          "A) يتم إضافة زوج جديد بنفس المفتاح",
+          "B) يتم تجاهل الأمر",
+          "C) يتم تحديث محتوى القيمة المرتبطة بالمفتاح",
+          "D) يتم إرجاع خطأ"
+        ],
+        "correct_answer": "C) يتم تحديث محتوى القيمة المرتبطة بالمفتاح"
+      }
+    },
+    {
+      "question_number": 22,
+      "type": "true_false",
+      "question": "يتم استخدام الصفوف (Tuples) عند الحاجة إلى تغيير عناصر القائمة بشكل متكرر.",
+      "hint": "تذكر خاصية الصفوف المتعلقة بالتعديل.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 23,
+      "type": "multiple_choice",
+      "question": "ما هي الصيغة العامة لتعريف القاموس؟",
+      "hint": "تذكر الرموز المستخدمة في بناء القاموس.",
+      "answer_data": {
+        "options": [
+          "A) `dictionary_name = [key₁: value, key₂: value]`",
+          "B) `dictionary_name = (key₁: value, key₂: value)`",
+          "C) `dictionary_name = {key₁: value, key₂: value}`",
+          "D) `dictionary_name = key₁: value, key₂: value`"
+        ],
+        "correct_answer": "C) `dictionary_name = {key₁: value, key₂: value}`"
+      }
+    },
+    {
+      "question_number": 24,
+      "type": "true_false",
+      "question": "يُعد القاموس هيكل بيانات مفيدًا عند الحاجة إلى إيجاد ربط منطقي بين المفتاح والقيمة.",
+      "hint": "فكر في الغرض الأساسي من استخدام القاموس.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 25,
+      "type": "multiple_choice",
+      "question": "في مشروع البنك، لماذا تم استخدام القائمة كقيمة مرتبطة بالمفتاح؟",
+      "hint": "فكر في البيانات المتعددة التي تحتاج إلى تخزينها لكل عميل.",
+      "answer_data": {
+        "options": [
+          "A) لأن القوائم غير قابلة للتغيير",
+          "B) لأن القوائم أكثر أمانًا",
+          "C) لأن سجل العميل يحتوي على قيمتين (الاسم والرصيد)",
+          "D) لأن القائمة أسهل في الإنشاء"
+        ],
+        "correct_answer": "C) لأن سجل العميل يحتوي على قيمتين (الاسم والرصيد)"
+      }
+    },
+    {
+      "question_number": 26,
+      "type": "true_false",
+      "question": "يمكن استخدام علامات تنصيص مفردة أو مزدوجة عند تعريف القاموس في بايثون.",
+      "hint": "فكر في مرونة لغة بايثون في التعامل مع النصوص.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 27,
+      "type": "multiple_choice",
+      "question": "ما هي نتيجة تشغيل المقطع البرمجي التالي؟\n`ArabGulf = {'Saudi Arabia': 'Riyadh', 'Oman': 'Muscat'}`\n`print(ArabGulf.keys())`",
+      "hint": "فكر في ما تفعله دالة `keys()`.",
+      "answer_data": {
+        "options": [
+          "A) `dict_keys(['Saudi Arabia', 'Oman'])`",
+          "B) `['Riyadh', 'Muscat']`",
+          "C) `('Saudi Arabia', 'Oman')`",
+          "D) `{'Saudi Arabia', 'Oman'}`"
+        ],
+        "correct_answer": "A) `dict_keys(['Saudi Arabia', 'Oman'])`"
+      }
+    },
+    {
+      "question_number": 28,
+      "type": "true_false",
+      "question": "يمكنك إنشاء قاموس بحيث يدخل المستخدم بياناته.",
+      "hint": "هل يمكن دمج القواميس مع دوال الإدخال في بايثون؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 29,
+      "type": "multiple_choice",
+      "question": "لإضافة بيانات طالب جديد إلى قاموس موجود، أي من الدوال التالية يمكنك استخدامها؟",
+      "hint": "فكر في الدالة التي تقوم بتحديث محتوى القاموس.",
+      "answer_data": {
+        "options": [
+          "A) `add()`",
+          "B) `append()`",
+          "C) `update()`",
+          "D) `insert()`"
+        ],
+        "correct_answer": "C) `update()`"
+      }
+    },
+    {
+      "question_number": 30,
+      "type": "true_false",
+      "question": "تساعد كتابة جمل تعريف القاموس في عدة أسطر في تحسين إمكانية قراءته.",
+      "hint": "فكر في أفضل الممارسات لكتابة الكود البرمجي.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 31,
+      "type": "multiple_choice",
+      "question": "ما هي نتيجة الأمر `print(ArabGulf)` بعد تنفيذ المقطع البرمجي التالي؟\n`ArabGulf = {'Saudi Arabia': 'Riyadh', 'Oman': 'Muscat', 'Bahrain': 'Manama'}`\n`del ArabGulf['Oman']`",
+      "hint": "فكر في كيفية عمل الأمر `del` على عنصر محدد في القاموس.",
+      "answer_data": {
+        "options": [
+          "A) `{'Saudi Arabia': 'Riyadh', 'Bahrain': 'Manama'}`",
+          "B) `{'Saudi Arabia': 'Riyadh', 'Oman': 'Muscat', 'Bahrain': 'Manama'}`",
+          "C) `{}`",
+          "D) `NameError: name 'ArabGulf' is not defined`"
+        ],
+        "correct_answer": "A) `{'Saudi Arabia': 'Riyadh', 'Bahrain': 'Manama'}`"
+      }
+    },
+    {
+      "question_number": 32,
+      "type": "true_false",
+      "question": "عند استخدام دالة `get()` للوصول إلى قيمة مفتاح غير موجود، يتم إرجاع خطأ `KeyError`.",
+      "hint": "تذكر ما يميز دالة `get()` عن طريقة الوصول بالأقواس المربعة.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 33,
+      "type": "multiple_choice",
+      "question": "ما هي نتيجة تشغيل المقطع البرمجي التالي؟\n`Students = {'Khalid': 'Science', 'Sara': 'Maths'}`\n`print(Students.get('Ali'))`",
+      "hint": "فكر في قيمة المفتاح غير الموجود.",
+      "answer_data": {
+        "options": [
+          "A) `None`",
+          "B) `KeyError`",
+          "C) `Ali`",
+          "D) `Social Studies`"
+        ],
+        "correct_answer": "A) `None`"
+      }
+    },
+    {
+      "question_number": 34,
+      "type": "true_false",
+      "question": "القاموس هو هيكل بيانات غير قابل للتغيير.",
+      "hint": "قارن القاموس بالصف في هذه الخاصية.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 35,
+      "type": "multiple_choice",
+      "question": "أي من الأوامر التالية يضيف عنصرًا جديدًا إلى قاموس موجود؟",
+      "hint": "فكر في الطريقة التي يتم بها تعيين قيمة جديدة لمفتاح.",
+      "answer_data": {
+        "options": [
+          "A) `myDict.add('key', 'value')`",
+          "B) `myDict['new_key'] = 'new_value'`",
+          "C) `myDict.append('new_key', 'new_value')`",
+          "D) `myDict.insert('new_key', 'new_value')`"
+        ],
+        "correct_answer": "B) `myDict['new_key'] = 'new_value'`"
+      }
+    },
+    {
+      "question_number": 36,
+      "type": "true_false",
+      "question": "يمكن أن يحتوي القاموس على مفتاحين متطابقين يشيران إلى قيم مختلفة.",
+      "hint": "تذكر أن المفتاح يجب أن يكون فريدًا.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 37,
+      "type": "multiple_choice",
+      "question": "ما هي نتيجة تشغيل المقطع البرمجي التالي؟\n`id_numbers = {'Khalid': 154327, 'Saad': 154876}`\n`id_numbers.update({'Saad': 154651})`\n`print(id_numbers['Saad'])`",
+      "hint": "فكر في تأثير دالة `update` على قيمة المفتاح `Saad`.",
+      "answer_data": {
+        "options": [
+          "A) 154327",
+          "B) 154876",
+          "C) 154651",
+          "D) None"
+        ],
+        "correct_answer": "C) 154651"
+      }
+    },
+    {
+      "question_number": 38,
+      "type": "true_false",
+      "question": "يمكن استخدام القوائم كقيمة مرتبطة بمفتاح في القاموس.",
+      "hint": "فكر في مثال مشروع البنك.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 39,
+      "type": "multiple_choice",
+      "question": "ما هي نتيجة تشغيل المقطع البرمجي التالي؟\n`ArabGulf = {'Saudi Arabia': 'Riyadh', 'Oman': 'Muscat'}`\n`print(ArabGulf.values())`",
+      "hint": "ما هي القيم التي ترجعها دالة `values()`؟",
+      "answer_data": {
+        "options": [
+          "A) `dict_values(['Riyadh', 'Muscat'])`",
+          "B) `['Saudi Arabia', 'Oman']`",
+          "C) `{'Riyadh', 'Muscat'}`",
+          "D) `('Riyadh', 'Muscat')`"
+        ],
+        "correct_answer": "A) `dict_values(['Riyadh', 'Muscat'])`"
+      }
+    },
+    {
+      "question_number": 40,
+      "type": "true_false",
+      "question": "يُعد الصف (Tuple) هيكل بيانات غير قابل للتعديل.",
+      "hint": "تذكر الوصف الذي يجعله أكثر أمانًا.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 41,
+      "type": "multiple_choice",
+      "question": "في القاموس، ما هو الرمز الذي يفصل بين زوج من المفتاح والقيمة؟",
+      "hint": "هذا الرمز يميز القاموس عن هياكل البيانات الأخرى.",
+      "answer_data": {
+        "options": [
+          "A) الفاصلة ,",
+          "B) النقطة .",
+          "C) النقطتان الرأسيتان :",
+          "D) الفاصلة المنقوطة ;"
+        ],
+        "correct_answer": "C) النقطتان الرأسيتان :"
+      }
+    },
+    {
+      "question_number": 42,
+      "type": "true_false",
+      "question": "يمكن استخدام دالة `dict()` لإنشاء قاموس.",
+      "hint": "تذكر الطريقتين المتاحتين لإنشاء قاموس.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 43,
+      "type": "multiple_choice",
+      "question": "أي من الدوال التالية يمكن أن تضيف زوجًا جديدًا من المفتاح والقيمة إلى القاموس؟",
+      "hint": "فكر في الدالة التي تقوم بتحديث القاموس.",
+      "answer_data": {
+        "options": [
+          "A) `get()`",
+          "B) `keys()`",
+          "C) `clear()`",
+          "D) `update()`"
+        ],
+        "correct_answer": "D) `update()`"
+      }
+    },
+    {
+      "question_number": 44,
+      "type": "true_false",
+      "question": "لا يمكن لـ `del` حذف قاموس بأكمله.",
+      "hint": "هل يمكن حذف متغير بالكامل في بايثون؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 45,
+      "type": "multiple_choice",
+      "question": "في مشروع البنك، ما هو المفتاح الذي تم استخدامه في القاموس؟",
+      "hint": "فكر في القيمة الفريدة لكل عميل في البنك.",
+      "answer_data": {
+        "options": [
+          "A) اسم العميل",
+          "B) رصيد الحساب",
+          "C) رقم الحساب",
+          "D) القائمة"
+        ],
+        "correct_answer": "C) رقم الحساب"
+      }
+    },
+    {
+      "question_number": 46,
+      "type": "true_false",
+      "question": "تُستخدم القواميس عند الحاجة للبحث عن بيانات بناءً على مفتاح محدد.",
+      "hint": "هذه إحدى المزايا الرئيسية للقاموس.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 47,
+      "type": "multiple_choice",
+      "question": "ما هي نتيجة تشغيل المقطع البرمجي التالي؟\n`ArabGulf = {'Saudi Arabia': 'Riyadh'}`\n`ArabGulf.clear()`\n`print(ArabGulf)`",
+      "hint": "فكر في تأثير دالة `clear()`.",
+      "answer_data": {
+        "options": [
+          "A) `{'Saudi Arabia': 'Riyadh'}`",
+          "B) `None`",
+          "C) `{}`",
+          "D) `NameError`"
+        ],
+        "correct_answer": "C) `{}`"
+      }
+    },
+    {
+      "question_number": 48,
+      "type": "true_false",
+      "question": "يُعد الصف (Tuple) أحد هياكل البيانات الخطية.",
+      "hint": "راجع المخطط الهيكلي في بداية الدرس.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 49,
+      "type": "multiple_choice",
+      "question": "أي من الدوال التالية ترجع جميع مفاتيح القاموس؟",
+      "hint": "اسم الدالة يشير إلى ما تفعله باللغة الإنجليزية.",
+      "answer_data": {
+        "options": [
+          "A) `values()`",
+          "B) `items()`",
+          "C) `keys()`",
+          "D) `get()`"
+        ],
+        "correct_answer": "C) `keys()`"
+      }
+    },
+    {
+      "question_number": 50,
+      "type": "true_false",
+      "question": "يتم استخدام الأقواس المربعة [] للوصول إلى عناصر القاموس.",
+      "hint": "فكر في الطريقة الشائعة للوصول إلى العناصر باستخدام مفتاحها.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 51,
+      "type": "multiple_choice",
+      "question": "أي من الأوامر التالية يزيل عنصرًا واحدًا من القاموس `myDict`؟",
+      "hint": "تذكر الكلمة التي تستخدم لحذف العناصر.",
+      "answer_data": {
+        "options": [
+          "A) `myDict.remove('key')`",
+          "B) `del myDict['key']`",
+          "C) `myDict.pop('key')`",
+          "D) `myDict.delete('key')`"
+        ],
+        "correct_answer": "B) `del myDict['key']`"
+      }
+    },
+    {
+      "question_number": 52,
+      "type": "true_false",
+      "question": "تتكون القائمة (List) من سلسلة مرتبة من كائنات لتخزين البيانات بأنواعها.",
+      "hint": "هذا هو تعريف القائمة.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 53,
+      "type": "multiple_choice",
+      "question": "ماذا تعني الأرقام في `bankInfo[123]` في سياق مشروع البنك؟",
+      "hint": "تذكر ما تم استخدامه كمفتاح في القاموس.",
+      "answer_data": {
+        "options": [
+          "A) فهرس العنصر",
+          "B) اسم العميل",
+          "C) رصيد الحساب",
+          "D) رقم الحساب"
+        ],
+        "correct_answer": "D) رقم الحساب"
+      }
+    },
+    {
+      "question_number": 54,
+      "type": "true_false",
+      "question": "لا يمكن لـ `update()` إضافة زوج جديد من المفتاح والقيمة إلى القاموس.",
+      "hint": "فكر في مرونة دالة `update`.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 55,
+      "type": "multiple_choice",
+      "question": "في مشروع البنك، أي جزء من `account = bankInfo.get(accountNo)` يمثل القيمة المرتبطة بالمفتاح؟",
+      "hint": "فكر في ما يتم تخزينه في المتغير `account`.",
+      "answer_data": {
+        "options": [
+          "A) `accountNo`",
+          "B) `bankInfo`",
+          "C) `account`",
+          "D) `get()`"
+        ],
+        "correct_answer": "C) `account`"
+      }
+    },
+    {
+      "question_number": 56,
+      "type": "true_false",
+      "question": "يمكنك تغيير قيمة عنصر داخل القاموس باستخدام الأقواس المربعة.",
+      "hint": "تذكر كيف تم تحديث قيمة 'Ali' إلى 'Social Studies' في المثال.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 57,
+      "type": "multiple_choice",
+      "question": "ما هي نتيجة تشغيل المقطع البرمجي التالي؟\n`Employees = {'Khalid': 'Project Manager', 'Saad': 'Data Analyst'}`\n`Employees['Saad'] = 'Data Scientist'`\n`print(Employees['Saad'])`",
+      "hint": "ما هي القيمة الجديدة للمفتاح `Saad`؟",
+      "answer_data": {
+        "options": [
+          "A) `Project Manager`",
+          "B) `Data Analyst`",
+          "C) `Data Scientist`",
+          "D) `KeyError`"
+        ],
+        "correct_answer": "C) `Data Scientist`"
+      }
+    },
+    {
+      "question_number": 58,
+      "type": "true_false",
+      "question": "يتم استخدام القاموس (Dictionary) بشكل أساسي عند الحاجة إلى تخزين بيانات لا يمكن تغييرها.",
+      "hint": "هل القاموس قابل للتغيير أم لا؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 59,
+      "type": "multiple_choice",
+      "question": "ما هي نتيجة تشغيل المقطع البرمجي التالي؟\n`id_numbers = {'Khalid': 154327, 'Saad': 154876}`\n`new_id = {'Ahmed': 174527}`\n`id_numbers.update(new_id)`\n`print(id_numbers)`",
+      "hint": "تذكر ما تفعله دالة `update` عند إضافة زوج جديد.",
+      "answer_data": {
+        "options": [
+          "A) `{'Ahmed': 174527}`",
+          "B) `{'Khalid': 154327, 'Saad': 154876}`",
+          "C) `{'Khalid': 154327, 'Saad': 154876, 'Ahmed': 174527}`",
+          "D) `NameError`"
+        ],
+        "correct_answer": "C) `{'Khalid': 154327, 'Saad': 154876, 'Ahmed': 174527}`"
+      }
+    },
+    {
+      "question_number": 60,
+      "type": "true_false",
+      "question": "يُعد `dict()` أحد الطرق لإنشاء قاموس فارغ.",
+      "hint": "تذكر الدالة التي تقوم بإنشاء قاموس جديد.",
+      "answer_data": { "correct_answer": true }
+    }
+  ]
+}

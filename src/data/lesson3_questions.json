@@ -1,0 +1,970 @@
+{
+  "questions": [
+    {
+      "question_number": 1,
+      "type": "multiple_choice",
+      "question": "ما هو النموذج البرمجي القياسي الذي يستخدم لإنشاء واجهات المستخدم الرسومية (GUI) في لغة بايثون؟",
+      "hint": "فكر في المكتبة المضمنة في بايثون والمصممة لتطوير التطبيقات الرسومية.",
+      "answer_data": {
+        "options": [
+          "A) Django",
+          "B) Tkinter",
+          "C) Pygame",
+          "D) Matplotlib"
+        ],
+        "correct_answer": "B) Tkinter"
+      }
+    },
+    {
+      "question_number": 2,
+      "type": "true_false",
+      "question": "تُستخدم واجهة المستخدم الرسومية (GUI) للتفاعل مع الحاسب باستخدام النصوص فقط.",
+      "hint": "هل تعتمد الواجهات الرسومية على النصوص فقط أم تشمل عناصر أخرى مثل الأزرار والأيقونات؟",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 3,
+      "type": "multiple_choice",
+      "question": "ما هي الأداة التي تُعتبر منطقة مستطيلة مخصصة للرسم في النموذج البرمجي تكينتر؟",
+      "hint": "هذه الأداة هي السطح الذي تتم عليه جميع عمليات الرسم.",
+      "answer_data": {
+        "options": [
+          "A) Widget",
+          "B) Window",
+          "C) Canvas",
+          "D) Frame"
+        ],
+        "correct_answer": "C) Canvas"
+      }
+    },
+    {
+      "question_number": 4,
+      "type": "multiple_choice",
+      "question": "ما هي الوظيفة الأساسية للأمر `window = Tk()`؟",
+      "hint": "هذا الأمر هو الخطوة الأولى لتحديد النافذة الرئيسية لتطبيقك.",
+      "answer_data": {
+        "options": [
+          "A) يبدأ حلقة البرنامج الرئيسية",
+          "B) يحدد حجم النافذة",
+          "C) ينشئ نافذة أساسية جديدة",
+          "D) يستورد نموذج تكينتر"
+        ],
+        "correct_answer": "C) ينشئ نافذة أساسية جديدة"
+      }
+    },
+    {
+      "question_number": 5,
+      "type": "true_false",
+      "question": "يتم استخدام الأمر `canvas.pack()` لوضع جميع العناصر على النافذة.",
+      "hint": "هذا الأمر مسؤول عن إدارة وتخطيط الأداة داخل النافذة الرئيسية.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 6,
+      "type": "multiple_choice",
+      "question": "ما هو الأمر الصحيح لاستيراد جميع مكونات النموذج البرمجي تكينتر؟",
+      "hint": "أمر الاستيراد الذي يجلب كل شيء من مكتبة معينة.",
+      "answer_data": {
+        "options": [
+          "A) import tkinter",
+          "B) from tkinter import all",
+          "C) from tkinter import *",
+          "D) import all from tkinter"
+        ],
+        "correct_answer": "C) from tkinter import *"
+      }
+    },
+    {
+      "question_number": 7,
+      "type": "true_false",
+      "question": "يمكن تحديد ألوان الخلفية وأبعاد لوحة الرسم القماشية عند إنشائها.",
+      "hint": "هل يمكن تهيئة خصائص الأداة مثل لون الخلفية وحجمها عند تعريفها؟",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 8,
+      "type": "multiple_choice",
+      "question": "ما هو الغرض من `window.mainloop()`؟",
+      "hint": "هذا الأمر هو الحلقة التي تبقي البرنامج قيد التشغيل في انتظار أحداث المستخدم.",
+      "answer_data": {
+        "options": [
+          "A) إنشاء نافذة جديدة",
+          "B) تحديث محتوى اللوحة",
+          "C) بدء حلقة البرنامج الرئيسية التي تنتظر الأحداث",
+          "D) إغلاق النافذة"
+        ],
+        "correct_answer": "C) بدء حلقة البرنامج الرئيسية التي تنتظر الأحداث"
+      }
+    },
+    {
+      "question_number": 9,
+      "type": "true_false",
+      "question": "يمكن تحديد الألوان في تكينتر باستخدام أسماء الألوان القياسية فقط.",
+      "hint": "فكر في النماذج الرقمية لتمثيل الألوان، مثل الأحمر والأخضر والأزرق.",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 10,
+      "type": "multiple_choice",
+      "question": "ما هو النطاق العددي لقيم الألوان في نموذج ألوان RGB؟",
+      "hint": "يتراوح كل مكون لوني من الصفر إلى أقصى قيمة ممكنة.",
+      "answer_data": {
+        "options": [
+          "A) 0 إلى 100",
+          "B) 0 إلى 1",
+          "C) 0 إلى 255",
+          "D) -128 إلى 127"
+        ],
+        "correct_answer": "C) 0 إلى 255"
+      }
+    },
+    {
+      "question_number": 11,
+      "type": "multiple_choice",
+      "question": "أي من الألوان التالية ليس من الألوان القياسية المتاحة دائما في تكينتر؟",
+      "hint": "تذكر الألوان الثمانية الأساسية التي تأتي مع النموذج البرمجي بشكل افتراضي.",
+      "answer_data": {
+        "options": [
+          "A) سماوي",
+          "B) أرجواني",
+          "C) بني",
+          "D) أزرق"
+        ],
+        "correct_answer": "C) بني"
+      }
+    },
+    {
+      "question_number": 12,
+      "type": "true_false",
+      "question": "نموذج ألوان RGB هو نظام يحدد الألوان بناءً على شدة الألوان الثلاثة: الأحمر، والأخضر، والأزرق.",
+      "hint": "اسم النموذج نفسه هو اختصار لهذه الألوان الثلاثة.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 13,
+      "type": "multiple_choice",
+      "question": "ما هي قيمة RGB للون الأبيض؟",
+      "hint": "اللون الأبيض هو مجموع الألوان الأساسية الثلاثة بأقصى شدة.",
+      "answer_data": {
+        "options": [
+          "A) (0, 0, 0)",
+          "B) (255, 0, 0)",
+          "C) (255, 255, 255)",
+          "D) (0, 255, 255)"
+        ],
+        "correct_answer": "C) (255, 255, 255)"
+      }
+    },
+    {
+      "question_number": 14,
+      "type": "true_false",
+      "question": "تكون النقطة ذات الإحداثيات (0,0) في نظام تكينتر في الزاوية اليسرى السفلى من اللوحة.",
+      "hint": "قارن هذا النظام بنظام الإحداثيات الرياضية التقليدي.",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 15,
+      "type": "multiple_choice",
+      "question": "في نظام إحداثيات تكينتر، ماذا يحدث لقيمة y كلما تحركت لأسفل؟",
+      "hint": "فكر في نقطة الصفر (0,0) وموقعها في الزاوية العلوية.",
+      "answer_data": {
+        "options": [
+          "A) تزداد",
+          "B) تقل",
+          "C) تبقى كما هي",
+          "D) تتغير بشكل عشوائي"
+        ],
+        "correct_answer": "A) تزداد"
+      }
+    },
+    {
+      "question_number": 16,
+      "type": "true_false",
+      "question": "تُستخدم دالة `canvas.create_line()` لرسم خط مستقيم واحد فقط.",
+      "hint": "هل يمكن لدالة `create_line()` أن تربط أكثر من نقطتين؟",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 17,
+      "type": "multiple_choice",
+      "question": "أي من المعاملات التالية يستخدم لتحديد لون الخط عند الرسم في تكينتر؟",
+      "hint": "المعامل الذي يحدد لون 'تعبئة' الشكل.",
+      "answer_data": {
+        "options": [
+          "A) color",
+          "B) stroke",
+          "C) fill",
+          "D) outline"
+        ],
+        "correct_answer": "C) fill"
+      }
+    },
+    {
+      "question_number": 18,
+      "type": "true_false",
+      "question": "يمكن تغيير عرض الخط المرسوم باستخدام المعامل `width`.",
+      "hint": "المعامل المسؤول عن سمك الخط.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 19,
+      "type": "multiple_choice",
+      "question": "ما هي إحداثيات البداية والنهاية لخط يتم رسمه بالأمر `canvas.create_line(10, 10, 100, 100)`؟",
+      "hint": "تذكر الترتيب الذي يتم تمرير الإحداثيات به في دالة `create_line`.",
+      "answer_data": {
+        "options": [
+          "A) البداية (10, 10)، النهاية (100, 100)",
+          "B) البداية (10, 100)، النهاية (100, 10)",
+          "C) البداية (100, 10)، النهاية (10, 100)",
+          "D) لا يمكن تحديدها"
+        ],
+        "correct_answer": "A) البداية (10, 10)، النهاية (100, 100)"
+      }
+    },
+    {
+      "question_number": 20,
+      "type": "true_false",
+      "question": "يُستخدم المعامل `dash` في دالة `create_line` لإنشاء خط متقطع.",
+      "hint": "هذا المعامل يتحكم في نمط الخط، هل هو متصل أم متقطع؟",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 21,
+      "type": "multiple_choice",
+      "question": "لربط حدث ضغط زر الفأرة الأيسر بدالة معينة، أي من الأحداث التالية يجب استخدامه مع `.bind()`؟",
+      "hint": "الحدث الذي يتفاعل مع النقر على زر الفأرة الأول.",
+      "answer_data": {
+        "options": [
+          "A) `<Button-1>`",
+          "B) `<Key>`",
+          "C) `<Return>`",
+          "D) `<Enter>`"
+        ],
+        "correct_answer": "A) `<Button-1>`"
+      }
+    },
+    {
+      "question_number": 22,
+      "type": "true_false",
+      "question": "يمكن استخدام `.bind()` لربط الأحداث بأي عنصر في واجهة المستخدم.",
+      "hint": "هل يقتصر استخدام هذه الدالة على لوحة الرسم القماشية فقط؟",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 23,
+      "type": "multiple_choice",
+      "question": "للحصول على إحداثيات x و y لنقطة ضغط الفأرة داخل دالة رد الاتصال، ما هي الخصائص التي يجب استخدامها من كائن الحدث؟",
+      "hint": "فكر في الخصائص التي توفرها الكائنات التي يتم تمريرها إلى دوال رد الاتصال.",
+      "answer_data": {
+        "options": [
+          "A) `event.x` و `event.y`",
+          "B) `event.mouse_x` و `event.mouse_y`",
+          "C) `event.x_pos` و `event.y_pos`",
+          "D) `event.coords`"
+        ],
+        "correct_answer": "A) `event.x` و `event.y`"
+      }
+    },
+    {
+      "question_number": 24,
+      "type": "true_false",
+      "question": "لرسم مثلث، يجب استخدام دالة خاصة تسمى `create_triangle()`.",
+      "hint": "الدرس يوضح كيفية رسم المثلث باستخدام دالة أخرى متعددة الاستخدامات.",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 25,
+      "type": "multiple_choice",
+      "question": "ما هي الدالة التي تستخدم لرسم مستطيل في تكينتر؟",
+      "hint": "الاسم الإنجليزي للشكل هو مفتاح الإجابة.",
+      "answer_data": {
+        "options": [
+          "A) `canvas.create_box()`",
+          "B) `canvas.draw_rectangle()`",
+          "C) `canvas.create_rectangle()`",
+          "D) `canvas.rectangle()`"
+        ],
+        "correct_answer": "C) `canvas.create_rectangle()`"
+      }
+    },
+    {
+      "question_number": 26,
+      "type": "true_false",
+      "question": "يتم تحديد المستطيل في تكينتر بإحداثيات الزاويتين العلوية اليمنى والسفلية اليسرى.",
+      "hint": "راجع ترتيب إحداثيات النقاط التي تحدد المستطيل.",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 27,
+      "type": "multiple_choice",
+      "question": "أي من المعاملات التالية يحدد لون الإطار الخارجي لشكل ما؟",
+      "hint": "فكر في المعامل الذي يتحكم في لون 'الحدود' الخارجية للشكل.",
+      "answer_data": {
+        "options": [
+          "A) `outline`",
+          "B) `fill`",
+          "C) `frame`",
+          "D) `border`"
+        ],
+        "correct_answer": "A) `outline`"
+      }
+    },
+    {
+      "question_number": 28,
+      "type": "true_false",
+      "question": "يمكن استخدام `canvas.create_oval()` لرسم دائرة.",
+      "hint": "الدائرة هي حالة خاصة من الشكل البيضاوي.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 29,
+      "type": "multiple_choice",
+      "question": "لرسم شكل بيضاوي، ما هي إحداثيات النقاط التي تحدد أبعاده؟",
+      "hint": "الشكل البيضاوي يرسم داخل مربع أو مستطيل محدد.",
+      "answer_data": {
+        "options": [
+          "A) مركز الشكل البيضاوي",
+          "B) نقطة واحدة على المحيط",
+          "C) الزاوية اليسرى العلوية واليمنى السفلية للمستطيل الذي يحتويه",
+          "D) الزوايا الأربعة للمستطيل الذي يحتويه"
+        ],
+        "correct_answer": "C) الزاوية اليسرى العلوية واليمنى السفلية للمستطيل الذي يحتويه"
+      }
+    },
+    {
+      "question_number": 30,
+      "type": "true_false",
+      "question": "المضلع هو شكل مستوٍ يتكون من خطوط مستقيمة متصلة لتكوين شكل مغلق.",
+      "hint": "هذا هو التعريف الهندسي الأساسي للمضلع.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 31,
+      "type": "multiple_choice",
+      "question": "ما هي الدالة التي تستخدم لرسم مضلع في تكينتر؟",
+      "hint": "اسم الدالة هو ترجمة للمصطلح الهندسي 'polygon'.",
+      "answer_data": {
+        "options": [
+          "A) `canvas.create_shape()`",
+          "B) `canvas.create_poly()`",
+          "C) `canvas.create_polygon()`",
+          "D) `canvas.create_multi_line()`"
+        ],
+        "correct_answer": "C) `canvas.create_polygon()`"
+      }
+    },
+    {
+      "question_number": 32,
+      "type": "true_false",
+      "question": "تتطلب دالة `create_polygon()` قائمة من النقاط لتحديد رؤوس المضلع.",
+      "hint": "فكر في كيفية تحديد نقاط الشكل متعدد الأضلاع.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 33,
+      "type": "multiple_choice",
+      "question": "ما هو الأمر الذي يقوم بتعيين عنوان النافذة في تكينتر؟",
+      "hint": "المعامل الذي يحدد اسم النافذة.",
+      "answer_data": {
+        "options": [
+          "A) `window.name()`",
+          "B) `window.title()`",
+          "C) `window.label()`",
+          "D) `window.text()`"
+        ],
+        "correct_answer": "B) `window.title()`"
+      }
+    },
+    {
+      "question_number": 34,
+      "type": "true_false",
+      "question": "الرسم في تكينتر يتم على أداة `window` مباشرة.",
+      "hint": "فكر في الأداة التي تعتبر سطح الرسم الفعلي.",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 35,
+      "type": "multiple_choice",
+      "question": "في الأمر `canvas = Canvas(bg=\"teal\", width=500, height=350)`، ما هو لون الخلفية الذي تم تحديده؟",
+      "hint": "انظر إلى القيمة المخصصة للمتغير `bg`.",
+      "answer_data": {
+        "options": [
+          "A) أزرق",
+          "B) أرجواني",
+          "C) سماوي",
+          "D) أسود"
+        ],
+        "correct_answer": "C) سماوي"
+      }
+    },
+    {
+      "question_number": 36,
+      "type": "true_false",
+      "question": "القيمة `(255, 0, 0)` في نموذج ألوان RGB تمثل اللون الأحمر.",
+      "hint": "تذكر أن القيم تشير إلى شدة كل لون أساسي (أحمر، أخضر، أزرق).",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 37,
+      "type": "multiple_choice",
+      "question": "أي من الأوامر التالية سيعمل على إنشاء نافذة بحجم 400x400 بكسل؟",
+      "hint": "راجع المعاملات المستخدمة لتحديد أبعاد لوحة الرسم.",
+      "answer_data": {
+        "options": [
+          "A) `canvas = Canvas(width=400, height=400)`",
+          "B) `canvas = Canvas(size=400)`",
+          "C) `window = Tk(400, 400)`",
+          "D) `canvas.size(400, 400)`"
+        ],
+        "correct_answer": "A) `canvas = Canvas(width=400, height=400)`"
+      }
+    },
+    {
+      "question_number": 38,
+      "type": "true_false",
+      "question": "كلما تحركت يميناً في لوحة الرسم القماشية، تقل قيمة إحداثيات x.",
+      "hint": "فكر في محور X في نظام الإحداثيات العادي.",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 39,
+      "type": "multiple_choice",
+      "question": "ما هو الأمر الذي يرسم خطًا من النقطة (10, 10) إلى النقطة (100, 100) بلون أحمر وعرض 5 بكسل؟",
+      "hint": "تحقق من المعاملات الصحيحة للون وسمك الخط.",
+      "answer_data": {
+        "options": [
+          "A) `canvas.create_line(10, 10, 100, 100, color='red', width=5)`",
+          "B) `canvas.create_line(10, 10, 100, 100, fill='red', width=5)`",
+          "C) `canvas.line(10, 10, 100, 100, red, 5)`",
+          "D) `canvas.create_line(x1=10, y1=10, x2=100, y2=100, fill='red', width=5)`"
+        ],
+        "correct_answer": "B) `canvas.create_line(10, 10, 100, 100, fill='red', width=5)`"
+      }
+    },
+    {
+      "question_number": 40,
+      "type": "true_false",
+      "question": "يُستخدم الأمر `widget.bind(<Return>, handler)` لمعالجة حدث الضغط على مفتاح الإدخال (Enter).",
+      "hint": "فكر في اسم الحدث المرتبط بمفتاح الإدخال.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 41,
+      "type": "multiple_choice",
+      "question": "أي حدث يطابق الضغط المزدوج على زر الفأرة الأيسر؟",
+      "hint": "الحدث الذي يتضمن النقر مرتين بزر الفأرة الأول.",
+      "answer_data": {
+        "options": [
+          "A) `<Button-2>`",
+          "B) `<Double-Button-1>`",
+          "C) `<Click-2>`",
+          "D) `<DoubleClick-1>`"
+        ],
+        "correct_answer": "B) `<Double-Button-1>`"
+      }
+    },
+    {
+      "question_number": 42,
+      "type": "true_false",
+      "question": "يمكن لدالة `create_line()` أن ترسم أشكالًا متعددة الأضلاع مثل المثلثات والمربعات.",
+      "hint": "هل يمكن لدالة رسم الخط أن تربط أكثر من نقطتين؟",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 43,
+      "type": "multiple_choice",
+      "question": "ما هو الحد الأدنى لقيمة كل من الأحمر، والأخضر، والأزرق في نموذج ألوان RGB؟",
+      "hint": "أقل شدة ممكنة لكل لون من الألوان الأساسية.",
+      "answer_data": {
+        "options": [
+          "A) -1",
+          "B) 0",
+          "C) 1",
+          "D) 255"
+        ],
+        "correct_answer": "B) 0"
+      }
+    },
+    {
+      "question_number": 44,
+      "type": "true_false",
+      "question": "يُستخدم المعامل `fill` في دالة `create_rectangle()` لتعبئة الجزء الداخلي من المستطيل.",
+      "hint": "المعامل الذي يتحكم في لون التعبئة الداخلية.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 45,
+      "type": "multiple_choice",
+      "question": "إذا كانت أبعاد المستطيل الذي يحتوي على شكل بيضاوي تشكل مربعًا، فما هو الشكل الذي ستحصل عليه؟",
+      "hint": "البيضاوي الذي يتم رسمه داخل مربع متساوي الأضلاع.",
+      "answer_data": {
+        "options": [
+          "A) مستطيل",
+          "B) خط",
+          "C) دائرة",
+          "D) مثلث"
+        ],
+        "correct_answer": "C) دائرة"
+      }
+    },
+    {
+      "question_number": 46,
+      "type": "true_false",
+      "question": "يمكنك استخدام دالة `create_polygon()` لرسم خط مستقيم واحد فقط.",
+      "hint": "هذه الدالة مصممة للأشكال متعددة الأضلاع.",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 47,
+      "type": "multiple_choice",
+      "question": "ما هو الفرق الرئيسي بين نظام إحداثيات تكينتر ونظام الإحداثيات الديكارتي؟",
+      "hint": "قارن بين موضع نقطة البداية واتجاه المحور العمودي في كلا النظامين.",
+      "answer_data": {
+        "options": [
+          "A) اتجاه محور x",
+          "B) اتجاه محور y",
+          "C) موقع نقطة (0,0)",
+          "D) كلا من اتجاه محور y وموقع (0,0)"
+        ],
+        "correct_answer": "D) كلا من اتجاه محور y وموقع (0,0)"
+      }
+    },
+    {
+      "question_number": 48,
+      "type": "true_false",
+      "question": "يُستخدم الأمر `from tkinter import *` لاستيراد وحدات برمجية معينة من تكينتر.",
+      "hint": "علامة `*` لها دلالة خاصة في لغات البرمجة.",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 49,
+      "type": "multiple_choice",
+      "question": "أي من الأوامر التالية سيقوم بتغيير لون خلفية لوحة الرسم القماشية إلى اللون الأبيض؟",
+      "hint": "يتم تحديد لون الخلفية عند إنشاء الكائن `Canvas`.",
+      "answer_data": {
+        "options": [
+          "A) `canvas.color = \"white\"`",
+          "B) `canvas.bg(\"white\")`",
+          "C) `canvas.config(bg=\"white\")`",
+          "D) `canvas = Canvas(bg=\"white\")`"
+        ],
+        "correct_answer": "D) `canvas = Canvas(bg=\"white\")`"
+      }
+    },
+    {
+      "question_number": 50,
+      "type": "true_false",
+      "question": "يمكنك استخدام المعاملات `fill` و `outline` مع دالة `create_oval()`.",
+      "hint": "هذه المعاملات شائعة لمعظم الأشكال الهندسية.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 51,
+      "type": "multiple_choice",
+      "question": "ما هي النقطة التي تمثل الزاوية اليسرى العليا في نظام إحداثيات تكينتر؟",
+      "hint": "هذه هي نقطة الأصل في نظام الإحداثيات المعتمد.",
+      "answer_data": {
+        "options": [
+          "A) (0,0)",
+          "B) (width, height)",
+          "C) (0, height)",
+          "D) (width, 0)"
+        ],
+        "correct_answer": "A) (0,0)"
+      }
+    },
+    {
+      "question_number": 52,
+      "type": "true_false",
+      "question": "يمكنك تحديد لون الخط باستخدام اسم اللون أو قيمة RGB.",
+      "hint": "هناك أكثر من طريقة لتسمية الألوان في تكينتر.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 53,
+      "type": "multiple_choice",
+      "question": "أي من الأحداث التالية يطابق إخراج مؤشر الفأرة من النافذة؟",
+      "hint": "الحدث الذي يحدث عند 'مغادرة' المؤشر للنافذة.",
+      "answer_data": {
+        "options": [
+          "A) `<Leave>`",
+          "B) `<Enter>`",
+          "C) `<FocusOut>`",
+          "D) `<Exit>`"
+        ],
+        "correct_answer": "A) `<Leave>`"
+      }
+    },
+    {
+      "question_number": 54,
+      "type": "true_false",
+      "question": "لرسم مثلث، يجب استخدام دالة خاصة تسمى `create_triangle()`.",
+      "hint": "هل يمكن استخدام دالة `create_line()` لربط ثلاث نقاط؟",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 55,
+      "type": "multiple_choice",
+      "question": "ماذا تعني الأرقام `(100, 150, 400, 250)` في الأمر `canvas.create_rectangle(100, 150, 400, 250)`؟",
+      "hint": "راجع ترتيب إحداثيات النقاط التي تحدد المستطيل.",
+      "answer_data": {
+        "options": [
+          "A) أبعاد المستطيل",
+          "B) إحداثيات المركز",
+          "C) إحداثيات الزاوية العلوية اليسرى والسفلية اليمنى",
+          "D) إحداثيات جميع الزوايا"
+        ],
+        "correct_answer": "C) إحداثيات الزاوية العلوية اليسرى والسفلية اليمنى"
+      }
+    },
+    {
+      "question_number": 56,
+      "type": "true_false",
+      "question": "يتم التعبير عن الإحداثيات في تكينتر كأعداد صحيحة بنماذج البكسل.",
+      "hint": "فكر في الوحدة المستخدمة في الشاشات الرقمية.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 57,
+      "type": "multiple_choice",
+      "question": "أي أمر يضع العناصر على النافذة ويجعلها مرئية؟",
+      "hint": "الأمر الذي يقوم بـ'تجميع' العناصر على الشاشة.",
+      "answer_data": {
+        "options": [
+          "A) `canvas.show()`",
+          "B) `canvas.render()`",
+          "C) `canvas.pack()`",
+          "D) `canvas.display()`"
+        ],
+        "correct_answer": "C) `canvas.pack()`"
+      }
+    },
+    {
+      "question_number": 58,
+      "type": "true_false",
+      "question": "القيمة `(0, 0, 255)` في نموذج ألوان RGB تمثل اللون الأخضر.",
+      "hint": "القيمة 255 تشير إلى أقصى شدة للون الأزرق، وليس الأخضر.",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 59,
+      "type": "multiple_choice",
+      "question": "ما هو الحدث الذي يطابق دخول مؤشر الفأرة إلى نافذة تكينتر؟",
+      "hint": "الحدث الذي يحدث عند 'دخول' المؤشر للنافذة.",
+      "answer_data": {
+        "options": [
+          "A) `<Enter>`",
+          "B) `<FocusIn>`",
+          "C) `<MouseIn>`",
+          "D) `<Go>`"
+        ],
+        "correct_answer": "A) `<Enter>`"
+      }
+    },
+    {
+      "question_number": 60,
+      "type": "true_false",
+      "question": "يمكن استخدام `create_line()` لرسم مثلث عن طريق تحديد إحداثيات رؤوسه الثلاثة.",
+      "hint": "فكر في كيفية ربط ثلاث نقاط باستخدام دالة `create_line()`.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 61,
+      "type": "multiple_choice",
+      "question": "ما هي القيمة القصوى لكل من الأحمر، والأخضر، والأزرق في نموذج ألوان RGB؟",
+      "hint": "أعلى قيمة عددية في النطاق من 0 إلى 255.",
+      "answer_data": {
+        "options": [
+          "A) 1",
+          "B) 100",
+          "C) 255",
+          "D) 128"
+        ],
+        "correct_answer": "C) 255"
+      }
+    },
+    {
+      "question_number": 62,
+      "type": "true_false",
+      "question": "لا يمكن لـ `canvas.create_line()` أن ترسم خطوطًا متقطعة.",
+      "hint": "هل يمكن التحكم في نمط الخط؟",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 63,
+      "type": "multiple_choice",
+      "question": "ما هو الأمر الذي ينشئ حلقة البرنامج الرئيسية لنافذة تكينتر؟",
+      "hint": "هذا الأمر يبدأ حلقة لا نهائية للاستماع إلى الأحداث.",
+      "answer_data": {
+        "options": [
+          "A) `window.start()`",
+          "B) `window.run()`",
+          "C) `window.mainloop()`",
+          "D) `window.loop()`"
+        ],
+        "correct_answer": "C) `window.mainloop()`"
+      }
+    },
+    {
+      "question_number": 64,
+      "type": "true_false",
+      "question": "تُستخدم دالة `canvas.create_oval()` لرسم مستطيل.",
+      "hint": "راجع اسم الدالة، فهو يشير إلى نوع الشكل الذي ترسمه.",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 65,
+      "type": "multiple_choice",
+      "question": "كيف يتم تحديد لون الخلفية للوحة الرسم القماشية؟",
+      "hint": "المعامل المسؤول عن لون الخلفية.",
+      "answer_data": {
+        "options": [
+          "A) باستخدام المعامل `color`",
+          "B) باستخدام المعامل `bgcolor`",
+          "C) باستخدام المعامل `bg`",
+          "D) باستخدام المعامل `background`"
+        ],
+        "correct_answer": "C) باستخدام المعامل `bg`"
+      }
+    },
+    {
+      "question_number": 66,
+      "type": "true_false",
+      "question": "القيمة `(255, 255, 0)` في نموذج ألوان RGB تمثل اللون الأصفر.",
+      "hint": "مزيج من الأحمر والأخضر بأقصى شدة.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 67,
+      "type": "multiple_choice",
+      "question": "أي من الأوامر التالية يستخدم لرسم خط أفقي؟",
+      "hint": "الخط الأفقي يحافظ على نفس القيمة على المحور الرأسي.",
+      "answer_data": {
+        "options": [
+          "A) `canvas.create_line(x1, y1, x2, y1)`",
+          "B) `canvas.create_line(x1, y1, x1, y2)`",
+          "C) `canvas.create_line(x, y, x, y)`",
+          "D) `canvas.create_line(x, 0, x, 100)`"
+        ],
+        "correct_answer": "A) `canvas.create_line(x1, y1, x2, y1)`"
+      }
+    },
+    {
+      "question_number": 68,
+      "type": "true_false",
+      "question": "يُستخدم الأمر `window.title()` لتحديد حجم النافذة.",
+      "hint": "هل هذا الأمر مسؤول عن الأبعاد أم عن العنوان؟",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 69,
+      "type": "multiple_choice",
+      "question": "ما هو الأمر الصحيح لرسم مستطيل لونه الداخلي أخضر وعرض إطاره 5 بكسل؟",
+      "hint": "استخدم المعاملات الصحيحة للون التعبئة الداخلية وعرض الخط.",
+      "answer_data": {
+        "options": [
+          "A) `canvas.create_rectangle(..., fill=\"green\", width=5)`",
+          "B) `canvas.create_rectangle(..., color=\"green\", border=5)`",
+          "C) `canvas.create_rectangle(..., bgcolor=\"green\", stroke=5)`",
+          "D) `canvas.create_rectangle(..., outline=\"green\", width=5)`"
+        ],
+        "correct_answer": "A) `canvas.create_rectangle(..., fill=\"green\", width=5)`"
+      }
+    },
+    {
+      "question_number": 70,
+      "type": "true_false",
+      "question": "الرسم البيضاوي يتسع داخل مستطيل تحدده إحداثيات `x1`, `y1`, `x2`, `y2`.",
+      "hint": "تخيل الشكل البيضاوي مرسومًا داخل صندوق محيط.",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 71,
+      "type": "multiple_choice",
+      "question": "أي من الأوامر التالية يحدد عرض الخط المرسوم؟",
+      "hint": "المعامل الذي يتحكم في سمك الخط.",
+      "answer_data": {
+        "options": [
+          "A) `size`",
+          "B) `thickness`",
+          "C) `width`",
+          "D) `stroke`"
+        ],
+        "correct_answer": "C) `width`"
+      }
+    },
+    {
+      "question_number": 72,
+      "type": "true_false",
+      "question": "دالة `create_polygon()` لا يمكنها رسم أشكال بأكثر من أربعة أضلاع.",
+      "hint": "المضلع يمكن أن يكون له أي عدد من الأضلاع.",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 73,
+      "type": "multiple_choice",
+      "question": "ما هي القيمة التي تمثل اللون الأسود في نموذج ألوان RGB؟",
+      "hint": "اللون الأسود هو غياب جميع الألوان الأساسية.",
+      "answer_data": {
+        "options": [
+          "A) `(255, 255, 255)`",
+          "B) `(0, 0, 0)`",
+          "C) `(128, 128, 128)`",
+          "D) `(0, 0, 255)`"
+        ],
+        "correct_answer": "B) `(0, 0, 0)`"
+      }
+    },
+    {
+      "question_number": 74,
+      "type": "true_false",
+      "question": "النموذج البرمجي تكينتر هو جزء من مكتبة بايثون القياسية ولا يحتاج إلى تثبيت إضافي.",
+      "hint": "هل تحتاج إلى تثبيت هذه المكتبة باستخدام 'pip'؟",
+      "answer_data": {
+        "correct_answer": true
+      }
+    },
+    {
+      "question_number": 75,
+      "type": "multiple_choice",
+      "question": "ما هو الحدث الذي يطابق الضغط على أي مفتاح في لوحة المفاتيح؟",
+      "hint": "الحدث الذي يربط 'المفتاح' بالدالة.",
+      "answer_data": {
+        "options": [
+          "A) `<Key>`",
+          "B) `<Press>`",
+          "C) `<Button-K>`",
+          "D) `<Enter>`"
+        ],
+        "correct_answer": "A) `<Key>`"
+      }
+    },
+    {
+      "question_number": 76,
+      "type": "true_false",
+      "question": "في نظام إحداثيات تكينتر، تزداد قيمة x كلما تحركت إلى اليسار.",
+      "hint": "فكر في كيفية عمل محور x في أي نظام إحداثيات.",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 77,
+      "type": "multiple_choice",
+      "question": "إذا كان لديك كود `canvas.create_line(240, 20, 160, 100, 320, 100, 240, 20)`، فماذا يرسم هذا الأمر؟",
+      "hint": "عد النقاط التي يتم توصيلها في هذا الأمر.",
+      "answer_data": {
+        "options": [
+          "A) خطًا واحدًا",
+          "B) خطين منفصلين",
+          "C) مثلثًا مغلقًا",
+          "D) مستطيلًا"
+        ],
+        "correct_answer": "C) مثلثًا مغلقًا"
+      }
+    },
+    {
+      "question_number": 78,
+      "type": "true_false",
+      "question": "يُستخدم الأمر `canvas.pack()` لضبط حجم لوحة الرسم.",
+      "hint": "هل هذا الأمر مسؤول عن التخطيط أو عن الأبعاد؟",
+      "answer_data": {
+        "correct_answer": false
+      }
+    },
+    {
+      "question_number": 79,
+      "type": "multiple_choice",
+      "question": "ماذا تعني الأرقام `(1, 2, 3)` في `dash=(1, 2, 3)`؟",
+      "hint": "هذا المعامل يتحكم في نمط الشرطات والفراغات في الخط.",
+      "answer_data": {
+        "options": [
+          "A) نمط الخط المتقطع",
+          "B) لون الخط",
+          "C) سمك الخط",
+          "D) إحداثيات الخط"
+        ],
+        "correct_answer": "A) نمط الخط المتقطع"
+      }
+    },
+    {
+      "question_number": 80,
+      "type": "true_false",
+      "question": "تسمح لك دالة `canvas.bind()` بربط دالة بايثون بأحداث المستخدم مثل ضغطات الفأرة.",
+      "hint": "هل هذا الأمر يربط بين حدث معين ووظيفة تقوم بها؟",
+      "answer_data": {
+        "correct_answer": true
+      }
+    }
+  ]
+}

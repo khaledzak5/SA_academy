@@ -1,0 +1,329 @@
+/* نظام التصميم العصري - أكاديمية البرمجة */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* الوضع الفاتح - تدرجات عصرية */
+    --background: 0 0% 100%;
+    --background-secondary: 240 9% 98%;
+    --foreground: 220 13% 18%;
+    --foreground-secondary: 220 9% 46%;
+    
+    /* ألوان أساسية - تدرج أزرق إلى بنفسجي */
+    --primary: 237 88% 60%;
+    --primary-light: 237 88% 70%;
+    --primary-dark: 237 88% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* ألوان ثانوية - تدرج وردي إلى برتقالي */
+    --secondary: 336 84% 70%;
+    --secondary-light: 336 84% 80%;
+    --secondary-dark: 336 84% 60%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* ألوان البطاقات والعناصر */
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+    --card-hover: 240 9% 98%;
+    
+    /* ألوان التفاعل */
+    --accent: 271 91% 65%;
+    --accent-light: 271 91% 75%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    
+    /* الحدود والمدخلات */
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 237 88% 60%;
+    
+    /* ألوان حالة التطبيق */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --error: 0 84% 60%;
+    --error-foreground: 0 0% 100%;
+    
+    /* التدرجات الجميلة */
+    --gradient-primary: linear-gradient(135deg, hsl(237, 88%, 60%), hsl(271, 91%, 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(336, 84%, 70%), hsl(38, 92%, 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(237, 88%, 60%) 0%, hsl(271, 91%, 65%) 50%, hsl(336, 84%, 70%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(240, 9%, 98%) 100%);
+    
+    /* الظلال العصرية */
+    --shadow-sm: 0 1px 2px hsl(237, 88%, 60%, 0.05);
+    --shadow-md: 0 4px 12px hsl(237, 88%, 60%, 0.15);
+    --shadow-lg: 0 10px 25px hsl(237, 88%, 60%, 0.2);
+    --shadow-glow: 0 0 30px hsl(237, 88%, 60%, 0.3);
+    
+    /* الانحناءات */
+    --radius: 0.75rem;
+    --radius-sm: 0.5rem;
+    --radius-lg: 1rem;
+    
+    /* متغيرات الحركة */
+    --transition-all: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.15s ease-out;
+  }
+
+  .dark {
+    /* الوضع المظلم - تدرجات نيون */
+    --background: 240 10% 4%;
+    --background-secondary: 240 8% 7%;
+    --foreground: 0 0% 98%;
+    --foreground-secondary: 240 5% 65%;
+    
+    /* ألوان أساسية نيون */
+    --primary: 195 100% 50%;
+    --primary-light: 195 100% 60%;
+    --primary-dark: 195 100% 40%;
+    --primary-foreground: 240 10% 4%;
+    
+    /* ألوان ثانوية نيون */
+    --secondary: 330 100% 70%;
+    --secondary-light: 330 100% 80%;
+    --secondary-dark: 330 100% 60%;
+    --secondary-foreground: 240 10% 4%;
+    
+    /* ألوان البطاقات المظلمة */
+    --card: 240 8% 7%;
+    --card-foreground: 0 0% 98%;
+    --card-hover: 240 6% 10%;
+    
+    /* ألوان التفاعل النيون */
+    --accent: 271 100% 70%;
+    --accent-light: 271 100% 80%;
+    --accent-foreground: 240 10% 4%;
+    
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    
+    /* الحدود والمدخلات المظلمة */
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 195 100% 50%;
+    
+    /* ألوان حالة التطبيق المظلمة */
+    --success: 142 100% 50%;
+    --success-foreground: 240 10% 4%;
+    --warning: 38 100% 60%;
+    --warning-foreground: 240 10% 4%;
+    --error: 0 100% 70%;
+    --error-foreground: 240 10% 4%;
+    
+    /* التدرجات النيون */
+    --gradient-primary: linear-gradient(135deg, hsl(195, 100%, 50%), hsl(271, 100%, 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(330, 100%, 70%), hsl(38, 100%, 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(195, 100%, 50%) 0%, hsl(271, 100%, 70%) 50%, hsl(330, 100%, 70%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(240, 8%, 7%) 0%, hsl(240, 6%, 10%) 100%);
+    
+    /* الظلال النيون */
+    --shadow-sm: 0 1px 2px hsl(195, 100%, 50%, 0.1);
+    --shadow-md: 0 4px 12px hsl(195, 100%, 50%, 0.25);
+    --shadow-lg: 0 10px 25px hsl(195, 100%, 50%, 0.35);
+    --shadow-glow: 0 0 30px hsl(195, 100%, 50%, 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-family: 'IBM Plex Sans Arabic', 'Inter', system-ui, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    direction: rtl;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'IBM Plex Sans Arabic', 'Inter', system-ui, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  .font-english {
+    font-family: 'Inter', system-ui, sans-serif;
+    direction: ltr;
+  }
+}
+
+@layer components {
+  /* أزرار عصرية مع تأثيرات */
+  .btn-gradient {
+    @apply bg-gradient-to-r from-primary to-accent text-primary-foreground;
+    @apply shadow-lg transition-all duration-300;
+    @apply hover:scale-105 active:scale-95;
+    box-shadow: 0 4px 12px hsl(var(--primary) / 0.15);
+  }
+
+  .btn-gradient:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .btn-glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+    @apply hover:bg-white/20 transition-all duration-300;
+  }
+
+  /* بطاقات عصرية */
+  .card-modern {
+    @apply bg-gradient-to-br from-card to-card-hover;
+    @apply border border-border/50 rounded-lg shadow-md;
+    @apply hover:shadow-lg transition-all duration-300;
+    @apply hover:-translate-y-1;
+  }
+
+  .card-glass {
+    @apply bg-white/10 dark:bg-white/5 backdrop-blur-md;
+    @apply border border-white/20 dark:border-white/10 rounded-lg;
+    @apply shadow-lg transition-all duration-300;
+  }
+
+  .card-glass:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* تأثيرات التدرج */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+  }
+
+  .gradient-border {
+    @apply relative overflow-hidden;
+  }
+
+  .gradient-border::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary rounded-lg;
+    z-index: -1;
+    margin: 1px;
+  }
+
+  .gradient-border::after {
+    content: '';
+    @apply absolute inset-1 bg-background rounded-lg;
+    z-index: -1;
+  }
+
+  /* تأثيرات الحركة */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* شريط التمرير المخصص */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-muted/30 rounded-full;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full hover:bg-primary/50;
+  }
+
+  /* تأثيرات التفاعل */
+  .interactive-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg;
+    @apply hover:-translate-y-1 active:scale-95;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 dark:bg-white/5 backdrop-blur-lg;
+    @apply border border-white/20 dark:border-white/10;
+  }
+}
+
+@layer utilities {
+  /* تخطيط متجاوب */
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-spacing {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  /* تأثيرات بصرية */
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .shadow-colored {
+    box-shadow: 0 10px 25px hsl(var(--primary) / 0.15);
+  }
+
+  /* تحسينات الأداء */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}
+
+/* الحركات المخصصة */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+  100% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
+}
+
+@keyframes slideInRight {
+  0% { transform: translateX(100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* تحسينات الوصولية */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* تحسينات الطباعة */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

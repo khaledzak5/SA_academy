@@ -1,0 +1,1723 @@
+{
+  "questions": [
+    {
+      "questionNumber": 1,
+      "question": "ما هو التعريف الأفضل للمكتبة البرمجية (Programming Library)؟",
+      "answerOptions": [
+        {
+          "text": "مجموعة من التعليمات البرمجية المدمجة سابقًا وتُستخدم لتقليل وقت البرمجة.",
+          "rationale": "هذا هو التعريف الأساسي للمكتبة البرمجية، حيث أنها توفر أكواد جاهزة للاستخدام.",
+          "isCorrect": true
+        },
+        {
+          "text": "لغة برمجة جديدة تم تطويرها لتسهيل كتابة الأكواد.",
+          "rationale": "المكتبة ليست لغة برمجة، بل هي مجموعة أدوات مكتوبة بلغة برمجة موجودة.",
+          "isCorrect": false
+        },
+        {
+          "text": "برنامج مستقل يستخدم لتشغيل الأكواد البرمجية.",
+          "rationale": "المكتبة ليست برنامجًا مستقلاً، بل يتم استدعاؤها واستخدامها داخل برامج أخرى.",
+          "isCorrect": false
+        },
+        {
+          "text": "قاعدة بيانات لتخزين المتغيرات والدوال.",
+          "rationale": "المكتبة تحتوي على أكواد ووظائف، وليست مجرد مكان لتخزين البيانات.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في الغرض الرئيسي من استخدام المبرمجين للأكواد الجاهزة."
+    },
+    {
+      "questionNumber": 2,
+      "question": "أي من التالي **ليس** من خصائص المكتبة البرمجية؟",
+      "answerOptions": [
+        {
+          "text": "يمكن استخدامها من قبل برامج متعددة ومختلفة.",
+          "rationale": "هذه إحدى أهم ميزات المكتبات، وهي قابلية إعادة الاستخدام.",
+          "isCorrect": false
+        },
+        {
+          "text": "يجب على المستخدم معرفة كل تفاصيلها الداخلية لكي يستخدمها.",
+          "rationale": "المستخدم يحتاج فقط لمعرفة وظيفة المكتبة وكيفية استدعاء دوالها، وليس تفاصيل عملها الداخلية.",
+          "isCorrect": true
+        },
+        {
+          "text": "تساعد في الوصول إلى التعليمات البرمجية المكتوبة سابقًا.",
+          "rationale": "هذا هو جوهر فائدة المكتبات، توفير الوقت والجهد.",
+          "isCorrect": false
+        },
+        {
+          "text": "يمكن كتابتها بأي لغة برمجة.",
+          "rationale": "المكتبات لا تقتصر على لغة برمجة واحدة ويمكن تطويرها بلغات مختلفة.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في مستوى التفاصيل الذي يحتاجه المبرمج عند استخدام أداة جاهزة."
+    },
+    {
+      "questionNumber": 3,
+      "question": "في بايثون، ما هو المصطلح الذي يطلق على ملف يحتوي على مقاطع برمجية ودوال جاهزة ويمكن استيراده؟",
+      "answerOptions": [
+        {
+          "text": "النموذج البرمجي (Module)",
+          "rationale": "النموذج البرمجي (Module) هو ملف بايثون (بامتداد .py) يحتوي على دوال ومتغيرات يمكن استيرادها.",
+          "isCorrect": true
+        },
+        {
+          "text": "المكتبة القياسية (Standard Library)",
+          "rationale": "المكتبة القياسية هي مجموعة كبيرة من النماذج البرمجية، وليست الملف الواحد.",
+          "isCorrect": false
+        },
+        {
+          "text": "الدالة (Function)",
+          "rationale": "الدالة هي جزء من النموذج البرمجي، وليست الحزمة الكاملة.",
+          "isCorrect": false
+        },
+        {
+          "text": "المتغير (Variable)",
+          "rationale": "المتغير يستخدم لتخزين البيانات، وليس لتجميع الأكواد.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "ابحث عن الاسم الذي يصف 'وحدة' من الكود القابل لإعادة الاستخدام."
+    },
+    {
+      "questionNumber": 4,
+      "question": "صح أم خطأ: مكتبة بايثون القياسية (Python Standard Library) تحتاج إلى تثبيت منفصل بعد تثبيت بايثون.",
+      "answerOptions": [
+        {
+          "text": "خطأ",
+          "rationale": "المكتبة القياسية تأتي مدمجة مع بايثون ويتم تثبيتها تلقائيًا.",
+          "isCorrect": true
+        },
+        {
+          "text": "صح",
+          "rationale": "المكتبات الخارجية هي التي تحتاج إلى تثبيت منفصل، أما القياسية فلا.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في معنى كلمة 'قياسية' في هذا السياق."
+    },
+    {
+      "questionNumber": 5,
+      "question": "ما هو الأمر المستخدم لاستيراد **جميع** الدوال والمتغيرات من نموذج برمجي يسمى `math` مباشرة إلى نطاق البرنامج الحالي؟",
+      "answerOptions": [
+        {
+          "text": "import math",
+          "rationale": "هذا الأمر يستورد النموذج بأكمله، ولكن للوصول إلى دواله يجب كتابة `math.function_name()`.",
+          "isCorrect": false
+        },
+        {
+          "text": "from math import *",
+          "rationale": "علامة النجمة (*) تعني استيراد كل شيء من النموذج البرمجي.",
+          "isCorrect": true
+        },
+        {
+          "text": "import * from math",
+          "rationale": "الصياغة البرمجية لهذا الأمر غير صحيحة في بايثون.",
+          "isCorrect": false
+        },
+        {
+          "text": "math.import()",
+          "rationale": "هذه ليست طريقة صحيحة لاستيراد النماذج البرمجية في بايثون.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "تذكر الرمز الذي يعني 'الكل' في سياقات برمجية مختلفة."
+    },
+    {
+      "questionNumber": 6,
+      "question": "ما هي الميزة الرئيسية لطريقة الاستيراد `import module_name` مقارنة بـ `from module_name import *`؟",
+      "answerOptions": [
+        {
+          "text": "أنها أسرع في الكتابة.",
+          "rationale": "بالعكس، تتطلب كتابة اسم النموذج البرمجي قبل كل دالة، مما يجعلها أطول.",
+          "isCorrect": false
+        },
+        {
+          "text": "تجنب تضارب الأسماء بين الدوال الموجودة في برنامجك وتلك الموجودة في النموذج البرمجي.",
+          "rationale": "لأنها تجبرك على استخدام `module_name.function_name()`، فهي تمنع أي تداخل في الأسماء قد يحدث.",
+          "isCorrect": true
+        },
+        {
+          "text": "تستخدم ذاكرة أقل دائمًا.",
+          "rationale": "كلا الطريقتين تقومان بتحميل النموذج البرمجي في الذاكرة، والفرق في طريقة الوصول للدوال.",
+          "isCorrect": false
+        },
+        {
+          "text": "لا توجد أي ميزة، الطريقتان متطابقتان تمامًا.",
+          "rationale": "هناك فروقات جوهرية في تنظيم الكود وتجنب الأخطاء.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في ماذا سيحدث إذا كان لديك دالة بنفس اسم دالة موجودة في المكتبة التي استوردتها."
+    },
+    {
+      "questionNumber": 7,
+      "question": "ما وظيفة النموذج البرمجي `sys` بشكل أساسي؟",
+      "answerOptions": [
+        {
+          "text": "التعامل مع العمليات الرياضية المعقدة.",
+          "rationale": "هذه وظيفة النموذج البرمجي `math`.",
+          "isCorrect": false
+        },
+        {
+          "text": "إنشاء واجهات مستخدم رسومية.",
+          "rationale": "هذه وظيفة النموذج البرمجي `tkinter`.",
+          "isCorrect": false
+        },
+        {
+          "text": "التفاعل مع نظام التشغيل ومعرفة خصائص مفسر بايثون.",
+          "rationale": "`sys` يوفر معلومات حول النظام (System) الذي يعمل عليه بايثون.",
+          "isCorrect": true
+        },
+        {
+          "text": "التعامل مع الوقت والتاريخ.",
+          "rationale": "هذه وظيفة النموذجين `time` و `datetime`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "اسم النموذج `sys` هو اختصار لكلمة إنجليزية. ما هي هذه الكلمة؟"
+    },
+    {
+      "questionNumber": 8,
+      "question": "ماذا ستكون نتيجة تنفيذ الكود التالي؟\n```python\nimport sys\nprint(type(sys.path))\n```",
+      "answerOptions": [
+        {
+          "text": "<class 'str'>",
+          "rationale": "`sys.path` ليس نصًا واحدًا، بل مجموعة من المسارات.",
+          "isCorrect": false
+        },
+        {
+          "text": "<class 'list'>",
+          "rationale": "`sys.path` يعرض قائمة (list) بالمسارات التي يبحث فيها بايثون عن النماذج البرمجية.",
+          "isCorrect": true
+        },
+        {
+          "text": "<class 'tuple'>",
+          "rationale": "على الرغم من أنها مجموعة من العناصر، إلا أن نوع البيانات المستخدم هو القائمة القابلة للتعديل.",
+          "isCorrect": false
+        },
+        {
+          "text": "سيحدث خطأ برمجي.",
+          "rationale": "الكود صحيح تمامًا وسيعمل بدون مشاكل.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "`sys.path` يحتوي على عدة مسارات. ما هو نوع البيانات في بايثون الذي يستخدم لتخزين مجموعة من العناصر؟"
+    },
+    {
+      "questionNumber": 9,
+      "question": "أي دالة من النموذج البرمجي `os` تستخدم لمعرفة المجلد الحالي الذي يعمل فيه البرنامج؟",
+      "answerOptions": [
+        {
+          "text": "os.listdir()",
+          "rationale": "هذه الدالة تستخدم لعرض محتويات المجلد الحالي، وليس لمعرفة اسمه.",
+          "isCorrect": false
+        },
+        {
+          "text": "os.chdir()",
+          "rationale": "هذه الدالة تستخدم لتغيير المجلد الحالي.",
+          "isCorrect": false
+        },
+        {
+          "text": "os.getcwd()",
+          "rationale": "getcwd هي اختصار لـ 'get current working directory' أي 'الحصول على مجلد العمل الحالي'.",
+          "isCorrect": true
+        },
+        {
+          "text": "os.platform()",
+          "rationale": "هذه ليست دالة صحيحة في `os`. الدالة المشابهة هي `sys.platform`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "ابحث عن الدالة التي اسمها هو اختصار لـ 'get current working directory'."
+    },
+    {
+      "questionNumber": 10,
+      "question": "ماذا يفعل الأمر `os.chdir('..')`؟",
+      "answerOptions": [
+        {
+          "text": "ينتقل إلى المجلد الجذر (root directory).",
+          "rationale": "الانتقال للمجلد الجذر يتطلب مسارًا مطلقًا مثل 'C:\\' أو '/'.",
+          "isCorrect": false
+        },
+        {
+          "text": "ينشئ مجلدًا جديدًا باسم '..'.",
+          "rationale": "لإنشاء مجلد نستخدم `os.mkdir()`.",
+          "isCorrect": false
+        },
+        {
+          "text": "ينتقل إلى المجلد الأصل (الأعلى بمستوى واحد).",
+          "rationale": "في أنظمة التشغيل، النقطتان '..' ترمزان دائمًا للمجلد الأصل.",
+          "isCorrect": true
+        },
+        {
+          "text": "يحذف المجلد الحالي.",
+          "rationale": "لحذف مجلد نستخدم `os.rmdir()`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في معنى الرمز '..' في مسارات الملفات في سطر الأوامر."
+    },
+    {
+      "questionNumber": 11,
+      "question": "ما فائدة الدالة المدمجة `dir()` عند استخدامها مع نموذج برمجي مثل `os`؟ `dir(os)`",
+      "answerOptions": [
+        {
+          "text": "تعرض مسار النموذج البرمجي على القرص الصلب.",
+          "rationale": "لمعرفة المسارات نستخدم `sys.path`.",
+          "isCorrect": false
+        },
+        {
+          "text": "تطبع شرحًا تفصيليًا لكل دالة في النموذج.",
+          "rationale": "للحصول على شرح نستخدم دالة `help()`.",
+          "isCorrect": false
+        },
+        {
+          "text": "تعرض قائمة بأسماء جميع الدوال والمتغيرات المتاحة داخل النموذج.",
+          "rationale": "`dir()` اختصار لـ 'directory' وهي تعرض 'فهرس' محتويات الكائن أو النموذج.",
+          "isCorrect": true
+        },
+        {
+          "text": "تنفذ جميع الدوال الموجودة في النموذج.",
+          "rationale": "هذا الأمر سيكون خطيرًا وغير عملي. `dir()` تعرض الأسماء فقط.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "تخيل أنك تريد معرفة 'فهرس' محتويات مكتبة ما."
+    },
+    {
+      "questionNumber": 12,
+      "question": "صح أم خطأ: يمكن استخدام الدالة `dir()` فقط مع النماذج البرمجية.",
+      "answerOptions": [
+        {
+          "text": "خطأ",
+          "rationale": "يمكن استخدام `dir()` مع أي كائن في بايثون، مثل القوائم، النصوص، الأعداد، لمعرفة العمليات المتاحة عليه.",
+          "isCorrect": true
+        },
+        {
+          "text": "صح",
+          "rationale": "فائدة `dir()` تمتد إلى ما هو أبعد من النماذج البرمجية فقط، فهي أداة استكشاف عامة.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "جرب كتابة `dir(list)` أو `dir(str)` في مترجم بايثون وانظر للنتيجة."
+    },
+    {
+      "questionNumber": 13,
+      "question": "في النموذج البرمجي `math`, ما هي الوحدة التي تتعامل بها الدوال المثلثية مثل `math.sin()`؟",
+      "answerOptions": [
+        {
+          "text": "الدرجات (Degrees)",
+          "rationale": "إذا أدخلت زاوية بالدرجات مباشرة، ستكون النتيجة غير صحيحة.",
+          "isCorrect": false
+        },
+        {
+          "text": "التقدير الدائري (Radians)",
+          "rationale": "جميع الدوال المثلثية في مكتبة `math` تتوقع أن تكون الزاوية بالتقدير الدائري.",
+          "isCorrect": true
+        },
+        {
+          "text": "الجراد (Gradians)",
+          "rationale": "هذه وحدة قياس زوايا أخرى ولكنها غير مستخدمة في مكتبة `math`.",
+          "isCorrect": false
+        },
+        {
+          "text": "لا يهم، تقبل أي وحدة.",
+          "rationale": "الدوال البرمجية دقيقة جدًا بشأن وحدات الإدخال.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "تذكر الدالة التي تستخدمها لتحويل الزوايا قبل استخدام `sin` أو `cos`."
+    },
+    {
+      "questionNumber": 14,
+      "question": "ما هو ناتج الكود التالي؟\n```python\nimport math\nprint(math.ceil(10.1657))\n```",
+      "answerOptions": [
+        {
+          "text": "10",
+          "rationale": "هذه نتيجة دالة `floor` التي تقرب للأسفل.",
+          "isCorrect": false
+        },
+        {
+          "text": "11",
+          "rationale": "`ceil` هي اختصار لـ 'ceiling' وتعني 'سقف'، وهي دائمًا تقرب الرقم العشري للأعلى إلى أقرب عدد صحيح.",
+          "isCorrect": true
+        },
+        {
+          "text": "10.2",
+          "rationale": "الدالة لا تقرب لأقرب جزء من عشرة، بل لأقرب عدد صحيح.",
+          "isCorrect": false
+        },
+        {
+          "text": "10.17",
+          "rationale": "هذا تقريب رياضي عادي، وليس وظيفة دالة `ceil`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "كلمة `ceil` تعني 'سقف'. كيف يؤثر ذلك على التقريب؟"
+    },
+    {
+      "questionNumber": 15,
+      "question": "وما هو ناتج هذا الكود؟\n```python\nimport math\nprint(math.floor(-10.1657))\n```",
+      "answerOptions": [
+        {
+          "text": "-10",
+          "rationale": "مع الأرقام السالبة، العدد 'الأكبر' هو الأقرب للصفر. -11 هو 'الأصغر'.",
+          "isCorrect": false
+        },
+        {
+          "text": "-11",
+          "rationale": "`floor` تعني 'أرضية'، وهي دائمًا تقرب للأسفل (باتجاه سالب مالانهاية) إلى أقرب عدد صحيح. العدد الصحيح الذي يأتي قبل -10.1657 هو -11.",
+          "isCorrect": true
+        },
+        {
+          "text": "10",
+          "rationale": "الدالة تحافظ على إشارة الرقم.",
+          "isCorrect": false
+        },
+        {
+          "text": "11",
+          "rationale": "الدالة لا تغير إشارة الرقم ولا تقرب للأعلى.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "كلمة `floor` تعني 'أرضية'. بالنسبة للأرقام السالبة، ما هو العدد الصحيح الذي يعتبر 'أسفل'؟"
+    },
+    {
+      "questionNumber": 16,
+      "question": "ما وظيفة الدالة `math.pow(3, 4)`؟",
+      "answerOptions": [
+        {
+          "text": "تحسب 3 * 4",
+          "rationale": "هذه عملية ضرب عادية.",
+          "isCorrect": false
+        },
+        {
+          "text": "تحسب 4 أس 3 (4^3)",
+          "rationale": "الدالة ترفع الرقم الأول (الأساس) إلى قوة الرقم الثاني (الأس).",
+          "isCorrect": false
+        },
+        {
+          "text": "تحسب 3 أس 4 (3^4)",
+          "rationale": "الدالة `pow` اختصار لـ 'power' (قوة)، وتحسب الأساس مرفوعًا للأس. `pow(base, exponent)`.",
+          "isCorrect": true
+        },
+        {
+          "text": "تحسب الجذر الرابع للرقم 3.",
+          "rationale": "لحساب الجذور يمكن استخدام `pow` مع أس كسري، مثل `pow(3, 1/4)`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "تذكر ترتيب المعاملات في الدالة: `pow(base, exponent)`."
+    },
+    {
+      "questionNumber": 17,
+      "question": "ما هو النموذج البرمجي المستخدم لإنشاء واجهات المستخدم الرسومية (GUI) والمذكور في الدرس؟",
+      "answerOptions": [
+        {
+          "text": "pygame",
+          "rationale": "`pygame` تستخدم بشكل أساسي للألعاب والوسائط المتعددة، على الرغم من إمكانية إنشاء عناصر واجهة بها.",
+          "isCorrect": false
+        },
+        {
+          "text": "os",
+          "rationale": "`os` يتفاعل مع نظام التشغيل على مستوى الملفات والمجلدات.",
+          "isCorrect": false
+        },
+        {
+          "text": "tkinter",
+          "rationale": "`tkinter` هي المكتبة القياسية في بايثون لإنشاء نوافذ وأزرار ومربعات نص وغيرها من عناصر الواجهة الرسومية.",
+          "isCorrect": true
+        },
+        {
+          "text": "sys",
+          "rationale": "`sys` يتفاعل مع مفسر بايثون نفسه.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "ابحث عن المكتبة التي اسمها يبدو كأنه اختصار لـ 'Tk interface'."
+    },
+    {
+      "questionNumber": 18,
+      "question": "في `tkinter`، ما وظيفة الأمر `window.mainloop()`؟",
+      "answerOptions": [
+        {
+          "text": "يغلق النافذة فورًا.",
+          "rationale": "لإغلاق النافذة نستخدم `window.destroy()` أو نضغط على زر الإغلاق.",
+          "isCorrect": false
+        },
+        {
+          "text": "يقوم بإنشاء حلقة تكرارية لا نهائية لرسم الأشكال.",
+          "rationale": "هو ينشئ حلقة، ولكن ليس لغرض الرسم بشكل مباشر.",
+          "isCorrect": false
+        },
+        {
+          "text": "يبدأ حلقة الأحداث، مما يحافظ على النافذة مفتوحة وتستجيب للمستخدم (مثل النقرات وتحريك الفأرة).",
+          "rationale": "بدون `mainloop()`، سيتم إنشاء النافذة وإغلاقها فورًا. هذه الدالة تجعل البرنامج ينتظر تفاعل المستخدم.",
+          "isCorrect": true
+        },
+        {
+          "text": "يغير عنوان النافذة إلى 'mainloop'.",
+          "rationale": "لتغيير العنوان نستخدم `window.title()`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر فيما يجب أن يفعله البرنامج بعد رسم النافذة لكي تبقى ظاهرة على الشاشة."
+    },
+    {
+      "questionNumber": 19,
+      "question": "أي من الأكواد التالية يستخدم للحصول على التاريخ الحالي (سنة، شهر، يوم)؟",
+      "answerOptions": [
+        {
+          "text": "import time\ntime.today()",
+          "rationale": "مكتبة `time` لا تحتوي على دالة `today()` بهذا الشكل.",
+          "isCorrect": false
+        },
+        {
+          "text": "import datetime\ndatetime.date.today()",
+          "rationale": "هذا هو المسار الصحيح للوصول إلى دالة `today()` التي تعيد كائن التاريخ الحالي داخل مكتبة `datetime`.",
+          "isCorrect": true
+        },
+        {
+          "text": "import date\ndate.now()",
+          "rationale": "لا توجد مكتبة قياسية باسم `date` بهذا الشكل، و `now()` تستخدم بشكل مختلف.",
+          "isCorrect": false
+        },
+        {
+          "text": "import sys\nsys.date()",
+          "rationale": "مكتبة `sys` لا تتعامل مع الوقت والتاريخ.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "تذكر المكتبة المتخصصة في التعامل مع 'التاريخ والوقت' معًا."
+    },
+    {
+      "questionNumber": 20,
+      "question": "إذا كان `today = datetime.date.today()`، كيف يمكنك طباعة رقم الشهر الحالي فقط؟",
+      "answerOptions": [
+        {
+          "text": "print(today.get_month())",
+          "rationale": "لا توجد دالة اسمها `get_month()`، يتم الوصول للخصائص مباشرة.",
+          "isCorrect": false
+        },
+        {
+          "text": "print(today.month)",
+          "rationale": "كائن التاريخ يحتوي على خصائص (attributes) مثل `day`, `month`, `year` يمكن الوصول إليها مباشرة.",
+          "isCorrect": true
+        },
+        {
+          "text": "print(month(today))",
+          "rationale": "الصياغة البرمجية غير صحيحة، `month` ليست دالة مستقلة.",
+          "isCorrect": false
+        },
+        {
+          "text": "print(today[1])",
+          "rationale": "كائن التاريخ ليس قائمة أو tuple، لا يمكن الوصول لمحتوياته باستخدام الفهرس الرقمي.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "يتم الوصول إلى مكونات التاريخ (اليوم، الشهر، السنة) كأنها 'خصائص' للكائن."
+    },
+    {
+      "questionNumber": 21,
+      "question": "ما هو مدير حزم بايثون (Python Package Manager) الذي يستخدم لتثبيت مكتبات إضافية؟",
+      "answerOptions": [
+        {
+          "text": "PyPI",
+          "rationale": "PyPI هو 'فهرس حزم بايثون'، وهو المستودع الذي يتم تحميل الحزم منه، وليس الأداة التي تقوم بالتثبيت.",
+          "isCorrect": false
+        },
+        {
+          "text": "Python Installer",
+          "rationale": "هذا هو البرنامج الذي يثبت بايثون نفسه، وليس المكتبات الإضافية.",
+          "isCorrect": false
+        },
+        {
+          "text": "PIP",
+          "rationale": "PIP هو الأداة المستخدمة في سطر الأوامر لتثبيت وإدارة الحزم من PyPI.",
+          "isCorrect": true
+        },
+        {
+          "text": "Standard Library",
+          "rationale": "المكتبة القياسية تأتي مدمجة ولا تحتاج لمدير حزم لتثبيتها.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "الأداة لها اسم قصير مكون من ثلاثة أحرف."
+    },
+    {
+      "questionNumber": 22,
+      "question": "صح أم خطأ: مكتبة `pygame` هي جزء من مكتبة بايثون القياسية.",
+      "answerOptions": [
+        {
+          "text": "خطأ",
+          "rationale": "`pygame` هي مكتبة خارجية شائعة جدًا، ولكنها ليست جزءًا من التثبيت الأساسي لبايثون وتحتاج إلى تثبيت باستخدام PIP.",
+          "isCorrect": true
+        },
+        {
+          "text": "صح",
+          "rationale": "لو كانت جزءًا من المكتبة القياسية، لما احتجت إلى تثبيتها بشكل منفصل.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في الخطوات التي قمت بها في الدرس لاستخدام `pygame`. هل بدأت بالاستيراد مباشرة أم بخطوة أخرى؟"
+    },
+    {
+      "questionNumber": 23,
+      "question": "في `pygame`، ما وظيفة `pygame.init()`؟",
+      "answerOptions": [
+        {
+          "text": "تنشئ نافذة اللعبة.",
+          "rationale": "لإنشاء النافذة نستخدم `pygame.display.set_mode()`.",
+          "isCorrect": false
+        },
+        {
+          "text": "تقوم بتهيئة جميع نماذج `pygame` البرمجية التي تم استيرادها لتكون جاهزة للاستخدام.",
+          "rationale": "هذه الخطوة ضرورية ويجب استدعاؤها في بداية أي برنامج `pygame` لضمان عمل كل شيء بشكل صحيح.",
+          "isCorrect": true
+        },
+        {
+          "text": "تثبت مكتبة `pygame` على الجهاز.",
+          "rationale": "التثبيت يتم مرة واحدة باستخدام PIP في سطر الأوامر.",
+          "isCorrect": false
+        },
+        {
+          "text": "تغلق وتنهي عمل `pygame`.",
+          "rationale": "لإنهاء العمل نستخدم `pygame.quit()`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "اسم الدالة `init` هو اختصار لكلمة تعني 'البدء' أو 'التهيئة'."
+    },
+    {
+      "questionNumber": 24,
+      "question": "كيف يتم تحديد الألوان في `pygame` كما هو موضح في الدرس؟",
+      "answerOptions": [
+        {
+          "text": "باستخدام أسماء الألوان كنصوص، مثل 'Red'.",
+          "rationale": "على الرغم من أن بعض المكتبات تدعم هذا، إلا أن `pygame` تعتمد بشكل أساسي على نظام رقمي.",
+          "isCorrect": false
+        },
+        {
+          "text": "باستخدام نظام RGB (أحمر، أخضر، أزرق) في tuple، مثل `(255, 0, 0)`.",
+          "rationale": "هذه هي الطريقة المعتمدة، حيث يمثل كل رقم كمية اللون من 0 إلى 255.",
+          "isCorrect": true
+        },
+        {
+          "text": "باستخدام أكواد HEX، مثل `#FF0000`.",
+          "rationale": "أكواد HEX شائعة في تصميم الويب، ولكن `pygame` تستخدم tuple من الأرقام.",
+          "isCorrect": false
+        },
+        {
+          "text": "باستخدام أرقام من 0 إلى 1.",
+          "rationale": "بعض أنظمة الرسوميات تستخدم قيمًا عشرية، لكن `pygame` تستخدم قيمًا صحيحة من 0 إلى 255.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "تذكر نظام الألوان الذي يعتمد على مزج ثلاثة ألوان أساسية للضوء."
+    },
+    {
+      "questionNumber": 25,
+      "question": "ماذا يفعل الأمر `screen.fill(darkBlue)` في `pygame`؟",
+      "answerOptions": [
+        {
+          "text": "يرسم مربعًا باللون الأزرق الداكن.",
+          "rationale": "لرسم شكل محدد مثل المربع نستخدم دوال مثل `pygame.draw.rect()`.",
+          "isCorrect": false
+        },
+        {
+          "text": "يغير لون إطار النافذة.",
+          "rationale": "لون الإطار يتم التحكم فيه بواسطة نظام التشغيل.",
+          "isCorrect": false
+        },
+        {
+          "text": "يملأ الشاشة بأكملها (الخلفية) باللون المحدد في المتغير `darkBlue`.",
+          "rationale": "دالة `fill` تستخدم لملء سطح (surface) بالكامل بلون واحد.",
+          "isCorrect": true
+        },
+        {
+          "text": "يعين `darkBlue` كلون افتراضي للرسم.",
+          "rationale": "لون الرسم يجب تحديده في كل مرة نستدعي فيها دالة رسم.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "كلمة `fill` الإنجليزية تعني 'يملأ'."
+    },
+    {
+      "questionNumber": 26,
+      "question": "بعد القيام بعمليات الرسم في `pygame` (مثل `draw.rect` أو `blit`), ما هو الأمر الذي يجب استدعاؤه لجعل هذه التغييرات تظهر على الشاشة؟",
+      "answerOptions": [
+        {
+          "text": "pygame.init()",
+          "rationale": "هذه الدالة للتهيئة وتستخدم مرة واحدة في البداية.",
+          "isCorrect": false
+        },
+        {
+          "text": "screen.fill()",
+          "rationale": "هذه الدالة تملأ الخلفية بلون، وتمحو أي تغييرات تمت قبلها إذا لم يتم تحديث الشاشة.",
+          "isCorrect": false
+        },
+        {
+          "text": "pygame.display.update()",
+          "rationale": "هذه الدالة تقوم بـ 'تحديث' الشاشة، أي أنها تأخذ كل ما تم رسمه في الذاكرة وتعرضه فعليًا للمستخدم.",
+          "isCorrect": true
+        },
+        {
+          "text": "pygame.quit()",
+          "rationale": "هذه الدالة تستخدم للخروج من البرنامج.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في أن بايثون يرسم على 'لوحة' غير مرئية أولاً، ثم يحتاج لأمر لـ 'عرض' هذه اللوحة."
+    },
+    {
+      "questionNumber": 27,
+      "question": "ما وظيفة الدالة `pygame.image.load('file.png')`؟",
+      "answerOptions": [
+        {
+          "text": "تعرض الصورة مباشرة على الشاشة.",
+          "rationale": "العرض على الشاشة يتطلب خطوة إضافية باستخدام `blit`.",
+          "isCorrect": false
+        },
+        {
+          "text": "تحفظ الشاشة الحالية كملف صورة.",
+          "rationale": "لحفظ الشاشة نستخدم `pygame.image.save()`.",
+          "isCorrect": false
+        },
+        {
+          "text": "تقوم بتحميل ملف صورة من القرص الصلب إلى كائن 'surface' في الذاكرة.",
+          "rationale": "هذه الدالة تقرأ بيانات الصورة وتجهزها للاستخدام في البرنامج، ولكنها لا تعرضها بعد.",
+          "isCorrect": true
+        },
+        {
+          "text": "تغير حجم الصورة لتناسب الشاشة.",
+          "rationale": "لتغيير الحجم نستخدم دوال أخرى مثل `pygame.transform.scale()`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "كلمة `load` تعني 'تحميل'."
+    },
+    {
+      "questionNumber": 28,
+      "question": "في `pygame`, ما هو الفرق بين `convert()` و `convert_alpha()` عند تحميل الصور؟",
+      "answerOptions": [
+        {
+          "text": "لا يوجد فرق، كلاهما يفعل نفس الشيء.",
+          "rationale": "لو كانا متطابقين، لما كان هناك داعٍ لوجود دالتين مختلفتين.",
+          "isCorrect": false
+        },
+        {
+          "text": "`convert()` أسرع ولكن `convert_alpha()` أفضل جودة.",
+          "rationale": "كلاهما يحسن الأداء، ولكن الفرق بينهما يتعلق بالشفافية.",
+          "isCorrect": false
+        },
+        {
+          "text": "`convert()` تحسن أداء عرض الصورة، و`convert_alpha()` تفعل نفس الشيء بالإضافة إلى أنها تحافظ على شفافية الصورة (مثل خلفيات png الشفافة).",
+          "rationale": "هذا هو الفرق الجوهري. `alpha` تشير إلى قناة الشفافية في الصورة.",
+          "isCorrect": true
+        },
+        {
+          "text": "`convert()` تستخدم لصور jpg و `convert_alpha()` تستخدم لصور png.",
+          "rationale": "يمكن استخدامهما مع أنواع مختلفة من الصور، ولكن `convert_alpha()` تكون مفيدة بشكل خاص مع الصور التي تدعم الشفافية مثل png.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في معنى كلمة 'alpha' في سياق الرسوميات الرقمية."
+    },
+    {
+      "questionNumber": 29,
+      "question": "ما هي الدالة المستخدمة لوضع صورة (تم تحميلها مسبقًا) على الشاشة في موقع محدد؟",
+      "answerOptions": [
+        {
+          "text": "window.draw()",
+          "rationale": "لا توجد دالة عامة بهذا الاسم في `pygame` لرسم الصور.",
+          "isCorrect": false
+        },
+        {
+          "text": "window.blit(image, (x, y))",
+          "rationale": "`blit` هي الدالة المسؤولة عن 'رسم' سطح (مثل صورة) على سطح آخر (مثل الشاشة) في الإحداثيات المحددة.",
+          "isCorrect": true
+        },
+        {
+          "text": "window.paste(image, (x, y))",
+          "rationale": "`paste` (لصق) هو مصطلح يستخدم في مكتبات معالجة الصور الأخرى، وليس `pygame`.",
+          "isCorrect": false
+        },
+        {
+          "text": "window.show(image, (x, y))",
+          "rationale": "لا توجد دالة بهذا الاسم لعرض الصور.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "ابحث عن المصطلح الذي يعني 'نسخ كتلة من البكسلات'."
+    },
+    {
+      "questionNumber": 30,
+      "question": "أي من التالي يعتبر من مميزات إنشاء المقطع البرمجي الخاص بك بدلاً من استخدام النماذج الخارجية؟",
+      "answerOptions": [
+        {
+          "text": "أنه يوفر السرعة والموثوقية دائمًا.",
+          "rationale": "إعادة استخدام التعليمات البرمجية من المكتبات الموثوقة غالبًا ما يكون أسرع وأكثر موثوقية من كتابة كل شيء من الصفر.",
+          "isCorrect": false
+        },
+        {
+          "text": "أنك تتحكم بشكل كامل في الكود ويمكنك تعديله بسهولة.",
+          "rationale": "عندما تكتب الكود بنفسك، فأنت تفهم كل جزء منه ولك الحرية الكاملة في تعديله وتصحيح أخطائه.",
+          "isCorrect": true
+        },
+        {
+          "text": "أنه لا يحتاج إلى توثيق.",
+          "rationale": "بالعكس، الأكواد الخاصة تحتاج إلى توثيق جيد لكي تتمكن من فهمها لاحقًا أو لكي يفهمها فريق العمل.",
+          "isCorrect": false
+        },
+        {
+          "text": "أنه مجاني دائمًا، بينما المكتبات الخارجية مكلفة.",
+          "rationale": "الكثير من المكتبات الخارجية مفتوحة المصدر ومجانية تمامًا.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في مستوى 'التحكم' الذي لديك على كود كتبته بنفسك مقابل كود كتبه شخص آخر."
+    },
+    {
+      "questionNumber": 31,
+      "question": "ما هو ناتج الكود التالي؟\n```python\nimport math\nprint(math.sqrt(16))\n```",
+      "answerOptions": [
+        {
+          "text": "4",
+          "rationale": "دالة `sqrt` تحسب الجذر التربيعي (Square Root).",
+          "isCorrect": false
+        },
+        {
+          "text": "4.0",
+          "rationale": "دوال مكتبة `math` غالبًا ما تعيد النتائج كأرقام عشرية (float) لضمان الدقة.",
+          "isCorrect": true
+        },
+        {
+          "text": "8",
+          "rationale": "هذا هو ناتج 16 / 2.",
+          "isCorrect": false
+        },
+        {
+          "text": "256",
+          "rationale": "هذا هو ناتج 16^2.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "الدالة `sqrt` هي اختصار لـ 'Square Root'."
+    },
+    {
+      "questionNumber": 32,
+      "question": "أي أمر يستخدم لتثبيت مكتبة `numpy` باستخدام مدير الحزم؟",
+      "answerOptions": [
+        {
+          "text": "pip install numpy",
+          "rationale": "هذه هي الصيغة الصحيحة: `pip` ثم الأمر `install` ثم اسم الحزمة.",
+          "isCorrect": true
+        },
+        {
+          "text": "python install numpy",
+          "rationale": "نحن نستخدم أداة `pip` وليس `python` مباشرة للتثبيت.",
+          "isCorrect": false
+        },
+        {
+          "text": "pip numpy install",
+          "rationale": "ترتيب الكلمات غير صحيح.",
+          "isCorrect": false
+        },
+        {
+          "text": "install numpy",
+          "rationale": "يجب تحديد الأداة التي تقوم بالتثبيت، وهي `pip`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "تذكر اسم الأداة، ثم الفعل الذي تقوم به، ثم اسم الشيء الذي تريد تثبيته."
+    },
+    {
+      "questionNumber": 33,
+      "question": "صح أم خطأ: الأمر `from module import function` يستورد دالة واحدة فقط ولا يمكن استيراد أكثر.",
+      "answerOptions": [
+        {
+          "text": "خطأ",
+          "rationale": "يمكن استيراد عدة دوال عن طريق فصل أسمائها بفاصلة، مثل: `from math import sin, cos, tan`.",
+          "isCorrect": true
+        },
+        {
+          "text": "صح",
+          "rationale": "هذه الطريقة مرنة وتسمح باستيراد دالة واحدة أو أكثر حسب الحاجة.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "كيف يمكنك استيراد دالتي `sin` و `cos` في سطر واحد؟"
+    },
+    {
+      "questionNumber": 34,
+      "question": "ما هو النموذج البرمجي الذي يحتوي على ثابت رياضي يمثل النسبة التقريبية $\\pi$؟",
+      "answerOptions": [
+        {
+          "text": "sys",
+          "rationale": "`sys` يهتم بالنظام وليس بالرياضيات.",
+          "isCorrect": false
+        },
+        {
+          "text": "math",
+          "rationale": "`math.pi` يوفر قيمة دقيقة للثابت $\\pi$.",
+          "isCorrect": true
+        },
+        {
+          "text": "random",
+          "rationale": "`random` يستخدم لتوليد أرقام عشوائية.",
+          "isCorrect": false
+        },
+        {
+          "text": "os",
+          "rationale": "`os` يهتم بنظام التشغيل.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "ابحث عن المكتبة المتخصصة في العمليات الرياضية."
+    },
+    {
+      "questionNumber": 35,
+      "question": "ماذا يفعل الكود التالي؟\n```python\nimport os\nfiles = os.listdir()\nprint(len(files))\n```",
+      "answerOptions": [
+        {
+          "text": "يطبع أسماء جميع الملفات والمجلدات في المجلد الحالي.",
+          "rationale": "هذا ما تفعله `print(files)`، ولكن الكود يطبع `len(files)`.",
+          "isCorrect": false
+        },
+        {
+          "text": "يطبع عدد الملفات والمجلدات في المجلد الحالي.",
+          "rationale": "`os.listdir()` تعيد قائمة بالأسماء، و `len()` تحسب عدد العناصر في هذه القائمة.",
+          "isCorrect": true
+        },
+        {
+          "text": "يطبع حجم المجلد الحالي بالبايت.",
+          "rationale": "لحساب الحجم يتطلب الأمر المرور على كل ملف وجمع أحجامه.",
+          "isCorrect": false
+        },
+        {
+          "text": "يطبع أطول اسم ملف في المجلد الحالي.",
+          "rationale": "هذا يتطلب منطقًا برمجيًا إضافيًا للمقارنة بين أطوال الأسماء.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "ركز على وظيفة الدالة `len()` وماذا تفعل عندما تطبق على قائمة."
+    },
+    {
+      "questionNumber": 36,
+      "question": "ما هو الغرض من النموذج البرامجي `turtle` المذكور في الدرس؟",
+      "answerOptions": [
+        {
+          "text": "معرفة خصائص جهاز الحاسب.",
+          "rationale": "هذه وظيفة `platform` أو `sys`.",
+          "isCorrect": false
+        },
+        {
+          "text": "الرسم وإنشاء الأشكال الهندسية بطريقة بسيطة.",
+          "rationale": "`turtle` يوفر واجهة رسومية بسيطة لتعليم البرمجة عن طريق 'سلحفاة' ترسم خطوطًا.",
+          "isCorrect": true
+        },
+        {
+          "text": "قراءة وكتابة البيانات في ملفات إكسل.",
+          "rationale": "هذه وظيفة `openpyxl`.",
+          "isCorrect": false
+        },
+        {
+          "text": "التعامل مع الوقت والتاريخ.",
+          "rationale": "هذه وظيفة `time` و `datetime`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "تخيل سلحفاة صغيرة تتحرك على الشاشة وتترك أثرًا خلفها."
+    },
+    {
+      "questionNumber": 37,
+      "question": "أي من دوال `datetime` تستخدم لاستبدال جزء من التاريخ (مثل السنة) بقيمة جديدة؟",
+      "answerOptions": [
+        {
+          "text": "change()",
+          "rationale": "لا توجد دالة بهذا الاسم في كائن التاريخ.",
+          "isCorrect": false
+        },
+        {
+          "text": "update()",
+          "rationale": "`update` هو مصطلح شائع في هياكل بيانات أخرى مثل القواميس، ولكنه غير مستخدم هنا.",
+          "isCorrect": false
+        },
+        {
+          "text": "replace()",
+          "rationale": "دالة `replace()` تعيد كائن تاريخ جديد مع القيم المحددة (مثل `year=2025`) التي تم تغييرها.",
+          "isCorrect": true
+        },
+        {
+          "text": "set()",
+          "rationale": "لا توجد دالة بهذا الاسم لتعديل التاريخ.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "ابحث عن الكلمة الإنجليزية التي تعني 'استبدال'."
+    },
+    {
+      "questionNumber": 38,
+      "question": "ماذا يعرض الأمر `time.strftime('%A')`؟",
+      "answerOptions": [
+        {
+          "text": "اسم اليوم كاملًا (e.g., 'Wednesday').",
+          "rationale": "`%A` هو الرمز الخاص بالاسم الكامل لليوم.",
+          "isCorrect": true
+        },
+        {
+          "text": "اسم الشهر كاملًا (e.g., 'August').",
+          "rationale": "للحصول على اسم الشهر نستخدم `%B`.",
+          "isCorrect": false
+        },
+        {
+          "text": "الوقت بنظام 24 ساعة (e.g., '14:30').",
+          "rationale": "للحصول على الوقت نستخدم رموزًا مثل `%H:%M`.",
+          "isCorrect": false
+        },
+        {
+          "text": "صباحًا أو مساءً (AM/PM).",
+          "rationale": "للحصول على AM/PM نستخدم `%p`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "حرف 'A' في الرمز يشير إلى اسم اليوم. فكر فيما إذا كان الحرف كبيرًا (capital) أو صغيرًا (small) وماذا يمكن أن يعني ذلك."
+    },
+    {
+      "questionNumber": 39,
+      "question": "صح أم خطأ: عند استخدام `import math`, يمكنك استدعاء دالة الجيب بكتابة `sin(1.57)` مباشرة.",
+      "answerOptions": [
+        {
+          "text": "خطأ",
+          "rationale": "عند استخدام `import math`, يجب تحديد اسم النموذج البرمجي قبل اسم الدالة، أي `math.sin(1.57)`.",
+          "isCorrect": true
+        },
+        {
+          "text": "صح",
+          "rationale": "الطريقة المباشرة لاستدعاء الدالة تكون ممكنة فقط عند استخدام `from math import sin` أو `from math import *`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في كيف يعرف بايثون أن `sin` التي تقصدها هي تلك الموجودة داخل `math`."
+    },
+    {
+      "questionNumber": 40,
+      "question": "ما هو PyPI (Python Package Index)؟",
+      "answerOptions": [
+        {
+          "text": "محرر أكواد خاص بلغة بايثون.",
+          "rationale": "محررات الأكواد هي برامج مثل PyCharm أو VS Code.",
+          "isCorrect": false
+        },
+        {
+          "text": "المستودع الرسمي لبرامج ومكتبات بايثون الخارجية.",
+          "rationale": "هو بمثابة 'متجر التطبيقات' لمبرمجي بايثون، حيث يمكنهم العثور على حزم برمجية وتنزيلها.",
+          "isCorrect": true
+        },
+        {
+          "text": "نسخة خاصة من بايثون عالية الأداء.",
+          "rationale": "PyPI هو مستودع، وليس نسخة من لغة البرمجة نفسها.",
+          "isCorrect": false
+        },
+        {
+          "text": "مؤتمر سنوي لمطوري بايثون.",
+          "rationale": "هناك مؤتمرات لمطوري بايثون (مثل PyCon)، ولكن PyPI هو مستودع برمجي.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في المكان الذي تبحث فيه أداة `pip` عن الحزم لتنزيلها."
+    },
+    {
+      "questionNumber": 41,
+      "question": "ما هو ناتج الكود التالي؟\n```python\nimport math\nprint(math.log10(100))\n```",
+      "answerOptions": [
+        {
+          "text": "10",
+          "rationale": "هذا هو الجذر التربيعي لـ 100.",
+          "isCorrect": false
+        },
+        {
+          "text": "2.0",
+          "rationale": "اللوغاريتم ذو الأساس 10 يسأل: '10 أس كم يساوي 100؟'. الإجابة هي 2. (10^2 = 100).",
+          "isCorrect": true
+        },
+        {
+          "text": "4.605",
+          "rationale": "هذه هي قيمة اللوغاريتم الطبيعي (`math.log()`) لـ 100.",
+          "isCorrect": false
+        },
+        {
+          "text": "1000",
+          "rationale": "هذا هو ناتج 10 * 100.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "الدالة تسأل: ما هي القوة التي يجب أن نرفع بها الرقم 10 لنحصل على 100؟"
+    },
+    {
+      "questionNumber": 42,
+      "question": "في الأمر `pygame.display.set_mode((800, 600))`، ماذا يمثل الرقمان 800 و 600؟",
+      "answerOptions": [
+        {
+          "text": "موقع النافذة على الشاشة (x, y).",
+          "rationale": "موقع النافذة عادة ما يتم التحكم فيه بواسطة نظام التشغيل.",
+          "isCorrect": false
+        },
+        {
+          "text": "عرض وارتفاع النافذة بالبكسل.",
+          "rationale": "المعامل الأول هو العرض (width) والمعامل الثاني هو الارتفاع (height).",
+          "isCorrect": true
+        },
+        {
+          "text": "الحد الأدنى والأقصى لحجم النافذة.",
+          "rationale": "هذا الأمر يحدد الحجم الحالي، وليس حدود الحجم.",
+          "isCorrect": false
+        },
+        {
+          "text": "نطاق الألوان المسموح به.",
+          "rationale": "الألوان يتم تحديدها بنظام RGB.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في أبعاد شاشة العرض."
+    },
+    {
+      "questionNumber": 43,
+      "question": "لماذا قد يكون من المهم حفظ ملف الصورة في نفس مجلد ملف بايثون عند استخدام `pygame`؟",
+      "answerOptions": [
+        {
+          "text": "لأن بايثون لا يستطيع الوصول للملفات في المجلدات الأخرى.",
+          "rationale": "بايثون يستطيع الوصول لأي ملف إذا قمت بتوفير المسار الصحيح له.",
+          "isCorrect": false
+        },
+        {
+          "text": "لتسهيل الأمر، حيث يمكنك كتابة اسم الملف مباشرة (`'image.png'`) بدلاً من كتابة المسار الكامل (`'C:/Users/...'`).",
+          "rationale": "عندما يكون الملف في نفس المجلد، يكون المسار 'نسبيًا' وبسيطًا، مما يقلل من الأخطاء ويجعل المشروع قابلاً للنقل.",
+          "isCorrect": true
+        },
+        {
+          "text": "لأن `pygame` تتطلب ذلك لأسباب تتعلق بالأداء.",
+          "rationale": "الأداء لا يتأثر بموقع الملف، بل بسرعة القرص الصلب.",
+          "isCorrect": false
+        },
+        {
+          "text": "هذا ليس مهمًا على الإطلاق.",
+          "rationale": "هو ليس إلزاميًا، ولكنه ممارسة جيدة جدًا تجعل الكود أبسط وأكثر تنظيمًا.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في الفرق بين كتابة `stars.png` وكتابة `C:\\Users\\YourName\\Documents\\MyProject\\stars.png`."
+    },
+    {
+      "questionNumber": 44,
+      "question": "ماذا سيحدث إذا قمت بتحميل صورة ذات خلفية شفافة باستخدام `convert()` بدلاً من `convert_alpha()`؟",
+      "answerOptions": [
+        {
+          "text": "سيحدث خطأ برمجي.",
+          "rationale": "البرنامج لن يتعطل، ولكنه سيعرض الصورة بشكل غير متوقع.",
+          "isCorrect": false
+        },
+        {
+          "text": "ستظهر الصورة بشكل طبيعي مع خلفيتها الشفافة.",
+          "rationale": "دالة `convert()` لا تتعامل مع قناة الشفافية بشكل صحيح.",
+          "isCorrect": false
+        },
+        {
+          "text": "قد تظهر الخلفية الشفافة كلون ثابت (مثل الأسود أو الأبيض) بدلاً من أن تكون شفافة.",
+          "rationale": "لأن `convert()` تتجاهل معلومات الشفافية (alpha)، يتم استبدالها بلون افتراضي.",
+          "isCorrect": true
+        },
+        {
+          "text": "سيتم حذف الصورة من الذاكرة.",
+          "rationale": "الصورة ستبقى في الذاكرة ولكن بتنسيق بكسل خاطئ.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "دالة `convert()` لا تفهم معنى 'الشفافية'."
+    },
+    {
+      "questionNumber": 45,
+      "question": "صح أم خطأ: يمكن كتابة مكتبة برمجية بلغة C واستخدامها في برنامج بايثون.",
+      "answerOptions": [
+        {
+          "text": "صح",
+          "rationale": "العديد من مكتبات بايثون عالية الأداء (مثل NumPy) مكتوبة أجزاء منها بلغة C أو C++ لتحقيق أقصى سرعة، ويوفر بايثون طرقًا للتفاعل مع هذه المكتبات.",
+          "isCorrect": true
+        },
+        {
+          "text": "خطأ",
+          "rationale": "بايثون لغة مرنة جدًا وتستطيع التوافق مع لغات أخرى لزيادة قوتها.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "يذكر الدرس أن مكتبة بايثون القياسية نفسها تحتوي على نماذج مكتوبة بلغة C."
+    },
+    {
+      "questionNumber": 46,
+      "question": "ما هو أحد عيوب استخدام `from module_name import *`؟",
+      "answerOptions": [
+        {
+          "text": "أنه يجعل الكود صعب القراءة لأنه لا يكون واضحًا من أين أتت الدالة.",
+          "rationale": "عندما ترى دالة مثل `sqrt()`, قد لا تعرف هل هي من مكتبة `math` أم دالة قمت بتعريفها بنفسك, مما يزيد من صعوبة الصيانة.",
+          "isCorrect": true
+        },
+        {
+          "text": "أنه أبطأ في التنفيذ من `import module_name`.",
+          "rationale": "لا يوجد فرق كبير في أداء التنفيذ بين الطريقتين.",
+          "isCorrect": false
+        },
+        {
+          "text": "أنه يتطلب اتصالاً بالإنترنت في كل مرة يتم تشغيل البرنامج.",
+          "rationale": "عملية الاستيراد تتم من الملفات المحلية على جهازك.",
+          "isCorrect": false
+        },
+        {
+          "text": "أنه لا يعمل مع المكتبات الكبيرة.",
+          "rationale": "يعمل مع جميع المكتبات، ولكنه يعتبر ممارسة سيئة خاصة مع المكتبات الكبيرة.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في 'وضوح' الكود وقابليته للقراءة من قبل مبرمج آخر."
+    },
+    {
+      "questionNumber": 47,
+      "question": "إذا كان لديك الكود `import datetime`, ما هو نوع الكائن الذي تعيده `datetime.date.today()`؟",
+      "answerOptions": [
+        {
+          "text": "نص (string)",
+          "rationale": "على الرغم من أنه يمكن تحويله إلى نص، إلا أن نوعه الأصلي هو كائن متخصص.",
+          "isCorrect": false
+        },
+        {
+          "text": "كائن تاريخ (date object)",
+          "rationale": "الدالة تعيد كائنًا خاصًا يحتوي على معلومات اليوم والشهر والسنة.",
+          "isCorrect": true
+        },
+        {
+          "text": "قائمة (list)",
+          "rationale": "لا يعيد قائمة بالأرقام، بل كائن واحد.",
+          "isCorrect": false
+        },
+        {
+          "text": "عدد صحيح (integer)",
+          "rationale": "التاريخ يتكون من عدة أرقام، لذلك لا يمكن تمثيله بعدد صحيح واحد.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "الدالة موجودة داخل `datetime.date`, ماذا يوحي لك ذلك عن نوع المخرجات؟"
+    },
+    {
+      "questionNumber": 48,
+      "question": "ماذا يفعل الأمر `pygame.quit()`؟",
+      "answerOptions": [
+        {
+          "text": "يقوم بإلغاء تهيئة وحدات `pygame`, وهو عكس `pygame.init()`.",
+          "rationale": "هذا هو الإجراء الصحيح لإغلاق المكتبة بشكل نظيف وتحرير الموارد التي تستخدمها.",
+          "isCorrect": true
+        },
+        {
+          "text": "يغلق نافذة العرض فقط.",
+          "rationale": "هو يفعل أكثر من مجرد إغلاق النافذة، فهو ينهي عمل المكتبة بأكملها.",
+          "isCorrect": false
+        },
+        {
+          "text": "يحذف ملفات `pygame` من جهاز الكمبيوتر.",
+          "rationale": "هذا الأمر لا يقوم بإلغاء تثبيت المكتبة.",
+          "isCorrect": false
+        },
+        {
+          "text": "يوقف البرنامج مؤقتًا.",
+          "rationale": "لإيقاف البرنامج مؤقتًا نستخدم دوال مثل `time.sleep()`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في الفعل المعاكس لـ `init` (تهيئة)."
+    },
+    {
+      "questionNumber": 49,
+      "question": "لتحويل زاوية 90 درجة إلى راديان، أي كود ستستخدم؟",
+      "answerOptions": [
+        {
+          "text": "math.degrees(90)",
+          "rationale": "هذه الدالة تحول من راديان إلى درجات.",
+          "isCorrect": false
+        },
+        {
+          "text": "math.radians(90)",
+          "rationale": "هذه هي الدالة الصحيحة للتحويل من درجات إلى راديان.",
+          "isCorrect": true
+        },
+        {
+          "text": "math.to_radians(90)",
+          "rationale": "اسم الدالة ليس `to_radians`.",
+          "isCorrect": false
+        },
+        {
+          "text": "90 * (math.pi / 180)",
+          "rationale": "على الرغم من أن هذه هي المعادلة الرياضية الصحيحة، إلا أن استخدام دالة `math.radians()` هو الطريقة الأسهل والأكثر وضوحًا.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "ابحث عن الدالة التي اسمها يعكس الوحدة التي تريد التحويل 'إليها'."
+    },
+    {
+      "questionNumber": 50,
+      "question": "في بايثون، هل النموذج البرمجي (Module) والمكتبة البرمجية (Library) هما نفس الشيء تمامًا؟",
+      "answerOptions": [
+        {
+          "text": "نعم، المصطلحان مترادفان تمامًا.",
+          "rationale": "هناك علاقة بينهما، لكنهما ليسا نفس الشيء.",
+          "isCorrect": false
+        },
+        {
+          "text": "لا، المكتبة هي مجموعة من النماذج البرمجية.",
+          "rationale": "هذا هو الترتيب الهرمي الصحيح: المكتبة (مثل المكتبة القياسية) تحتوي على العديد من النماذج البرمجية (مثل `math`, `os`).",
+          "isCorrect": true
+        },
+        {
+          "text": "لا، النموذج البرمجية هو مجموعة من المكتبات.",
+          "rationale": "هذا عكس الترتيب الصحيح.",
+          "isCorrect": false
+        },
+        {
+          "text": "نعم، لكن 'مكتبة' هو المصطلح القديم و'نموذج' هو المصطلح الحديث.",
+          "rationale": "كلا المصطلحين ما زالا يستخدمان ولهما معان مختلفة.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في العلاقة بين 'كتاب' و'مكتبة'. أيهما يحتوي على الآخر؟"
+    },
+    {
+      "questionNumber": 51,
+      "question": "ما هي القيمة التي يمثلها `math.e`؟",
+      "answerOptions": [
+        {
+          "text": "قيمة باي ($\\pi$).",
+          "rationale": "هذه القيمة يتم تمثيلها بـ `math.pi`.",
+          "isCorrect": false
+        },
+        {
+          "text": "أساس اللوغاريتم الطبيعي (رقم أويلر).",
+          "rationale": "`e` هو ثابت رياضي مهم قيمته تقريبًا 2.718 ويستخدم كأساس في اللوغاريتم الطبيعي (`math.log`).",
+          "isCorrect": true
+        },
+        {
+          "text": "النسبة الذهبية.",
+          "rationale": "النسبة الذهبية ثابت رياضي آخر ولكنه غير موجود بشكل مباشر في مكتبة `math`.",
+          "isCorrect": false
+        },
+        {
+          "text": "سرعة الضوء.",
+          "rationale": "هذا ثابت فيزيائي وليس رياضيًا.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "هذا الثابت هو أساس الدالة `log()` عند عدم تحديد أساس آخر."
+    },
+    {
+      "questionNumber": 52,
+      "question": "ماذا ستطبع الشيفرة التالية؟\n```python\nimport os\nos.chdir('C:\\\\Users')\nprint(os.getcwd())\n```",
+      "answerOptions": [
+        {
+          "text": "المجلد الذي يوجد به ملف البايثون",
+          "rationale": "تم تغيير مجلد العمل الحالي باستخدام `chdir`.",
+          "isCorrect": false
+        },
+        {
+          "text": "C:\\Users",
+          "rationale": "الأمر `chdir` يغير دليل العمل الحالي، و`getcwd` يطبعه بعد التغيير.",
+          "isCorrect": true
+        },
+        {
+          "text": "سيحدث خطأ لأن المسار غير موجود",
+          "rationale": "المجلد `C:\\Users` هو مجلد قياسي في معظم أنظمة ويندوز، لذا من المحتمل جدًا أن يكون موجودًا.",
+          "isCorrect": false
+        },
+        {
+          "text": "Users",
+          "rationale": "الدالة `getcwd` تطبع المسار الكامل وليس فقط اسم المجلد الأخير.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "تتبع تنفيذ الأوامر بالترتيب: أولاً تغيير المجلد، ثم طباعة المجلد الحالي."
+    },
+    {
+      "questionNumber": 53,
+      "question": "صح أم خطأ: الأمر `pygame.draw.rect(screen, red, (30, 30, 60, 60))` يرسم مستطيلاً عرضه 30 وارتفاعه 30.",
+      "answerOptions": [
+        {
+          "text": "خطأ",
+          "rationale": "الأرقام الأربعة هي (x, y, width, height). إذن، العرض هو 60 والارتفاع هو 60. أما (30, 30) فهو موقع الركن العلوي الأيسر.",
+          "isCorrect": true
+        },
+        {
+          "text": "صح",
+          "rationale": "الأرقام تمثل الموقع ثم الأبعاد.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "تذكر ترتيب المعاملات: (الموقع الأفقي، الموقع الرأسي، العرض، الارتفاع)."
+    },
+    {
+      "questionNumber": 54,
+      "question": "أي من هذه النماذج البرمجية **ليس** من المكتبة القياسية ويتطلب تثبيتًا عبر `pip`؟",
+      "answerOptions": [
+        {
+          "text": "os",
+          "rationale": "نموذج `os` هو جزء أساسي من المكتبة القياسية.",
+          "isCorrect": false
+        },
+        {
+          "text": "sys",
+          "rationale": "نموذج `sys` هو جزء أساسي من المكتبة القياسية.",
+          "isCorrect": false
+        },
+        {
+          "text": "openpyxl",
+          "rationale": "`openpyxl` هو نموذج برمجي خارجي يستخدم للتعامل مع ملفات إكسل ويجب تثبيته.",
+          "isCorrect": true
+        },
+        {
+          "text": "math",
+          "rationale": "نموذج `math` هو جزء أساسي من المكتبة القياسية.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في النماذج المذكورة في الدرس. أي منها تم ذكره كمثال على مكتبة خارجية؟"
+    },
+    {
+      "questionNumber": 55,
+      "question": "في `tkinter`, ما هو الأمر المستخدم لتحديد أبعاد النافذة؟",
+      "answerOptions": [
+        {
+          "text": "window.size('300x300')",
+          "rationale": "اسم الدالة ليس `size`.",
+          "isCorrect": false
+        },
+        {
+          "text": "window.geometry('300x300')",
+          "rationale": "الدالة `geometry` هي المسؤولة عن تحديد حجم وموقع النافذة.",
+          "isCorrect": true
+        },
+        {
+          "text": "window.dimensions('300x300')",
+          "rationale": "اسم الدالة ليس `dimensions`.",
+          "isCorrect": false
+        },
+        {
+          "text": "window.shape('300x300')",
+          "rationale": "اسم الدالة ليس `shape`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "ابحث عن الكلمة الإنجليزية التي تعني 'الشكل الهندسي' أو 'الأبعاد'."
+    },
+    {
+      "questionNumber": 56,
+      "question": "ما هو ناتج `math.floor(9.99)`؟",
+      "answerOptions": [
+        {
+          "text": "10",
+          "rationale": "هذا هو ناتج `ceil` أو التقريب العادي.",
+          "isCorrect": false
+        },
+        {
+          "text": "9",
+          "rationale": "دالة `floor` (أرضية) دائمًا تقرب للأسفل إلى أقرب عدد صحيح.",
+          "isCorrect": true
+        },
+        {
+          "text": "9.9",
+          "rationale": "الدالة لا تقرب لأقرب جزء من عشرة.",
+          "isCorrect": false
+        },
+        {
+          "text": "9.0",
+          "rationale": "على الرغم من أن النتيجة عدد صحيح، فإن النوع المرجع قد يكون float، لكن القيمة هي 9.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "كلمة `floor` تعني 'أرضية'. ما هو العدد الصحيح الذي هو 'أسفل' 9.99؟"
+    },
+    {
+      "questionNumber": 57,
+      "question": "ماذا تفعل الدالة `time.sleep(5)` في `pygame` أو أي برنامج بايثون آخر؟",
+      "answerOptions": [
+        {
+          "text": "تغلق البرنامج بعد 5 ثوانٍ.",
+          "rationale": "هي توقف التنفيذ مؤقتًا، ولا تغلق البرنامج.",
+          "isCorrect": false
+        },
+        {
+          "text": "توقف تنفيذ البرنامج مؤقتًا لمدة 5 ثوانٍ.",
+          "rationale": "الدالة `sleep` تجعل البرنامج 'ينام' أو يتوقف عن العمل للمدة المحددة بالثواني.",
+          "isCorrect": true
+        },
+        {
+          "text": "تحذف آخر 5 تغييرات تمت على الشاشة.",
+          "rationale": "ليس لها علاقة بالرسوميات، هي فقط توقف التنفيذ.",
+          "isCorrect": false
+        },
+        {
+          "text": "تضبط معدل الإطارات على 5 إطارات في الثانية.",
+          "rationale": "لضبط معدل الإطارات نستخدم كائنات `pygame.time.Clock`.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "كلمة `sleep` تعني 'ينام'."
+    },
+    {
+      "questionNumber": 58,
+      "question": "ما هو الغرض الرئيسي من ميزة 'التخزين المؤقت المزدوج' (double buffering) المذكورة في الدرس؟",
+      "answerOptions": [
+        {
+          "text": "جعل البرنامج يعمل بشكل أسرع.",
+          "rationale": "هي لا تسرّع الحسابات، بل تحسّن طريقة العرض.",
+          "isCorrect": false
+        },
+        {
+          "text": "منع 'الوميض' (flickering) على الشاشة عن طريق رسم كل التغييرات في ذاكرة مؤقتة ثم عرضها دفعة واحدة.",
+          "rationale": "هذا هو التعريف الدقيق. يتم الرسم خلف الكواليس، ثم يتم تحديث الشاشة مرة واحدة، مما ينتج عنه حركة سلسة.",
+          "isCorrect": true
+        },
+        {
+          "text": "السماح برسم صورتين في نفس الوقت.",
+          "rationale": "هي تتعلق بعملية التحديث، وليس بعدد الصور المرسومة.",
+          "isCorrect": false
+        },
+        {
+          "text": "تقليل استهلاك الذاكرة.",
+          "rationale": "قد تزيد من استهلاك الذاكرة قليلاً لأنها تستخدم ذاكرة إضافية للتخزين المؤقت.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في الفرق بين تحديث الشاشة بعد رسم كل عنصر صغير، وتحديثها مرة واحدة بعد رسم كل شيء."
+    },
+    {
+      "questionNumber": 59,
+      "question": "للحصول على نسخة بايثون المستخدمة، أي أمر يجب كتابته؟",
+      "answerOptions": [
+        {
+          "text": "sys.version",
+          "rationale": "الخاصية `version` في نموذج `sys` تحتوي على معلومات مفصلة عن نسخة المفسر.",
+          "isCorrect": true
+        },
+        {
+          "text": "os.version",
+          "rationale": "نموذج `os` لا يحتوي على هذه الخاصية.",
+          "isCorrect": false
+        },
+        {
+          "text": "python.version()",
+          "rationale": "هذه ليست صياغة صحيحة.",
+          "isCorrect": false
+        },
+        {
+          "text": "sys.path",
+          "rationale": "`sys.path` يعرض مسارات البحث عن النماذج، وليس النسخة.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "تذكر النموذج الذي يوفر معلومات عن 'نظام' بايثون نفسه."
+    },
+    {
+      "questionNumber": 60,
+      "question": "إذا كان `result = datetime.date(2025, 2, 22) - datetime.date(2025, 2, 12)`, فماذا ستكون قيمة `result.days`؟",
+      "answerOptions": [
+        {
+          "text": "سيحدث خطأ",
+          "rationale": "يمكن طرح كائنات التاريخ من بعضها البعض.",
+          "isCorrect": false
+        },
+        {
+          "text": "10",
+          "rationale": "ناتج طرح تاريخين هو كائن `timedelta`, ويمكن الوصول لعدد الأيام من خلال خاصية `.days`.",
+          "isCorrect": true
+        },
+        {
+          "text": "-10",
+          "rationale": "النتيجة تكون موجبة لأننا نطرح التاريخ الأقدم من الأحدث.",
+          "isCorrect": false
+        },
+        {
+          "text": "1.0",
+          "rationale": "النتيجة تكون عددًا صحيحًا من الأيام، وليس عددًا عشريًا.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "احسب الفرق في الأيام بين التاريخين."
+    },
+    {
+      "questionNumber": 61,
+      "question": "صح أم خطأ: لا يمكن استخدام الدالة `dir()` مع أنواع البيانات البسيطة مثل الأرقام.",
+      "answerOptions": [
+        {
+          "text": "خطأ",
+          "rationale": "يمكن استخدامها بالتأكيد. جرب `dir(5)` أو `dir(3.14)` لترى العمليات المتاحة على الأرقام.",
+          "isCorrect": true
+        },
+        {
+          "text": "صح",
+          "rationale": "الدالة `dir()` عامة جدًا وتعمل مع جميع كائنات بايثون.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "في بايثون، كل شيء هو 'كائن', بما في ذلك الأرقام."
+    },
+    {
+      "questionNumber": 62,
+      "question": "ما وظيفة المعامل الثالث في الدالة `pygame.draw.lines(screen, pink, False, [(i,10), (250,350)], 1)`؟",
+      "answerOptions": [
+        {
+          "text": "يحدد لون الخط.",
+          "rationale": "اللون هو المعامل الثاني (`pink`).",
+          "isCorrect": false
+        },
+        {
+          "text": "يحدد ما إذا كان يجب إغلاق الشكل (توصيل النقطة الأخيرة بالأولى).",
+          "rationale": "إذا كانت القيمة `True`, سيتم رسم خط إضافي من النقطة الأخيرة إلى الأولى لإنشاء مضلع مغلق. `False` تعني ترك الشكل مفتوحًا.",
+          "isCorrect": true
+        },
+        {
+          "text": "يحدد سمك الخط.",
+          "rationale": "سمك الخط هو المعامل الأخير (`1`).",
+          "isCorrect": false
+        },
+        {
+          "text": "يحدد قائمة النقاط.",
+          "rationale": "قائمة النقاط هي المعامل الرابع.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في القيمة المنطقية (Boolean) وماذا يمكن أن تتحكم به في سياق رسم سلسلة من الخطوط."
+    },
+    {
+      "questionNumber": 63,
+      "question": "أي من التالي **ليس** مثالاً على نموذج برمجي قياسي مذكور في الدرس؟",
+      "answerOptions": [
+        {
+          "text": "tkinter",
+          "rationale": "تم ذكره كنموذج لواجهة المستخدم الرسومية.",
+          "isCorrect": false
+        },
+        {
+          "text": "platform",
+          "rationale": "تم ذكره كنموذج لمعرفة خصائص النظام.",
+          "isCorrect": false
+        },
+        {
+          "text": "turtle",
+          "rationale": "تم ذكره كنموذج للرسم.",
+          "isCorrect": false
+        },
+        {
+          "text": "requests",
+          "rationale": "`requests` هي مكتبة خارجية شائعة جدًا للتعامل مع طلبات الويب، ولكنها ليست جزءًا من المكتبة القياسية ولم تذكر في الدرس.",
+          "isCorrect": true
+        }
+      ],
+      "hint": "راجع قائمة الأمثلة على النماذج البرمجية القياسية في بداية الدرس."
+    },
+    {
+      "questionNumber": 64,
+      "question": "ماذا يعرض الأمر `print(sys.platform)` على نظام تشغيل ويندوز؟",
+      "answerOptions": [
+        {
+          "text": "يطبع 'Windows'",
+          "rationale": "الاسم المرجع يكون أكثر تحديدًا من مجرد 'Windows'.",
+          "isCorrect": false
+        },
+        {
+          "text": "يطبع 'win32' أو 'win64'",
+          "rationale": "هذه هي السلاسل النصية التي يستخدمها بايثون لتحديد بيئة ويندوز.",
+          "isCorrect": true
+        },
+        {
+          "text": "يطبع 'linux'",
+          "rationale": "هذه النتيجة تظهر على أنظمة لينكس.",
+          "isCorrect": false
+        },
+        {
+          "text": "سيحدث خطأ",
+          "rationale": "هذا أمر صحيح وسيعمل.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "تذكر المثال الموجود في الدرس والناتج الذي عرضه."
+    },
+    {
+      "questionNumber": 65,
+      "question": "العبارة 'إعادة استخدام المقطع البرمجي' هي أهمية أساسية لـ:",
+      "answerOptions": [
+        {
+          "text": "إنشاء المتغيرات",
+          "rationale": "المتغيرات تخزن البيانات، ولا تحتوي على مقاطع برمجية قابلة لإعادة الاستخدام.",
+          "isCorrect": false
+        },
+        {
+          "text": "النماذج البرمجية (Modules)",
+          "rationale": "الهدف الأساسي من تجميع الدوال في نماذج هو القدرة على استيرادها وإعادة استخدامها في مشاريع مختلفة.",
+          "isCorrect": true
+        },
+        {
+          "text": "كتابة التعليقات",
+          "rationale": "التعليقات تشرح الكود، ولكنها لا تساهم في إعادة استخدامه.",
+          "isCorrect": false
+        },
+        {
+          "text": "الدالة print()",
+          "rationale": "`print()` هي دالة بحد ذاتها، وليست مفهومًا لتنظيم الكود.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في المفهوم الذي يسمح لك بكتابة دالة مرة واحدة واستخدامها في 100 برنامج مختلف."
+    },
+    {
+      "questionNumber": 66,
+      "question": "إذا كنت تريد حساب اللوغاريثم الطبيعي للرقم 10، أي دالة ستستخدم؟",
+      "answerOptions": [
+        {
+          "text": "math.log10(10)",
+          "rationale": "هذه تحسب اللوغاريثم للأساس 10.",
+          "isCorrect": false
+        },
+        {
+          "text": "math.log(10)",
+          "rationale": "عندما لا يتم تحديد أساس، فإن دالة `log()` تحسب اللوغاريثم الطبيعي (للأساس `e`).",
+          "isCorrect": true
+        },
+        {
+          "text": "math.pow(e, 10)",
+          "rationale": "هذا يحسب e^10.",
+          "isCorrect": false
+        },
+        {
+          "text": "math.sqrt(10)",
+          "rationale": "هذا يحسب الجذر التربيعي.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "اللوغاريثم الطبيعي هو اللوغاريثم الذي أساسه الثابت `e`."
+    },
+    {
+      "questionNumber": 67,
+      "question": "صح أم خطأ: يمكن أن يكون للمكتبة القياسية والنموذج البرمجي نفس الاسم.",
+      "answerOptions": [
+        {
+          "text": "صح",
+          "rationale": "هذا صحيح، كما في حالة `pygame`, حيث أن `pygame` هو اسم المكتبة التي تثبتها، وهو أيضًا اسم النموذج الرئيسي الذي تستورده.",
+          "isCorrect": true
+        },
+        {
+          "text": "خطأ",
+          "rationale": "هذا ممكن وشائع في بعض الحالات.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "فكر في مكتبة `pygame` التي تم شرحها في الدرس."
+  }
+  ]
+}

@@ -1,0 +1,644 @@
+{
+  "questions": [
+    {
+      "question_number": 1,
+      "type": "multiple_choice",
+      "question": "ما هي البيانات التي يتم فقدانها عند إيقاف تشغيل البرنامج؟",
+      "hint": "فكر في الذاكرة التي تستخدم لتخزين البيانات أثناء التشغيل فقط.",
+      "answer_data": {
+        "options": [
+          "A) البيانات المخزنة في الملفات",
+          "B) البيانات المخزنة في الذاكرة العشوائية (RAM)",
+          "C) البيانات المخزنة على القرص الصلب",
+          "D) البيانات المخزنة في قواعد البيانات"
+        ],
+        "correct_answer": "B) البيانات المخزنة في الذاكرة العشوائية (RAM)"
+      }
+    },
+    {
+      "question_number": 2,
+      "type": "true_false",
+      "question": "تُستخدم الملفات لتخزين البيانات بشكل دائم، مما يمنع فقدانها عند إيقاف البرنامج.",
+      "hint": "هذا هو الغرض الأساسي من استخدام الملفات.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 3,
+      "type": "multiple_choice",
+      "question": "ما هو أبسط أنواع حاويات تخزين البيانات؟",
+      "hint": "الدرس يركز على نوع معين من الملفات.",
+      "answer_data": {
+        "options": [
+          "A) ملفات الوسائط المتعددة",
+          "B) الملفات الثنائية",
+          "C) الملفات النصية",
+          "D) قواعد البيانات"
+        ],
+        "correct_answer": "C) الملفات النصية"
+      }
+    },
+    {
+      "question_number": 4,
+      "type": "true_false",
+      "question": "الملف النصي هو سلسلة من النصوص التي قد تحتوي على الأحرف والأرقام والرموز فقط.",
+      "hint": "فكر في محتويات الملف النصي.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 5,
+      "type": "multiple_choice",
+      "question": "ما هي العملية التي يتم فيها نقل قيم المتغيرات وهياكل البيانات من البرنامج إلى الملف؟",
+      "hint": "العملية التي تسمى 'الكتابة في ملف'.",
+      "answer_data": {
+        "options": [
+          "A) فتح الملف",
+          "B) قراءة الملف",
+          "C) الكتابة في الملف",
+          "D) إغلاق الملف"
+        ],
+        "correct_answer": "C) الكتابة في الملف"
+      }
+    },
+    {
+      "question_number": 6,
+      "type": "true_false",
+      "question": "لفتح ملف، يجب عليك تحديد موقعه فقط.",
+      "hint": "هناك عامل آخر يجب تحديده بجانب الموقع.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 7,
+      "type": "multiple_choice",
+      "question": "ما هو النمط الذي يسمح لك بالقراءة والكتابة في ملف موجود، مع حذف محتواه السابق؟",
+      "hint": "النمط الذي يبدأ بحرف 'w'.",
+      "answer_data": {
+        "options": ["A) 'r'", "B) 'w'", "C) 'a'", "D) 'r+'"],
+        "correct_answer": "B) 'w'"
+      }
+    },
+    {
+      "question_number": 8,
+      "type": "true_false",
+      "question": "يتم استخدام النمط 'r' لفتح ملف للكتابة فقط.",
+      "hint": "الرمز 'r' يشير إلى 'قراءة' باللغة الإنجليزية.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 9,
+      "type": "multiple_choice",
+      "question": "ما هي الطريقة الصحيحة لفتح ملف للقراءة فقط؟",
+      "hint": "استخدم دالة `open()` مع النمط الصحيح.",
+      "answer_data": {
+        "options": [
+          "A) `file = open('data.txt', 'r')`",
+          "B) `file = open('data.txt', 'w')`",
+          "C) `file = open('data.txt', 'a')`",
+          "D) `file = open('data.txt')`"
+        ],
+        "correct_answer": "A) `file = open('data.txt', 'r')`"
+      }
+    },
+    {
+      "question_number": 10,
+      "type": "true_false",
+      "question": "عند استخدام النمط 'a'، يتم حذف المحتوى السابق للملف.",
+      "hint": "الرمز 'a' يشير إلى 'إضافة' باللغة الإنجليزية.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 11,
+      "type": "multiple_choice",
+      "question": "أي من الأوامر التالية يقرأ محتوى الملف بالكامل ويخزنه في متغير؟",
+      "hint": "هذا الأمر لا يقرأ سطراً واحداً فقط.",
+      "answer_data": {
+        "options": [
+          "A) `file.readline()`",
+          "B) `file.readlines()`",
+          "C) `file.read()`",
+          "D) `file.close()`"
+        ],
+        "correct_answer": "C) `file.read()`"
+      }
+    },
+    {
+      "question_number": 12,
+      "type": "true_false",
+      "question": "يجب إغلاق الملف بعد الانتهاء من استخدامه لتجنب استهلاك الموارد.",
+      "hint": "هل يجب أن تقوم بإغلاق الملفات المفتوحة؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 13,
+      "type": "multiple_choice",
+      "question": "ما هي أفضل طريقة لضمان إغلاق الملف تلقائيًا بعد الانتهاء من استخدامه؟",
+      "hint": "هذا الهيكل البرمجي يغلق الملف تلقائيًا حتى لو حدث خطأ.",
+      "answer_data": {
+        "options": [
+          "A) `try...except`",
+          "B) `if...else`",
+          "C) `with open(...) as ...`",
+          "D) `for` loop"
+        ],
+        "correct_answer": "C) `with open(...) as ...`"
+      }
+    },
+    {
+      "question_number": 14,
+      "type": "true_false",
+      "question": "يُستخدم الأمر `file.readline()` لقراءة سطر واحد من الملف.",
+      "hint": "اسم الأمر يشير إلى وظيفته.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 15,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود؟\n\n`my_file = open('data.txt', 'w')`\n`my_file.write('Hello World!')`\n`my_file.close()`\n\n`my_file = open('data.txt', 'r')`\n`content = my_file.read()`\n`print(content)`\n`my_file.close()`",
+      "hint": "تتبع ما يحدث في الملف.",
+      "answer_data": {
+        "options": ["A) Hello", "B) World!", "C) Hello World!", "D) لا شيء"],
+        "correct_answer": "C) Hello World!"
+      }
+    },
+    {
+      "question_number": 16,
+      "type": "true_false",
+      "question": "يتم استخدام `file.writelines()` لكتابة قائمة من السلاسل النصية في الملف.",
+      "hint": "تذكر الفرق بين `write` و `writelines`.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 17,
+      "type": "multiple_choice",
+      "question": "ما هي وظيفة الأمر `file.readlines()`؟",
+      "hint": "تذكر أنه يقرأ كل سطر ويخزنه في قائمة.",
+      "answer_data": {
+        "options": [
+          "A) قراءة سطر واحد فقط",
+          "B) قراءة محتوى الملف بالكامل كسلسلة نصية واحدة",
+          "C) قراءة جميع الأسطر وتخزينها في قائمة",
+          "D) كتابة قائمة من الأسطر في الملف"
+        ],
+        "correct_answer": "C) قراءة جميع الأسطر وتخزينها في قائمة"
+      }
+    },
+    {
+      "question_number": 18,
+      "type": "true_false",
+      "question": "عند استخدام النمط 'w', إذا كان الملف موجودًا فسيتم حذف محتواه، وإذا لم يكن موجودًا فسيتم إنشاؤه.",
+      "hint": "هذا هو السلوك الأساسي لنمط 'w'.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 19,
+      "type": "multiple_choice",
+      "question": "ما هو الخطأ الذي سيحدث عند محاولة فتح ملف غير موجود باستخدام النمط 'r'?",
+      "hint": "الخطأ يشير إلى عدم وجود الملف.",
+      "answer_data": {
+        "options": ["A) `TypeError`", "B) `ValueError`", "C) `FileNotFoundError`", "D) `IOError`"],
+        "correct_answer": "C) `FileNotFoundError`"
+      }
+    },
+    {
+      "question_number": 20,
+      "type": "true_false",
+      "question": "البيانات في ذاكرة الوصول العشوائي (RAM) تُخزن بشكل دائم.",
+      "hint": "تذكر أن البيانات في الذاكرة العشوائية تفقد عند إيقاف تشغيل الجهاز.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 21,
+      "type": "multiple_choice",
+      "question": "ما هي الوظيفة الأساسية للملفات في البرمجة؟",
+      "hint": "فكر في الهدف من استخدامها في البرامج.",
+      "answer_data": {
+        "options": ["A) عرض البيانات على الشاشة", "B) تخزين البيانات بشكل مؤقت", "C) تخزين البيانات بشكل دائم", "D) إجراء العمليات الحسابية"],
+        "correct_answer": "C) تخزين البيانات بشكل دائم"
+      }
+    },
+    {
+      "question_number": 22,
+      "type": "true_false",
+      "question": "يتم استخدام `file.write()` لكتابة سلسلة نصية واحدة في الملف.",
+      "hint": "تذكر الفرق بين `write` و `writelines`.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 23,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود إذا كان الملف 'data.txt' يحتوي على 'Hello World!'؟\n\n`with open('data.txt', 'r') as file:`\n  `print(file.read())`",
+      "hint": "تتبع ما يفعله الأمر `read()`.",
+      "answer_data": {
+        "options": ["A) Hello", "B) World!", "C) Hello World!", "D) خطأ"],
+        "correct_answer": "C) Hello World!"
+      }
+    },
+    {
+      "question_number": 24,
+      "type": "true_false",
+      "question": "يُستخدم النمط 'r' لفتح ملف غير موجود وإنشائه.",
+      "hint": "ماذا يحدث عند محاولة فتح ملف غير موجود للقراءة؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 25,
+      "type": "multiple_choice",
+      "question": "ما هو الأمر المستخدم لإغلاق ملف بعد الانتهاء من استخدامه؟",
+      "hint": "اسم الأمر يشير إلى وظيفته.",
+      "answer_data": {
+        "options": ["A) `file.stop()`", "B) `file.end()`", "C) `file.close()`", "D) `file.exit()`"],
+        "correct_answer": "C) `file.close()`"
+      }
+    },
+    {
+      "question_number": 26,
+      "type": "true_false",
+      "question": "يُعد `open()` أحد الدوال المدمجة (Built-In Functions) في بايثون.",
+      "hint": "هل تحتاج إلى استيراد مكتبة لاستخدام هذه الدالة؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 27,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود إذا كان الملف 'data.txt' يحتوي على:\n\n`Line 1`\n`Line 2`\n`Line 3`\n\n\n`with open('data.txt', 'r') as file:`\n  `lines = file.readlines()`\n  `print(lines)`",
+      "hint": "تذكر أن `readlines()` يرجع قائمة.",
+      "answer_data": {
+        "options": ["A) `['Line 1', 'Line 2', 'Line 3']`", "B) `Line 1`\n`Line 2`\n`Line 3`", "C) `Line 1`", "D) `['Line 1\n', 'Line 2\n', 'Line 3\n']`"],
+        "correct_answer": "D) `['Line 1\n', 'Line 2\n', 'Line 3\n']`"
+      }
+    },
+    {
+      "question_number": 28,
+      "type": "true_false",
+      "question": "الذاكرة العشوائية (RAM) هي وسيلة تخزين دائمة للبيانات.",
+      "hint": "البيانات في RAM تفقد عند إيقاف التشغيل.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 29,
+      "type": "multiple_choice",
+      "question": "ما هو النمط الذي يسمح لك بإضافة محتوى جديد إلى نهاية ملف موجود؟",
+      "hint": "الرمز 'a' يشير إلى 'إضافة' أو 'append' باللغة الإنجليزية.",
+      "answer_data": {
+        "options": ["A) 'r'", "B) 'w'", "C) 'a'", "D) 'r+'"],
+        "correct_answer": "C) 'a'"
+      }
+    },
+    {
+      "question_number": 30,
+      "type": "true_false",
+      "question": "للقراءة من ملف، أنت تخزن البيانات في متغيرات أو هياكل بيانات داخل البرنامج.",
+      "hint": "هذا هو الهدف من عملية القراءة.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 31,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود إذا كان الملف 'data.txt' يحتوي على 'First line'?\n\n`with open('data.txt', 'w') as file:`\n  `file.write('Second line')`\n\n`with open('data.txt', 'r') as file:`\n  `print(file.read())`",
+      "hint": "تذكر أن نمط 'w' يحذف المحتوى السابق.",
+      "answer_data": { "options": ["A) First line", "B) Second line", "C) First line Second line", "D) خطأ"], "correct_answer": "B) Second line" }
+    },
+    {
+      "question_number": 32,
+      "type": "true_false",
+      "question": "يُعد الملف النصي (Text File) سلسلة من النصوص التي لا يمكن التعديل عليها.",
+      "hint": "هل يمكن إضافة أو حذف أو تعديل محتوى الملف النصي؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 33,
+      "type": "multiple_choice",
+      "question": "ما هي الوظيفة الأساسية للأمر `open()`؟",
+      "hint": "تذكر أن هذا الأمر هو الخطوة الأولى للتعامل مع أي ملف.",
+      "answer_data": { "options": ["A) إغلاق ملف", "B) قراءة محتوى ملف", "C) فتح ملف", "D) حذف ملف"], "correct_answer": "C) فتح ملف" }
+    },
+    {
+      "question_number": 34,
+      "type": "true_false",
+      "question": "عند استخدام `with open(...)`, لا تحتاج إلى استدعاء `file.close()`.",
+      "hint": "هذا هو الهدف من استخدام هذا الهيكل البرمجي.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 35,
+      "type": "multiple_choice",
+      "question": "ما هو النمط الذي يسمح لك بالقراءة من ملف موجود والكتابة عليه دون حذف محتواه السابق؟",
+      "hint": "الرمز 'r+' يشير إلى 'قراءة وكتابة'.",
+      "answer_data": { "options": ["A) 'a'", "B) 'w'", "C) 'r'", "D) 'r+'"], "correct_answer": "D) 'r+'" }
+    },
+    {
+      "question_number": 36,
+      "type": "true_false",
+      "question": "يمكن استخدام `for` loop للتكرار على أسطر ملف مفتوح.",
+      "hint": "فكر في كيفية التكرار على ملف سطرًا سطرًا.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 37,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود إذا كان الملف 'data.txt' يحتوي على 'Line 1' و 'Line 2'?\n\n`with open('data.txt', 'r') as file:`\n  `print(file.readline())`",
+      "hint": "تذكر أن `readline()` يقرأ سطرًا واحدًا فقط.",
+      "answer_data": { "options": ["A) `Line 1`", "B) `Line 2`", "C) `Line 1` و `Line 2`", "D) لا شيء"], "correct_answer": "A) `Line 1`" }
+    },
+    {
+      "question_number": 38,
+      "type": "true_false",
+      "question": "لا يمكن التعامل مع الملفات باستخدام هياكل البيانات مثل القوائم.",
+      "hint": "هل يمكن قراءة أسطر الملف وتخزينها في قائمة؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 39,
+      "type": "multiple_choice",
+      "question": "لإنشاء ملف جديد والكتابة فيه، ما هو النمط الذي يجب استخدامه؟",
+      "hint": "النمط الذي يبدأ بحرف 'w'.",
+      "answer_data": { "options": ["A) 'r'", "B) 'a'", "C) 'w'", "D) 'r+'"], "correct_answer": "C) 'w'" }
+    },
+    {
+      "question_number": 40,
+      "type": "true_false",
+      "question": "عند فتح ملف بنمط 'a', إذا كان الملف غير موجود فسيتم إنشاؤه.",
+      "hint": "هل النمط 'a' ينشئ الملف إذا لم يكن موجودًا؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 41,
+      "type": "multiple_choice",
+      "question": "ما هي الوظيفة الأساسية للأمر `file.write()`؟",
+      "hint": "تذكر أنه يستخدم لإرسال البيانات إلى الملف.",
+      "answer_data": { "options": ["A) قراءة محتوى الملف", "B) حذف محتوى الملف", "C) كتابة سلسلة نصية في الملف", "D) إغلاق الملف"], "correct_answer": "C) كتابة سلسلة نصية في الملف" }
+    },
+    {
+      "question_number": 42,
+      "type": "true_false",
+      "question": "يمكن استخدام `file.readlines()` لقراءة سطر واحد فقط من الملف.",
+      "hint": "تذكر أن هذا الأمر يقرأ كل الأسطر.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 43,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود إذا كان الملف 'data.txt' يحتوي على 'Hello'?\n\n`with open('data.txt', 'a') as file:`\n  `file.write(' World!')`\n\n`with open('data.txt', 'r') as file:`\n  `print(file.read())`",
+      "hint": "تذكر أن النمط 'a' يضيف المحتوى الجديد.",
+      "answer_data": { "options": ["A) World!", "B) Hello World!", "C) Hello", "D) خطأ"], "correct_answer": "B) Hello World!" }
+    },
+    {
+      "question_number": 44,
+      "type": "true_false",
+      "question": "الذاكرة العشوائية (RAM) تُخزن البيانات بشكل مؤقت.",
+      "hint": "البيانات في RAM تفقد عند إيقاف التشغيل.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 45,
+      "type": "multiple_choice",
+      "question": "ما هو الغرض من استخدام `try...except` عند التعامل مع الملفات؟",
+      "hint": "فكر في الأخطاء المحتملة مثل عدم وجود الملف.",
+      "answer_data": { "options": ["A) لفتح الملف", "B) لكتابة البيانات في الملف", "C) للتعامل مع الأخطاء مثل عدم وجود الملف", "D) لإغلاق الملف"], "correct_answer": "C) للتعامل مع الأخطاء مثل عدم وجود الملف" }
+    },
+    {
+      "question_number": 46,
+      "type": "true_false",
+      "question": "الملفات النصية لا يمكن أن تحتوي على أرقام.",
+      "hint": "الدرس يقول إنها قد تحتوي على أحرف وأرقام ورموز.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 47,
+      "type": "multiple_choice",
+      "question": "أي من الأوامر التالية يفتح ملفًا للقراءة والكتابة مع حذف المحتوى السابق؟",
+      "hint": "النمط `w+`.",
+      "answer_data": { "options": ["A) `open('data.txt', 'r')`", "B) `open('data.txt', 'a')`", "C) `open('data.txt', 'w+')`", "D) `open('data.txt', 'r+')`"], "correct_answer": "C) `open('data.txt', 'w+')`" }
+    },
+    {
+      "question_number": 48,
+      "type": "true_false",
+      "question": "يُعد `read()` أحد الدوال المدمجة في بايثون للتعامل مع الملفات.",
+      "hint": "تذكر أن `read()` هو أمر تابع لكائن الملف.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 49,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود إذا كان الملف 'data.txt' يحتوي على:\n\n`Line 1`\n`Line 2`\n\n`with open('data.txt', 'r') as file:`\n  `for line in file:`\n    `print(line)`",
+      "hint": "تتبع كيفية عمل حلقة `for` على الملف.",
+      "answer_data": { "options": ["A) Line 1", "B) Line 2", "C) `Line 1`\n`Line 2`", "D) `Line 1` `Line 2`"], "correct_answer": "C) `Line 1`\n`Line 2`" }
+    },
+    {
+      "question_number": 50,
+      "type": "true_false",
+      "question": "يمكن التعامل مع الملفات النصية فقط باستخدام أوامر برمجية محددة.",
+      "hint": "هل يمكن التعديل عليها يدوياً؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 51,
+      "type": "multiple_choice",
+      "question": "ما هو الغرض من استخدام `file.writelines()`؟",
+      "hint": "تذكر أنها تكتب قائمة من السلاسل النصية.",
+      "answer_data": { "options": ["A) لكتابة سطر واحد في الملف", "B) لقراءة جميع الأسطر", "C) لكتابة قائمة من الأسطر في الملف", "D) لحذف محتوى الملف"], "correct_answer": "C) لكتابة قائمة من الأسطر في الملف" }
+    },
+    {
+      "question_number": 52,
+      "type": "true_false",
+      "question": "تُستخدم الملفات لتخزين البيانات في ذاكرة الوصول العشوائية (RAM).",
+      "hint": "الملفات تخزن البيانات على القرص الصلب أو وحدات تخزين أخرى.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 53,
+      "type": "multiple_choice",
+      "question": "ما هو النمط الافتراضي عند فتح ملف باستخدام `open()` دون تحديد نمط؟",
+      "hint": "النمط الافتراضي هو للقراءة فقط.",
+      "answer_data": { "options": ["A) 'r'", "B) 'w'", "C) 'a'", "D) 'r+'"], "correct_answer": "A) 'r'" }
+    },
+    {
+      "question_number": 54,
+      "type": "true_false",
+      "question": "يُعد `file.close()` أمرًا ضروريًا لتحرير موارد النظام.",
+      "hint": "إغلاق الملف يحرر الموارد التي استخدمها البرنامج.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 55,
+      "type": "multiple_choice",
+      "question": "ماذا يحدث عند محاولة فتح ملف غير موجود بنمط 'w'?",
+      "hint": "النمط 'w' يمكنه إنشاء الملف.",
+      "answer_data": { "options": ["A) يحدث خطأ `FileNotFoundError`", "B) يتم إنشاء ملف جديد", "C) لا شيء يحدث", "D) يتم إرجاع قيمة `None`"], "correct_answer": "B) يتم إنشاء ملف جديد" }
+    },
+    {
+      "question_number": 56,
+      "type": "true_false",
+      "question": "البيانات المخزنة في الملفات يتم فقدانها فور إيقاف البرنامج.",
+      "hint": "الملفات تخزن البيانات بشكل دائم.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 57,
+      "type": "multiple_choice",
+      "question": "ما هو الفرق الرئيسي بين `read()` و `readlines()`؟",
+      "hint": "إحداهما ترجع سلسلة نصية والأخرى ترجع قائمة.",
+      "answer_data": { "options": ["A) `read()` يقرأ سطرًا واحدًا، `readlines()` يقرأ كل الملف.", "B) `read()` يرجع سلسلة نصية، `readlines()` يرجع قائمة.", "C) `read()` يقرأ من النهاية، `readlines()` يقرأ من البداية.", "D) لا يوجد فرق بينهما."], "correct_answer": "B) `read()` يرجع سلسلة نصية، `readlines()` يرجع قائمة." }
+    },
+    {
+      "question_number": 58,
+      "type": "true_false",
+      "question": "يمكن استخدام `for` loop للتكرار على محتوى ملف تم فتحه.",
+      "hint": "هل يمكن التكرار على الملف سطرًا سطرًا؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 59,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود:\n\n`lines = ['Line 1\\n', 'Line 2\\n', 'Line 3\\n']`\n`with open('data.txt', 'w') as file:`\n  `file.writelines(lines)`\n\n`with open('data.txt', 'r') as file:`\n  `print(file.read())`",
+      "hint": "تذكر أن `writelines()` لا تضيف أسطرًا جديدة تلقائيًا.",
+      "answer_data": { "options": ["A) Line 1 Line 2 Line 3", "B) Line 1\\nLine 2\\nLine 3\\n", "C) ['Line 1\\n', 'Line 2\\n', 'Line 3\\n']", "D) خطأ"], "correct_answer": "B) Line 1\nLine 2\nLine 3\n" }
+    },
+    {
+      "question_number": 60,
+      "type": "true_false",
+      "question": "عند فتح ملف بنمط 'a', إذا كان الملف موجودًا فسيتم حذف محتواه.",
+      "hint": "النمط 'a' يضيف المحتوى الجديد إلى نهاية الملف.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 61,
+      "type": "multiple_choice",
+      "question": "ما هي الخطوة الأولى للتعامل مع أي ملف؟",
+      "hint": "الخطوة التي تسبق القراءة أو الكتابة.",
+      "answer_data": { "options": ["A) إغلاق الملف", "B) قراءة محتوى الملف", "C) فتح الملف", "D) كتابة البيانات"], "correct_answer": "C) فتح الملف" }
+    },
+    {
+      "question_number": 62,
+      "type": "true_false",
+      "question": "يمكن كتابة البيانات في ملف فقط إذا كان فارغًا.",
+      "hint": "هل يمكن الكتابة في ملف يحتوي على بيانات بالفعل؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 63,
+      "type": "multiple_choice",
+      "question": "ما هو الأمر الذي يسمح لك بقراءة سطر واحد من ملف مفتوح؟",
+      "hint": "اسم الأمر يشير إلى 'قراءة سطر'.",
+      "answer_data": { "options": ["A) `file.read()`", "B) `file.readlines()`", "C) `file.readline()`", "D) `file.write()`"], "correct_answer": "C) `file.readline()`" }
+    },
+    {
+      "question_number": 64,
+      "type": "true_false",
+      "question": "يتم استخدام النمط 'w' لفتح ملف موجود والكتابة عليه دون حذف محتواه.",
+      "hint": "النمط 'w' يحذف المحتوى السابق.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 65,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود إذا كان الملف 'data.txt' يحتوي على 'Line 1' و 'Line 2'?\n\n`with open('data.txt', 'r') as file:`\n  `content = file.read()`\n  `print(content)`",
+      "hint": "تذكر أن `read()` يقرأ كل المحتوى.",
+      "answer_data": { "options": ["A) Line 1", "B) Line 2", "C) Line 1\nLine 2", "D) `['Line 1', 'Line 2']`"], "correct_answer": "C) Line 1\nLine 2" }
+    },
+    {
+      "question_number": 66,
+      "type": "true_false",
+      "question": "يُعد `with open(...)` طريقة غير آمنة للتعامل مع الملفات.",
+      "hint": "هذا الهيكل يضمن إغلاق الملف حتى في حالة حدوث خطأ.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 67,
+      "type": "multiple_choice",
+      "question": "أي من الأوامر التالية يستخدم لكتابة قائمة من الأسطر في ملف؟",
+      "hint": "اسم الأمر يشير إلى 'كتابة أسطر'.",
+      "answer_data": { "options": ["A) `file.read()`", "B) `file.write()`", "C) `file.readlines()`", "D) `file.writelines()`"], "correct_answer": "D) `file.writelines()`" }
+    },
+    {
+      "question_number": 68,
+      "type": "true_false",
+      "question": "البيانات المخزنة في الذاكرة العشوائية (RAM) تُستخدم للمعالجة فقط.",
+      "hint": "هل تُستخدم في المعالجة أم في التخزين الدائم؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 69,
+      "type": "multiple_choice",
+      "question": "ما هو الغرض من استخدام `finally` في كتلة `try...except...finally` عند التعامل مع الملفات؟",
+      "hint": "يتم تنفيذ الكود داخلها دائمًا.",
+      "answer_data": { "options": ["A) لمعالجة الأخطاء", "B) لفتح الملف", "C) لتنفيذ الكود بغض النظر عن حدوث خطأ", "D) لكتابة البيانات"], "correct_answer": "C) لتنفيذ الكود بغض النظر عن حدوث خطأ" }
+    },
+    {
+      "question_number": 70,
+      "type": "true_false",
+      "question": "لا يمكن إضافة محتوى جديد إلى نهاية ملف موجود.",
+      "hint": "تذكر النمط 'a'.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 71,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود:\n\n`with open('data.txt', 'w') as file:`\n  `file.write('First line')`\n  `file.write('Second line')`\n\n`with open('data.txt', 'r') as file:`\n  `print(file.read())`",
+      "hint": "تذكر أن `write()` لا تضيف أسطرًا جديدة تلقائيًا.",
+      "answer_data": { "options": ["A) First line", "B) Second line", "C) First lineSecond line", "D) خطأ"], "correct_answer": "C) First lineSecond line" }
+    },
+    {
+      "question_number": 72,
+      "type": "true_false",
+      "question": "البيانات في الملفات تُخزن على القرص الصلب.",
+      "hint": "الملفات تستخدم وحدات التخزين الدائمة.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 73,
+      "type": "multiple_choice",
+      "question": "ما هو الغرض من استخدام `try...except` في الكود التالي:\n\n`try:`\n  `f = open('data.txt', 'r')`\n  `print(f.read())`\n`except FileNotFoundError:`\n  `print('The file was not found.')`",
+      "hint": "يتم استخدام `except` للتعامل مع الأخطاء.",
+      "answer_data": { "options": ["A) للتأكد من إغلاق الملف", "B) للتعامل مع خطأ عدم وجود الملف", "C) لقراءة الملف فقط", "D) لفتح الملف فقط"], "correct_answer": "B) للتعامل مع خطأ عدم وجود الملف" }
+    },
+    {
+      "question_number": 74,
+      "type": "true_false",
+      "question": "يُعد `file.write()` أحد أوامر كتابة البيانات في الملفات.",
+      "hint": "تذكر أن `write()` يكتب سلسلة نصية.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 75,
+      "type": "multiple_choice",
+      "question": "ما هو الأمر الذي يحذف محتوى الملف قبل الكتابة فيه؟",
+      "hint": "النمط 'w' يحذف المحتوى السابق.",
+      "answer_data": { "options": ["A) `file.append()`", "B) `file.read()`", "C) `file.write()`", "D) `open('data.txt', 'w')`"], "correct_answer": "D) `open('data.txt', 'w')`" }
+    },
+    {
+      "question_number": 76,
+      "type": "true_false",
+      "question": "لا يمكن قراءة ملف نصي سطرًا سطرًا.",
+      "hint": "هل يمكن استخدام `readline()` أو حلقة `for`؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 77,
+      "type": "multiple_choice",
+      "question": "أي من الأوامر التالية يقرأ كل سطر من الملف ويخزنه كعنصر في قائمة؟",
+      "hint": "اسم الأمر يشير إلى 'قراءة الأسطر'.",
+      "answer_data": { "options": ["A) `file.read()`", "B) `file.readline()`", "C) `file.readlines()`", "D) `file.write()`"], "correct_answer": "C) `file.readlines()`" }
+    },
+    {
+      "question_number": 78,
+      "type": "true_false",
+      "question": "الذاكرة العشوائية (RAM) تُستخدم لتخزين البيانات التي لا تحتاج إلى أن تبقى بعد إيقاف البرنامج.",
+      "hint": "هذا هو الغرض من RAM.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 79,
+      "type": "multiple_choice",
+      "question": "ما هي الخطوة التي تضمن عدم فقدان البيانات التي تم إنشاؤها أثناء تشغيل البرنامج؟",
+      "hint": "فكر في التخزين الدائم.",
+      "answer_data": { "options": ["A) استخدام ذاكرة RAM", "B) إيقاف تشغيل البرنامج", "C) تخزين البيانات في ملف", "D) استخدام المتغيرات فقط"], "correct_answer": "C) تخزين البيانات في ملف" }
+    },
+    {
+      "question_number": 80,
+      "type": "true_false",
+      "question": "الملفات النصية لا يمكن أن تحتوي على رموز.",
+      "hint": "الدرس يقول إنها تحتوي على أحرف وأرقام ورموز.",
+      "answer_data": { "correct_answer": false }
+    }
+  ]
+}
