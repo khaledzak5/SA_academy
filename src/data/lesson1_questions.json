@@ -1,561 +1,591 @@
 {
-  "unit_title": "الوحدة الرابعة: البرمجة مع بايثون",
+  "unit_title": "الوحدة الأولى: القوائم والهياكل الأساسية",
   "questions": [
     {
-      "id": 1,
-      "question_text": "في لغة بايثون، ما هي الوظيفة الأساسية لهياكل البيانات (Data Structures)?",
-      "question_type": "multiple_choice",
-      "options": [
-        "تنفيذ العمليات الحسابية فقط",
-        "وسيلة لتخزين وتنظيم البيانات في الذاكرة بكفاءة",
-        "رسم الأشكال والرسومات البيانية",
-        "التعامل مع مدخلات المستخدم فقط"
-      ],
-      "correct_answer": "وسيلة لتخزين وتنظيم البيانات في الذاكرة بكفاءة",
-      "difficulty": "easy",
-      "topic": "مقدمة هياكل البيانات"
+      "question_number": 1,
+      "type": "multiple_choice",
+      "question": "ما هي الأقواس المستخدمة لتعريف القائمة في بايثون؟",
+      "hint": "تذكر الشكل العام لتعريف القائمة.",
+      "answer_data": {
+        "options": [
+          "A) أقواس دائرية ()",
+          "B) أقواس مربعة []",
+          "C) أقواس متعرجة {}",
+          "D) أقواس الزاوية <>"
+        ],
+        "correct_answer": "B) أقواس مربعة []"
+      }
     },
     {
-      "id": 2,
-      "question_text": "الأعداد الصحيحة (Integers) والأعداد العشرية (Floating Points) تعتبر من أنواع هياكل البيانات البسيطة (Primitive).",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "easy",
-      "topic": "هياكل البيانات البسيطة"
+      "question_number": 2,
+      "type": "true_false",
+      "question": "تُستخدم القوائم لتخزين البيانات من نفس النوع فقط.",
+      "hint": "هل يمكن للقائمة أن تحتوي على أرقام ونصوص معاً؟",
+      "answer_data": { "correct_answer": false }
     },
     {
-      "id": 3,
-      "question_text": "أي من الخيارات التالية يُستخدم لتعريف قائمة (List) في بايثون؟",
-      "question_type": "multiple_choice",
-      "options": [
-        "()",
-        "{}",
-        "[]",
-        "<> "
-      ],
-      "correct_answer": "[]",
-      "difficulty": "easy",
-      "topic": "القوائم (Lists)"
+      "question_number": 3,
+      "type": "multiple_choice",
+      "question": "ما هو الفهرس الذي يمثل العنصر الأول في القائمة؟",
+      "hint": "تذكر أن فهرسة القوائم تبدأ من رقم معين.",
+      "answer_data": {
+        "options": ["A) 1", "B) 0", "C) -1", "D) 2"],
+        "correct_answer": "B) 0"
+      }
     },
     {
-      "id": 4,
-      "question_text": "تبدأ فهرسة العناصر في القوائم وصفوف البيانات في بايثون من الرقم 1.",
-      "question_type": "true_false",
-      "correct_answer": false,
-      "difficulty": "easy",
-      "topic": "الفهرسة (Indexing)"
+      "question_number": 4,
+      "type": "true_false",
+      "question": "القائمة (List) هي هيكل بيانات غير قابل للتعديل.",
+      "hint": "هل يمكنك تغيير أو إضافة عناصر إلى القائمة بعد إنشائها؟",
+      "answer_data": { "correct_answer": false }
     },
     {
-      "id": 5,
-      "question_text": "ماذا سيكون ناتج الكود التالي؟ `for i in range(5): print(i)`",
-      "question_type": "multiple_choice",
-      "options": [
-        "يطبع الأرقام من 1 إلى 5",
-        "يطبع الأرقام من 0 إلى 4",
-        "يطبع الرقم 5 فقط",
-        "يسبب خطأ برمجياً"
-      ],
-      "correct_answer": "يطبع الأرقام من 0 إلى 4",
-      "difficulty": "medium",
-      "topic": "دالة range"
+      "question_number": 5,
+      "type": "multiple_choice",
+      "question": "ما هي الدالة التي تُستخدم لحساب عدد عناصر القائمة؟",
+      "hint": "اسم الدالة هو اختصار لكلمة 'طول' بالإنجليزية.",
+      "answer_data": {
+        "options": ["A) `sum()`", "B) `max()`", "C) `len()`", "D) `count()`"],
+        "correct_answer": "C) `len()`"
+      }
     },
     {
-      "id": 6,
-      "question_text": "تُعرف القوائم (Lists) في بايثون بأنها غير قابلة للتغيير (Immutable) بعد إنشائها.",
-      "question_type": "true_false",
-      "correct_answer": false,
-      "difficulty": "easy",
-      "topic": "خصائص القوائم"
+      "question_number": 6,
+      "type": "true_false",
+      "question": "يمكن الوصول إلى العناصر في القائمة باستخدام الفهرسة السالبة.",
+      "hint": "هل يمثل الفهرس -1 العنصر الأخير في القائمة؟",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 7,
-      "question_text": "أي دالة تستخدم لمعرفة عدد العناصر الموجودة داخل قائمة؟",
-      "question_type": "multiple_choice",
-      "options": [
-        "count()",
-        "sum()",
-        "size()",
-        "len()"
-      ],
-      "correct_answer": "len()",
-      "difficulty": "easy",
-      "topic": "دوال القوائم"
+      "question_number": 7,
+      "type": "multiple_choice",
+    "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود؟\n\n`fruits = [\"apple\", \"orange\", \"banana\"]`\n`print(fruits[1])`",
+      "hint": "الفهرس 1 يشير إلى أي عنصر؟",
+      "answer_data": {
+        "options": ["A) apple", "B) orange", "C) banana", "D) خطأ"],
+        "correct_answer": "B) orange"
+      }
     },
     {
-      "id": 8,
-      "question_text": "للوصول إلى العنصر الأخير في قائمة ما، يمكن استخدام الفهرس `[-1]`.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "medium",
-      "topic": "الفهرسة السالبة"
+      "question_number": 8,
+      "type": "true_false",
+    "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`fruits = [\"apple\", \"orange\", \"banana\"]`\n`print(fruits[-1])`",
+      "hint": "هل يمكن جمع نص مع رقم؟",
+      "answer_data": { "correct_answer": false }
     },
     {
-      "id": 9,
-      "question_text": "ما هو الأمر المستخدم لإضافة عنصر جديد إلى نهاية القائمة `my_list`؟",
-      "question_type": "multiple_choice",
-      "options": [
-        "my_list.add('new_item')",
-        "my_list.insert('new_item')",
-        "my_list.append('new_item')",
-        "my_list.push('new_item')"
-      ],
-      "correct_answer": "my_list.append('new_item')",
-      "difficulty": "medium",
-      "topic": "دوال القوائم المدمجة"
+      "question_number": 9,
+      "type": "multiple_choice",
+      "question": "ما هي الدالة التي تضيف عنصرًا جديدًا إلى نهاية القائمة؟",
+      "hint": "اسم الدالة هو 'إضافة' بالإنجليزية.",
+      "answer_data": {
+        "options": ["A) `remove()`", "B) `append()`", "C) `clear()`", "D) `sort()`"],
+        "correct_answer": "B) `append()`"
+      }
     },
     {
-      "id": 10,
-      "question_text": "ما هو الفرق الأساسي بين هيكل الصف البياني (Tuple) وهيكل القائمة (List)?",
-      "question_type": "multiple_choice",
-      "options": [
-        "القائمة يمكن أن تحتوي على أنواع بيانات مختلفة، بينما الصف لا يمكنه ذلك",
-        "القائمة قابلة للتغيير (Mutable)، بينما الصف غير قابل للتغيير (Immutable)",
-        "الصف يستخدم أقواساً مربعة `[]` والقائمة تستخدم أقواساً دائرية `()`",
-        "لا يوجد فرق جوهري بينهما"
-      ],
-      "correct_answer": "القائمة قابلة للتغيير (Mutable)، بينما الصف غير قابل للتغيير (Immutable)",
-      "difficulty": "medium",
-      "topic": "القوائم مقابل الصفوف"
+      "question_number": 10,
+      "type": "true_false",
+      "question": "تُستخدم الدالة `max()` لإرجاع قيمة أكبر عنصر في القائمة.",
+      "hint": "تذكر وظيفة دالة `max()`.",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 11,
-      "question_text": "الدالة `range(1, 10, 2)` ستقوم بتوليد سلسلة من الأعداد تبدأ بـ 1 وتنتهي بـ 9، وتزيد بمقدار 2 في كل خطوة.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "medium",
-      "topic": "دالة range"
+      "question_number": 11,
+      "type": "multiple_choice",
+      "question": "ما هو نوع الخطأ الذي يحدث عند محاولة تعديل قيمة عنصر في صف بياني (tuple)؟",
+      "hint": "تذكر أن الصفوف غير قابلة للتعديل.",
+      "answer_data": {
+        "options": ["A) `SyntaxError`", "B) `ValueError`", "C) `TypeError`", "D) `IndexError`"],
+        "correct_answer": "C) `TypeError`"
+      }
     },
     {
-      "id": 12,
-      "question_text": "أي من هياكل البيانات التالية يعتبر من هياكل البيانات غير الخطية (Non-Linear)?",
-      "question_type": "multiple_choice",
-      "options": [
-        "القائمة (List)",
-        "الصف (Tuple)",
-        "المصفوفة (Array)",
-        "الشجرة (Tree)"
-      ],
-      "correct_answer": "الشجرة (Tree)",
-      "difficulty": "hard",
-      "topic": "تصنيف هياكل البيانات"
+      "question_number": 12,
+      "type": "true_false",
+      "question": "يمكن للقائمة المتداخلة أن تحتوي على أنواع مختلفة من البيانات.",
+      "hint": "هل القائمة في بايثون تقيد نوع البيانات؟",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 13,
-      "question_text": "إذا كان لدينا القائمة `fruits = ['apple', 'orange', 'banana']`، ما هو ناتج `print(fruits[1])`?",
-      "question_type": "multiple_choice",
-      "options": [
-        "apple",
-        "orange",
-        "banana",
-        "يحدث خطأ"
-      ],
-      "correct_answer": "orange",
-      "difficulty": "easy",
-      "topic": "الفهرسة (Indexing)"
+      "question_number": 13,
+      "type": "multiple_choice",
+      "question": "ما هي الدالة التي تُستخدم لحذف عنصر معين من القائمة؟",
+      "hint": "اسم الدالة هو 'حذف' بالإنجليزية.",
+      "answer_data": {
+        "options": ["A) `clear()`", "B) `pop()`", "C) `remove()`", "D) `del`"],
+        "correct_answer": "C) `remove()`"
+      }
     },
     {
-      "id": 14,
-      "question_text": "استخدام الدالة `sum()` على قائمة تحتوي على نصوص وأرقام معًا سيؤدي إلى نتيجة صحيحة.",
-      "question_type": "true_false",
-      "correct_answer": false,
-      "difficulty": "medium",
-      "topic": "دوال القوائم"
+      "question_number": 14,
+      "type": "true_false",
+      "question": "دالة النطاق `range()` تتضمن الرقم الأخير المحدد في النطاق.",
+      "hint": "على سبيل المثال، هل `range(5)` تشمل الرقم 5؟",
+      "answer_data": { "correct_answer": false }
     },
     {
-      "id": 15,
-      "question_text": "ما هو دور القيمة الثالثة (the step) في دالة النطاق `range(start, stop, step)`?",
-      "question_type": "multiple_choice",
-      "options": [
-        "تحديد القيمة النهائية للتكرار",
-        "تحديد القيمة الابتدائية للتكرار",
-        "تحديد مقدار الزيادة أو النقصان في كل تكرار",
-        "تحديد عدد مرات التكرار الإجمالية"
-      ],
-      "correct_answer": "تحديد مقدار الزيادة أو النقصان في كل تكرار",
-      "difficulty": "medium",
-      "topic": "دالة range"
+      "question_number": 15,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود؟\n\n`nums = [1, 132, 358, 14.5, 7.13]`\n`print(max(nums))`",
+      "hint": "ابحث عن أكبر رقم في القائمة.",
+      "answer_data": { "options": ["A) 1", "B) 358", "C) 14.5", "D) 7.13"], "correct_answer": "B) 358" }
     },
     {
-      "id": 16,
-      "question_text": "لإزالة جميع العناصر من قائمة، نستخدم الدالة `listName.clear()`.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "medium",
-      "topic": "دوال القوائم المدمجة"
+      "question_number": 16,
+      "type": "true_false",
+      "question": "يتم استخدام الأقواس الدائرية `()` لتعريف الصفوف البيانية (Tuples).",
+      "hint": "تذكر الصيغة العامة لتعريف الصف.",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 17,
-      "question_text": "ماذا سيكون ناتج الكود التالي؟ `grades = [90, 85, 95]; print(max(grades))`",
-      "question_type": "multiple_choice",
-      "options": [
-        "90",
-        "85",
-        "95",
-        "لا شيء"
-      ],
-      "correct_answer": "95",
-      "difficulty": "easy",
-      "topic": "دوال القوائم"
+      "question_number": 17,
+      "type": "multiple_choice",
+      "question": "ما هي الدالة التي تُستخدم لحذف جميع العناصر من القائمة؟",
+      "hint": "اسم الدالة يعني 'مسح' بالإنجليزية.",
+      "answer_data": { "options": ["A) `pop()`", "B) `remove()`", "C) `clear()`", "D) `del`"], "correct_answer": "C) `clear()`" }
     },
     {
-      "id": 18,
-      "question_text": "محاولة تغيير قيمة عنصر داخل صف بياني (Tuple) ستنجح دون أي مشاكل.",
-      "question_type": "true_false",
-      "correct_answer": false,
-      "difficulty": "medium",
-      "topic": "خصائص الصفوف"
+      "question_number": 18,
+      "type": "true_false",
+      "question": "لا يمكن لدالة النطاق `range()` أن تتضمن قيمة خطوة سالبة.",
+      "hint": "هل يمكن العد بشكل عكسي باستخدام `range()`؟",
+      "answer_data": { "correct_answer": false }
     },
     {
-      "id": 19,
-      "question_text": "أي دالة مدمجة تقوم بترتيب عناصر القائمة ترتيبًا تصاعديًا?",
-      "question_type": "multiple_choice",
-      "options": [
-        "listName.order()",
-        "listName.arrange()",
-        "listName.sort()",
-        "listName.reverse()"
-      ],
-      "correct_answer": "listName.sort()",
-      "difficulty": "medium",
-      "topic": "دوال القوائم المدمجة"
+      "question_number": 19,
+      "type": "multiple_choice",
+  "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`fruits = ['apple', 'orange', 'banana']`\n`print(fruits[-1])`",
+      "hint": "الفهرس -1 يشير إلى العنصر الأخير.",
+      "answer_data": { "options": ["A) apple", "B) orange", "C) banana", "D) خطأ"], "correct_answer": "C) banana" }
     },
     {
-      "id": 20,
-      "question_text": "ماذا سيحدث عند تنفيذ الكود التالي? `my_tuple = (10, 20); my_tuple[0] = 15`",
-      "question_type": "multiple_choice",
-      "options": [
-        "سيتم تغيير قيمة العنصر الأول إلى 15 بنجاح",
-        "سيتم إضافة 15 إلى الصف البياني",
-        "سيحدث خطأ من نوع `TypeError` لأن الصفوف غير قابلة للتعديل",
-        "سيتم حذف العنصر الأول"
-      ],
-      "correct_answer": "سيحدث خطأ من نوع `TypeError` لأن الصفوف غير قابلة للتعديل",
-      "difficulty": "hard",
-      "topic": "خصائص الصفوف"
+      "question_number": 20,
+      "type": "true_false",
+      "question": "الصفوف (Tuples) هي هياكل بيانات قابلة للتعديل.",
+      "hint": "تذكر الفرق الرئيسي بين القوائم والصفوف.",
+      "answer_data": { "correct_answer": false }
     },
     {
-      "id": 21,
-      "question_text": "دالة النطاق `range(10, 5, -1)` ستقوم بتوليد الأرقام 10, 9, 8, 7, 6.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "hard",
-      "topic": "دالة range"
+      "question_number": 21,
+      "type": "multiple_choice",
+      "question": "ما هي الدالة التي ترتب عناصر القائمة تصاعدياً؟",
+      "hint": "اسم الدالة هو 'ترتيب' بالإنجليزية.",
+      "answer_data": { "options": ["A) `sort()`", "B) `reverse()`", "C) `order()`", "D) `arrange()`"], "correct_answer": "A) `sort()`" }
     },
     {
-      "id": 22,
-      "question_text": "في هياكل البيانات الخطية، يتم تخزين العناصر بشكل متسلسل ومتتالي.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "easy",
-      "topic": "تصنيف هياكل البيانات"
+      "question_number": 22,
+      "type": "true_false",
+      "question": "تعتبر هياكل البيانات البسيطة (Primitive Data Structures) مثل الأرقام والنصوص أنواع بيانات أساسية في بايثون.",
+      "hint": "هل يتم تعريف هذه الهياكل مسبقًا في اللغة؟",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 23,
-      "question_text": "إذا كان لدينا `data = [5, 10, 15, 20]`، فما هو ناتج `data.remove(10)`?",
-      "question_type": "multiple_choice",
-      "options": [
-        "القائمة تصبح `[5, 15, 20]`",
-        "القائمة تصبح `[10, 5, 15, 20]`",
-        "يحدث خطأ",
-        "يرجع القيمة 10"
-      ],
-      "correct_answer": "القائمة تصبح `[5, 15, 20]`",
-      "difficulty": "medium",
-      "topic": "دوال القوائم المدمجة"
+      "question_number": 23,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود؟\n\n`grades = [89, 88, 98, 95]`\n`print(min(grades))`",
+      "hint": "ابحث عن أصغر رقم في القائمة.",
+      "answer_data": { "options": ["A) 89", "B) 88", "C) 98", "D) 95"], "correct_answer": "B) 88" }
     },
     {
-      "id": 24,
-      "question_text": "تستخدم الدالة `min()` لإيجاد أصغر قيمة عددية أو أول قيمة أبجدية في قائمة.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "medium",
-      "topic": "دوال القوائم"
+      "question_number": 24,
+      "type": "true_false",
+      "question": "للتكرار على جميع عناصر القائمة، يمكن استخدام حلقة `for`.",
+      "hint": "هل يمكن التكرار على كل عنصر في القائمة باستخدام حلقة؟",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 25,
-      "question_text": "أي نوع من هياكل البيانات التالية يستخدم لتخزين قيمة من اثنتين فقط: صواب (True) أو خطأ (False)?",
-      "question_type": "multiple_choice",
-      "options": [
-        "Integer",
-        "String",
-        "Boolean",
-        "Float"
-      ],
-      "correct_answer": "Boolean",
-      "difficulty": "easy",
-      "topic": "هياكل البيانات البسيطة"
+      "question_number": 25,
+      "type": "multiple_choice",
+    "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`subjects = []`\n`for i in range(2):`\n  `subjects.append(\"subject\" + str(i+1))`\n`print(subjects)`",
+      "hint": "تتبع ما يحدث في كل تكرار للحلقة.",
+      "answer_data": { "options": ["A) `[]`", "B) `['subject1', 'subject2']`", "C) `['subject1']`", "D) `['subject0', 'subject1']`"], "correct_answer": "B) `['subject1', 'subject2']`" }
     },
     {
-      "id": 26,
-      "question_text": "القيمة `stop` في الدالة `range(start, stop)` يتم تضمينها دائماً في تسلسل الأرقام الناتج.",
-      "question_type": "true_false",
-      "correct_answer": false,
-      "difficulty": "medium",
-      "topic": "دالة range"
+      "question_number": 26,
+      "type": "true_false",
+      "question": "تُستخدم هياكل البيانات لتخزين وتنظيم البيانات في الذاكرة.",
+      "hint": "هذا هو التعريف الأساسي لهياكل البيانات.",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 27,
-      "question_text": "لنفترض أن لدينا القائمة `letters = ['c', 'a', 'b']`. بعد تنفيذ `letters.sort()`، ماذا ستكون قيمة `letters`?",
-      "question_type": "multiple_choice",
-      "options": [
-        "['c', 'a', 'b']",
-        "['b', 'c', 'a']",
-        "['a', 'b', 'c']",
-        "لا شيء مما سبق"
-      ],
-      "correct_answer": "['a', 'b', 'c']",
-      "difficulty": "medium",
-      "topic": "دوال القوائم المدمجة"
+      "question_number": 27,
+      "type": "multiple_choice",
+    "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`fruits = [\"apple\", \"orange\", \"banana\"]`\n`fruits[1] = \"grape\"`\n`print(fruits)`",
+      "hint": "تتبع عملية التعديل على العنصر في القائمة.",
+      "answer_data": { "options": ["A) `['apple', 'orange', 'banana']`", "B) `['apple', 'grape', 'banana']`", "C) `['grape', 'orange', 'banana']`", "D) خطأ"], "correct_answer": "B) `['apple', 'grape', 'banana']`" }
     },
     {
-      "id": 28,
-      "question_text": "يجب أن تكون جميع عناصر القائمة (List) من نفس نوع البيانات.",
-      "question_type": "true_false",
-      "correct_answer": false,
-      "difficulty": "medium",
-      "topic": "خصائص القوائم"
+      "question_number": 28,
+      "type": "true_false",
+      "question": "يتم فصل عناصر القائمة بفواصل داخل أقواس دائرية `()`.",
+      "hint": "ما هي الأقواس المستخدمة في القائمة؟",
+      "answer_data": { "correct_answer": false }
     },
     {
-      "id": 29,
-      "question_text": "ما وظيفة الدالة المدمجة `listName.count(x)`?",
-      "question_type": "multiple_choice",
-      "options": [
-        "تحسب عدد كل العناصر في القائمة",
-        "تحذف كل العناصر المساوية لـ x",
-        "تضيف x إلى القائمة",
-        "تحسب عدد مرات ظهور العنصر x داخل القائمة"
-      ],
-      "correct_answer": "تحسب عدد مرات ظهور العنصر x داخل القائمة",
-      "difficulty": "medium",
-      "topic": "دوال القوائم المدمجة"
+      "question_number": 29,
+      "type": "multiple_choice",
+      "question": "ما هي الدالة التي تُستخدم لحساب عدد مرات ظهور عنصر معين داخل القائمة؟",
+      "hint": "اسم الدالة يعني 'عد' بالإنجليزية.",
+      "answer_data": { "options": ["A) `len()`", "B) `find()`", "C) `count()`", "D) `get()`"], "correct_answer": "C) `count()`" }
     },
     {
-      "id": 30,
-      "question_text": "هياكل البيانات غير البسيطة (Non-primitive) مثل القوائم والصفوف، يتم تعريفها بواسطة المبرمج ولا تكون مدمجة في اللغة.",
-      "question_type": "true_false",
-      "correct_answer": false,
-      "difficulty": "hard",
-      "topic": "تصنيف هياكل البيانات"
+      "question_number": 30,
+      "type": "true_false",
+      "question": "يمكن تغيير القيم في القائمة بعد إنشائها.",
+      "hint": "هل القوائم قابلة للتعديل؟",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 31,
-      "question_text": "إذا كانت `my_list = [1, 2, 3]`، وبعدها تم تنفيذ `my_list.reverse()`، ما هي قيمة `my_list` الجديدة?",
-      "question_type": "multiple_choice",
-      "options": [
-        "[1, 2, 3]",
-        "[3, 2, 1]",
-        "يحدث خطأ",
-        "تصبح القائمة فارغة"
-      ],
-      "correct_answer": "[3, 2, 1]",
-      "difficulty": "medium",
-      "topic": "دوال القوائم المدمجة"
+      "question_number": 31,
+      "type": "multiple_choice",
+  "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`letters = ['b', 'a', 'x']`\n`print(min(letters))`",
+      "hint": "تذكر أن `min()` يمكنها العمل على النصوص.",
+      "answer_data": { "options": ["A) b", "B) a", "C) x", "D) خطأ"], "correct_answer": "B) a" }
     },
     {
-      "id": 32,
-      "question_text": "في بايثون، تعتبر النصوص (Strings) مجموعة من الأحرف وتعامل كنوع من أنواع البيانات البسيطة.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "easy",
-      "topic": "هياكل البيانات البسيطة"
+      "question_number": 32,
+      "type": "true_false",
+      "question": "يُعد الصف (Tuple) هيكل بيانات غير خطي.",
+      "hint": "تذكر أن الصف هو أحد هياكل البيانات الخطية.",
+      "answer_data": { "correct_answer": false }
     },
     {
-      "id": 33,
-      "question_text": "للوصول إلى العنصر الثاني في صف بياني `my_tuple`، نكتب:",
-      "question_type": "multiple_choice",
-      "options": [
-        "my_tuple[2]",
-        "my_tuple(1)",
-        "my_tuple[1]",
-        "my_tuple.get(2)"
-      ],
-      "correct_answer": "my_tuple[1]",
-      "difficulty": "easy",
-      "topic": "الفهرسة (Indexing)"
+      "question_number": 33,
+      "type": "multiple_choice",
+      "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود؟\n\n`grades = [89, 88, 98, 95]`\n`y = grades.count(88)`\n`print(y)`",
+      "hint": "كم مرة يظهر الرقم 88 في القائمة؟",
+      "answer_data": { "options": ["A) 1", "B) 2", "C) 3", "D) 0"], "correct_answer": "B) 2" }
     },
     {
-      "id": 34,
-      "question_text": "تعد الصفوف (Tuples) أكثر أمانًا من القوائم لتخزين البيانات التي لا يجب تغييرها، مثل بيانات التعريف الشخصية.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "medium",
-      "topic": "استخدامات الصفوف"
+      "question_number": 34,
+      "type": "true_false",
+      "question": "يتم فهرسة الصفوف البيانية (Tuples) بنفس طريقة فهرسة القوائم.",
+      "hint": "هل تبدأ الفهرسة من 0؟",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 35,
-      "question_text": "ماذا سيكون ناتج الكود `range(2, 6)`?",
-      "question_type": "multiple_choice",
-      "options": [
-        "2, 3, 4, 5, 6",
-        "2, 3, 4, 5",
-        "3, 4, 5, 6",
-        "3, 4, 5"
-      ],
-      "correct_answer": "2, 3, 4, 5",
-      "difficulty": "medium",
-      "topic": "دالة range"
+      "question_number": 35,
+      "type": "multiple_choice",
+      "question": "ماذا سيكون ناتج الكود `range(2, 6)`?",
+      "hint": "تذكر القيم الناتجة من دالة range.",
+      "answer_data": { "options": ["A) 2, 3, 4, 5, 6", "B) 2, 3, 4, 5", "C) 3, 4, 5, 6", "D) 3, 4, 5"], "correct_answer": "B) 2, 3, 4, 5" }
     },
     {
-      "id": 36,
-      "question_text": "الأقواس الدائرية `()` تُستخدم لإنشاء صفوف بيانات (Tuples) فارغة.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "easy",
-      "topic": "الصفوف (Tuples)"
+      "question_number": 36,
+      "type": "true_false",
+      "question": "الأقواس الدائرية `()` تُستخدم لإنشاء صفوف بيانات (Tuples) فارغة.",
+      "hint": "هل يمكن إنشاء Tuple فارغ باستخدام ()؟",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 37,
-      "question_text": "إذا كانت لدينا القائمة `numbers = [10, 20, 10, 30]`، فما هو ناتج `numbers.count(10)`?",
-      "question_type": "multiple_choice",
-      "options": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "correct_answer": "2",
-      "difficulty": "medium",
-      "topic": "دوال القوائم المدمجة"
+      "question_number": 37,
+      "type": "multiple_choice",
+      "question": "إذا كانت لدينا القائمة `numbers = [10, 20, 10, 30]`، فما هو ناتج `numbers.count(10)`?",
+      "hint": "كم مرة يظهر 10؟",
+      "answer_data": { "options": ["A) 1", "B) 2", "C) 3", "D) 4"], "correct_answer": "B) 2" }
     },
     {
-      "id": 38,
-      "question_text": "تعتبر المكتبات البرمجية (Libraries) مجموعة من الأوامر والدوال الجاهزة التي يمكن استدعاؤها لتنفيذ مهام محددة.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "easy",
-      "topic": "مفاهيم عامة"
+      "question_number": 38,
+      "type": "true_false",
+      "question": "تعتبر المكتبات البرمجية (Libraries) مجموعة من الأوامر والدوال الجاهزة التي يمكن استدعاؤها لتنفيذ مهام محددة.",
+      "hint": "هل يمكن استدعاء دوال جاهزة من مكتبات؟",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 39,
-      "question_text": "إذا كان لدينا `my_list = [100, 200, 300]` ونفذنا `print(my_list[-2])`، فماذا ستكون النتيجة؟",
-      "question_type": "multiple_choice",
-      "options": [
-        "100",
-        "200",
-        "300",
-        "خطأ فهرسة"
-      ],
-      "correct_answer": "200",
-      "difficulty": "medium",
-      "topic": "الفهرسة السالبة"
+      "question_number": 39,
+      "type": "multiple_choice",
+      "question": "إذا كان لدينا `my_list = [100, 200, 300]` ونفذنا `print(my_list[-2])`، فماذا ستكون النتيجة؟",
+      "hint": "الفهرس -2 يشير إلى أي عنصر؟",
+      "answer_data": { "options": ["A) 100", "B) 200", "C) 300", "D) خطأ فهرسة"], "correct_answer": "B) 200" }
     },
     {
-      "id": 40,
-      "question_text": "هياكل البيانات الخطية لا تحتوي على أي ارتباط تسلسلي بين عناصرها.",
-      "question_type": "true_false",
-      "correct_answer": false,
-      "difficulty": "medium",
-      "topic": "تصنيف هياكل البيانات"
+      "question_number": 40,
+      "type": "true_false",
+      "question": "هياكل البيانات الخطية لا تحتوي على أي ارتباط تسلسلي بين عناصرها.",
+      "hint": "هل تحتوي على ترتيب؟",
+      "answer_data": { "correct_answer": false }
     },
     {
-      "id": 41,
-      "question_text": "لتخزين مجموعة من البيانات التي يتم تعديلها باستمرار (إضافة، حذف، تغيير)، أي من التالي هو الأنسب؟",
-      "question_type": "multiple_choice",
-      "options": [
-        "Tuple",
-        "List",
-        "Integer",
-        "Boolean"
-      ],
-      "correct_answer": "List",
-      "difficulty": "hard",
-      "topic": "التطبيق العملي"
+      "question_number": 41,
+      "type": "multiple_choice",
+      "question": "لتخزين مجموعة من البيانات التي يتم تعديلها باستمرار (إضافة، حذف، تغيير)، أي من التالي هو الأنسب؟",
+      "hint": "فكر في الهياكل القابلة للتعديل.",
+      "answer_data": { "options": ["A) Tuple", "B) List", "C) Integer", "D) Boolean"], "correct_answer": "B) List" }
     },
     {
-      "id": 42,
-      "question_text": "عند استخدام `list.remove(value)`، يتم إزالة أول ظهور للقيمة `value` فقط من القائمة.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "hard",
-      "topic": "دوال القوائم المدمجة"
+      "question_number": 42,
+      "type": "true_false",
+      "question": "عند استخدام `list.remove(value)`، يتم إزالة أول ظهور للقيمة `value` فقط من القائمة.",
+      "hint": "هل تزيل كل الظهورات أم الأول فقط؟",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 43,
-      "question_text": "إذا كانت `my_list = [5, 15, 25]`، أي أمر برمجي يضيف الرقم 35 إلى نهايتها؟",
-      "question_type": "multiple_choice",
-      "options": [
-        "my_list.add(35)",
-        "my_list.sort(35)",
-        "my_list.clear(35)",
-        "my_list.append(35)"
-      ],
-      "correct_answer": "my_list.append(35)",
-      "difficulty": "easy",
-      "topic": "دوال القوائم المدمجة"
+      "question_number": 43,
+      "type": "multiple_choice",
+      "question": "إذا كانت `my_list = [5, 15, 25]`، أي أمر برمجي يضيف الرقم 35 إلى نهايتها؟",
+      "hint": "ما الدالة لإضافة عنصر؟",
+      "answer_data": { "options": ["A) my_list.add(35)", "B) my_list.sort(35)", "C) my_list.clear(35)", "D) my_list.append(35)"], "correct_answer": "D) my_list.append(35)" }
     },
     {
-      "id": 44,
-      "question_text": "الفهرسة السالبة في الصفوف (Tuples) تعمل بنفس طريقة عملها في القوائم (Lists).",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "medium",
-      "topic": "الفهرسة السالبة"
+      "question_number": 44,
+      "type": "true_false",
+      "question": "الفهرسة السالبة في الصفوف (Tuples) تعمل بنفس طريقة عملها في القوائم (Lists).",
+      "hint": "هل الفهرسة السالبة متشابهة؟",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 45,
-      "question_text": "ما هو الناتج المتوقع من الكود: `print(list(range(3, 0, -1)))`?",
-      "question_type": "multiple_choice",
-      "options": [
-        "[3, 2, 1, 0]",
-        "[2, 1, 0]",
-        "[3, 2, 1]",
-        "[]"
-      ],
-      "correct_answer": "[3, 2, 1]",
-      "difficulty": "hard",
-      "topic": "دالة range"
+      "question_number": 45,
+      "type": "multiple_choice",
+      "question": "ما هو الناتج المتوقع من الكود: `print(list(range(3, 0, -1)))`?",
+      "hint": "تتبع الأرقام الناتجة من range.",
+      "answer_data": { "options": ["A) [3, 2, 1, 0]", "B) [2, 1, 0]", "C) [3, 2, 1]", "D) []"], "correct_answer": "C) [3, 2, 1]" }
     },
     {
-      "id": 46,
-      "question_text": "هياكل البيانات غير البسيطة يمكن أن تحتوي على مجموعة من القيم، بينما البسيطة تحتوي على قيمة واحدة فقط.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "medium",
-      "topic": "تصنيف هياكل البيانات"
+      "question_number": 46,
+      "type": "true_false",
+      "question": "هياكل البيانات غير البسيطة يمكن أن تحتوي على مجموعة من القيم، بينما البسيطة تحتوي على قيمة واحدة فقط.",
+      "hint": "هل يمكن أن تحتوي على عدة قيم؟",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 47,
-      "question_text": "ما هي أفضل طريقة لتخزين إحداثيات (x, y) ثابتة لنقطة على الخريطة؟",
-      "question_type": "multiple_choice",
-      "options": [
-        "قائمة (List) مثل `[x, y]`",
-        "صف بياني (Tuple) مثل `(x, y)`",
-        "متغيرين منفصلين",
-        "مصفوفة (Array)"
-      ],
-      "correct_answer": "صف بياني (Tuple) مثل `(x, y)`",
-      "difficulty": "hard",
-      "topic": "التطبيق العملي"
+      "question_number": 47,
+      "type": "multiple_choice",
+      "question": "ما هي أفضل طريقة لتخزين إحداثيات (x, y) ثابتة لنقطة على الخريطة؟",
+      "hint": "فكر في الهيكل المناسب للبيانات الثابتة.",
+      "answer_data": { "options": ["A) قائمة (List) مثل `[x, y]`", "B) صف بياني (Tuple) مثل `(x, y)`", "C) متغيرين منفصلين", "D) مصفوفة (Array)"], "correct_answer": "B) صف بياني (Tuple) مثل `(x, y)`" }
     },
     {
-      "id": 48,
-      "question_text": "الدالة المدمجة `list.sort()` تعدّل القائمة الأصلية مباشرة ولا تُرجع قائمة جديدة.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "hard",
-      "topic": "دوال القوائم المدمجة"
+      "question_number": 48,
+      "type": "true_false",
+      "question": "الدالة المدمجة `list.sort()` تعدّل القائمة الأصلية مباشرة ولا تُرجع قائمة جديدة.",
+      "hint": "هل تعدل الأصل أم ترجع نسخة جديدة؟",
+      "answer_data": { "correct_answer": true }
     },
     {
-      "id": 49,
-      "question_text": "إذا كان لدينا `my_list = []`، فماذا ستكون قيمة `len(my_list)`?",
-      "question_type": "multiple_choice",
-      "options": [
-        "1",
-        "0",
-        "None",
-        "Error"
-      ],
-      "correct_answer": "0",
-      "difficulty": "easy",
-      "topic": "دوال القوائم"
+      "question_number": 49,
+      "type": "multiple_choice",
+      "question": "إذا كان لدينا `my_list = []`، فماذا ستكون قيمة `len(my_list)`?",
+      "hint": "كم عنصرًا في القائمة الفارغة؟",
+      "answer_data": { "options": ["A) 1", "B) 0", "C) None", "D) Error"], "correct_answer": "B) 0" }
     },
     {
-      "id": 50,
-      "question_text": "يمكن إنشاء قائمة تحتوي على قوائم أخرى بداخلها، وتسمى هذه 'قوائم متداخلة'.",
-      "question_type": "true_false",
-      "correct_answer": true,
-      "difficulty": "medium",
-      "topic": "مفاهيم متقدمة"
+      "question_number": 50,
+      "type": "true_false",
+      "question": "يمكن إنشاء قائمة تحتوي على قوائم أخرى بداخلها، وتسمى هذه 'قوائم متداخلة'.",
+      "hint": "هل يمكن وضع قائمة داخل قائمة؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 51,
+      "type": "multiple_choice",
+      "question": "ما هو الغرض من استخدام `for` loop مع القوائم؟",
+      "hint": "فكر في كيفية الوصول إلى كل عنصر في القائمة.",
+      "answer_data": { "options": ["A) لإنشاء القائمة", "B) لطباعة عناصر القائمة بشكل فردي", "C) لحذف عناصر القائمة", "D) لإضافة عناصر إلى القائمة"], "correct_answer": "B) لطباعة عناصر القائمة بشكل فردي" }
+    },
+    {
+      "question_number": 52,
+      "type": "true_false",
+      "question": "يمكن للقائمة أن تكون فارغة.",
+      "hint": "هل يمكن إنشاء قائمة بدون عناصر؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 53,
+      "type": "multiple_choice",
+    "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`C = [\"red\", \"orange\", \"green\"]`\n`print(C[0], C[2])`",
+      "hint": "تتبع الفهارس 0 و 2.",
+      "answer_data": { "options": ["A) red green", "B) orange", "C) red orange", "D) green red"], "correct_answer": "A) red green" }
+    },
+    {
+      "question_number": 54,
+      "type": "true_false",
+      "question": "تعتبر هياكل البيانات البسيطة (Primitive) هياكل متخصصة لتخزين مجموعة من القيم.",
+      "hint": "هل هي هياكل أساسية أم متخصصة؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 55,
+      "type": "multiple_choice",
+      "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`my_list = [10, 20, 30]`\n`my_list.reverse()`\n`print(my_list)`",
+      "hint": "تتبع عملية عكس ترتيب العناصر.",
+      "answer_data": { "options": ["A) `[10, 20, 30]`", "B) `[30, 20, 10]`", "C) `[10]`", "D) `[30]`"], "correct_answer": "B) `[30, 20, 10]`" }
+    },
+    {
+      "question_number": 56,
+      "type": "true_false",
+      "question": "يمكن للقائمة أن تحتوي على أرقام ونصوص معًا.",
+      "hint": "هل يمكن خلط أنواع البيانات في القائمة؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 57,
+      "type": "multiple_choice",
+      "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`for i in range(10, 5, -2):`\n  `print(i)`",
+      "hint": "تتبع قيمة البداية والنهاية والخطوة السالبة.",
+      "answer_data": { "options": ["A) 10 8 6", "B) 10 8", "C) 10 6 2", "D) 10"], "correct_answer": "A) 10 8 6" }
+    },
+    {
+      "question_number": 58,
+      "type": "true_false",
+      "question": "يتم استخدام الأقواس المربعة `[]` للوصول إلى عناصر الصفوف.",
+      "hint": "فكر في طريقة فهرسة الصفوف والقوائم.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 59,
+      "type": "multiple_choice",
+      "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`grades = [89, 88, 98, 95]`\n`print(sum(grades))`",
+      "hint": "قم بجمع جميع الأرقام في القائمة.",
+      "answer_data": { "options": ["A) 370", "B) 4", "C) 98", "D) خطأ"], "correct_answer": "A) 370" }
+    },
+    {
+      "question_number": 60,
+      "type": "true_false",
+      "question": "الذاكرة العشوائية (RAM) تُستخدم لتخزين البيانات بشكل دائم.",
+      "hint": "البيانات في RAM تُفقد عند إيقاف تشغيل البرنامج.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 61,
+      "type": "multiple_choice",
+      "question": "ما هو الغرض من استخدام `range(2, 5)`؟",
+      "hint": "تذكر أن `range(start, end)` يبدأ من `start` وينتهي قبل `end`.",
+      "answer_data": { "options": ["A) العد من 2 إلى 5", "B) العد من 2 إلى 4", "C) العد من 0 إلى 5", "D) العد من 1 إلى 5"], "correct_answer": "B) العد من 2 إلى 4" }
+    },
+    {
+      "question_number": 62,
+      "type": "true_false",
+      "question": "تُستخدم دالة `len()` لحساب مجموع العناصر في القائمة.",
+      "hint": "دالة `len()` تحسب عدد العناصر، وليست مجموعها.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 63,
+      "type": "multiple_choice",
+      "question": "أي من الخيارات التالية يُعد هيكل بيانات بسيط؟",
+      "hint": "هياكل البيانات البسيط تشمل الأرقام والنصوص.",
+      "answer_data": { "options": ["A) القائمة (List)", "B) الصف (Tuple)", "C) النصوص (Strings)", "D) القاموس (Dictionary)"], "correct_answer": "C) النصوص (Strings)" }
+    },
+    {
+      "question_number": 64,
+      "type": "true_false",
+      "question": "تعتبر هياكل البيانات غير الخطية (Non-Linear) غير مرتبة أو متسلسلة.",
+      "hint": "هل يمكن الوصول إلى عناصرها بدون ترتيب محدد؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 65,
+      "type": "multiple_choice",
+  "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`fruits = ['apple', 'orange', 'banana']`\n`for f in fruits:`\n  `print(f)`",
+      "hint": "تتبع كيفية التكرار على كل عنصر في القائمة.",
+      "answer_data": { "options": ["A) apple orange banana", "B) `['apple', 'orange', 'banana']`", "C) apple\norange\nbanana", "D) خطأ"], "correct_answer": "C) apple\norange\nbanana" }
+    },
+    {
+      "question_number": 66,
+      "type": "true_false",
+      "question": "القائمة (List) هي هيكل بيانات غير قابل للتغيير.",
+      "hint": "هل يمكن إضافة أو حذف أو تعديل العناصر في القائمة؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 67,
+      "type": "multiple_choice",
+      "question": "للوصول إلى العنصر الثالث في القائمة، ما هو الفهرس الصحيح؟",
+      "hint": "تذكر أن الفهرسة تبدأ من 0.",
+      "answer_data": { "options": ["A) 1", "B) 2", "C) 3", "D) 0"], "correct_answer": "B) 2" }
+    },
+    {
+      "question_number": 68,
+      "type": "true_false",
+      "question": "دالة `append()` تضيف عنصرًا إلى بداية القائمة.",
+      "hint": "تذكر أن `append()` تضيف عنصرًا إلى نهاية القائمة.",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 69,
+      "type": "multiple_choice",
+    "question": "ماذا سيتم طباعته عند تنفيذ هذا الكود؟\n\n`C = [\"red\", \"orange\", \"green\", \"blue\", \"white\"]`\n`print(C[-5])`",
+      "hint": "الفهرس -5 يشير إلى العنصر الأول في القائمة.",
+      "answer_data": { "options": ["A) white", "B) green", "C) orange", "D) red"], "correct_answer": "D) red" }
+    },
+    {
+      "question_number": 70,
+      "type": "true_false",
+      "question": "يتم ترتيب القائمة باستخدام دالة `sort()` بشكل تصاعدي تلقائيًا.",
+      "hint": "هذا هو السلوك الافتراضي لدالة `sort()`.",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 71,
+      "type": "multiple_choice",
+  "question": "ما هي النتيجة التي ستظهر عند تنفيذ هذا الكود؟\n\n`C = ['red', 'orange', 'green', 'blue', 'white']`\n`C[3] = 'red'`\n`print(C)`",
+      "hint": "تتبع التغيير الذي يحدث على العنصر في الفهرس 3.",
+      "answer_data": { "options": ["A) `['red', 'orange', 'green', 'blue', 'white']`", "B) `['red', 'orange', 'green', 'red', 'white']`", "C) `['red', 'orange', 'red', 'blue', 'white']`", "D) `['blue', 'orange', 'green', 'red', 'white']`"], "correct_answer": "B) `['red', 'orange', 'green', 'red', 'white']`" }
+    },
+    {
+      "question_number": 72,
+      "type": "true_false",
+      "question": "الصفوف (Tuples) تُستخدم عندما تحتاج إلى بيانات ثابتة وغير قابلة للتعديل.",
+      "hint": "هل الصفوف أكثر أمانًا للبيانات التي لا تتغير؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 73,
+      "type": "multiple_choice",
+      "question": "ما هي الدالة التي ترتب عناصر القائمة عكسيًا؟",
+      "hint": "اسم الدالة هو 'عكس' بالإنجليزية.",
+      "answer_data": { "options": ["A) `sort()`", "B) `reverse()`", "C) `order()`", "D) `arrange()`"], "correct_answer": "B) `reverse()`" }
+    },
+    {
+      "question_number": 74,
+      "type": "true_false",
+      "question": "يمكنك استخدام حلقة `for` مع `range()` لطباعة عناصر القائمة.",
+      "hint": "هل يمكن الجمع بين هذين الهيكلين؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 75,
+      "type": "multiple_choice",
+      "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`my_list = [1, 2, 3]`\n`my_list.clear()`\n`print(len(my_list))`",
+      "hint": "كم عدد العناصر في القائمة بعد مسحها؟",
+      "answer_data": { "options": ["A) 3", "B) 0", "C) 1", "D) خطأ"], "correct_answer": "B) 0" }
+    },
+    {
+      "question_number": 76,
+      "type": "true_false",
+      "question": "يُعد `len()` أحد الدوال المدمجة (Built-in Functions) في بايثون.",
+      "hint": "هل تحتاج إلى استيراد مكتبة لاستخدام هذه الدالة؟",
+      "answer_data": { "correct_answer": true }
+    },
+    {
+      "question_number": 77,
+      "type": "multiple_choice",
+  "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`my_tuple = ('a', 'b', 'c')`\n`for item in my_tuple:`\n  `print(item)`",
+      "hint": "تتبع كيفية عمل حلقة `for` على الصف.",
+      "answer_data": { "options": ["A) a b c", "B) a\nb\nc", "C) `['a', 'b', 'c']`", "D) خطأ"], "correct_answer": "B) a\nb\nc" }
+    },
+    {
+      "question_number": 78,
+      "type": "true_false",
+      "question": "لا يمكن للقائمة أن تحتوي على أرقام عشرية (Floating Points).",
+      "hint": "هل يمكن خلط أنواع البيانات في القائمة؟",
+      "answer_data": { "correct_answer": false }
+    },
+    {
+      "question_number": 79,
+      "type": "multiple_choice",
+      "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`grades = [89, 88, 98, 95]`\n`grades.append(100)`\n`grades.remove(88)`\n`print(grades)`",
+      "hint": "تتبع عملية الإضافة والحذف.",
+      "answer_data": { "options": ["A) `[89, 98, 95, 100]`", "B) `[88, 98, 95, 100]`", "C) `[89, 88, 98, 95, 100]`", "D) `[89, 88, 98, 95]`"], "correct_answer": "A) `[89, 98, 95, 100]`" }
+    },
+    {
+      "question_number": 80,
+      "type": "true_false",
+    "question": "ما هي النتيجة التي ستظهر عند تشغيل هذا الكود؟\n\n`C = [\"red\", \"orange\", \"green\", \"blue\", \"white\"]`\n`C[3] = \"red\"`\n`print(C)`",
+      "hint": "هياكل البيانات تشمل البسيطة وغير البسيطة.",
+      "answer_data": { "correct_answer": false }
     }
   ]
 }

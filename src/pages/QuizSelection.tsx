@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { supabase } from "@/integrations/supabase/client"
 import { useToast } from "@/hooks/use-toast"
-import { BookOpen, Brain, Clock, Target } from "lucide-react"
+import { BookOpen, Brain, Clock, Target, Lock } from "lucide-react"
 
 interface Lesson {
   id: number
@@ -142,12 +142,21 @@ export default function QuizSelection() {
               {lessons.map((lesson) => (
                 <Card 
                   key={lesson.id}
-                  className={`cursor-pointer transition-all duration-300 ${
+                  className={`relative cursor-pointer transition-all duration-300 ${
                     selectedLesson === lesson.id 
                       ? 'card-glass ring-2 ring-primary shadow-glow' 
                       : 'card-modern hover:shadow-lg'
                   }`}
-                  onClick={() => setSelectedLesson(lesson.id)}
+                  onClick={() => {
+                    // compute if previous lesson is completed
+                    const prev = lessons.find(l => l.lesson_number === lesson.lesson_number - 1)
+                    const locked = prev ? !(attemptsMap[prev.id] && attemptsMap[prev.id] > 0) : false
+                    if (locked) {
+                      toast({ title: 'مغلق', description: 'يجب إكمال اختبار الدرس السابق أولاً.', variant: 'destructive' })
+                      return
+                    }
+                    setSelectedLesson(lesson.id)
+                  }}
                 >
                   <CardHeader>
                     <div className="flex items-start justify-between">
@@ -165,6 +174,20 @@ export default function QuizSelection() {
                             </div>
                           </div>
                     </div>
+                    {/* lock badge if previous lesson not completed */}
+                    {(() => {
+                      const prevL = lessons.find(l => l.lesson_number === lesson.lesson_number - 1)
+                      const locked = prevL ? !(attemptsMap[prevL.id] && attemptsMap[prevL.id] > 0) : false
+                      if (lesson.lesson_number > 1 && locked) {
+                        return (
+                          <div className="absolute top-3 left-3 flex items-center gap-1 text-sm text-muted-foreground">
+                            <Lock className="w-4 h-4" />
+                            <span>مقفل</span>
+                          </div>
+                        )
+                      }
+                      return null
+                    })()}
                     <CardTitle className="text-lg">{lesson.lesson_title}</CardTitle>
                   </CardHeader>
                   <CardContent>

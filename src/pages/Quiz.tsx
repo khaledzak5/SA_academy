@@ -48,6 +48,29 @@ export default function Quiz() {
 
   const fetchLessonQuestions = async (lessonId: number) => {
     try {
+      // guard: ensure previous lesson completed before accessing this one
+      if (lessonId > 1) {
+        try {
+          const { data: { user } } = await supabase.auth.getUser()
+          if (user) {
+            // check attempts for previous lesson
+            const prevLesson = lessonId - 1
+            const { count: prevCount, error: pcErr } = await supabase
+              .from('quiz_results')
+              .select('*', { count: 'exact', head: true })
+              .eq('user_id', user.id)
+              .eq('lesson_id', prevLesson)
+
+            if (!pcErr && (prevCount ?? 0) === 0) {
+              toast({ title: 'غير مسموح', description: 'يجب إكمال اختبار الدرس السابق أولاً.', variant: 'destructive' })
+              navigate('/quiz-selection')
+              return
+            }
+          }
+        } catch (e) {
+          // ignore auth errors — allow access for unauthenticated users
+        }
+      }
       let raw: any = []
 
       if (lessonId === 1) {
@@ -305,14 +328,53 @@ export default function Quiz() {
   const q = questions[currentIndex]
   const rawItem = (q as any)?._raw || null
 
+  // render text that may contain inline/backtick code blocks.
+  // splits on backticks and renders code segments on their own LTR pre blocks
+  const renderTextWithCode = (text?: string) => {
+    if (!text) return null
+    // split by backticks (`). odd indices are code
+    const parts = String(text).split(/`+/g)
+    const textParts: string[] = []
+    const codeParts: string[] = []
+
+    parts.forEach((part, i) => {
+      if (i % 2 === 1) {
+        // code fragment
+        codeParts.push(part)
+      } else {
+        textParts.push(part)
+      }
+    })
+
+    return (
+      <div className="text-right">
+        {/* render concatenated non-code text first */}
+        {textParts.length > 0 && (
+          <div className="whitespace-pre-line">{textParts.join('')}</div>
+        )}
+
+        {/* render a single compact code block containing all code fragments stacked */}
+        {codeParts.length > 0 && (
+          <pre
+            dir="ltr"
+            className="bg-slate-100 dark:bg-slate-800 text-sm p-2 rounded my-1 overflow-x-auto whitespace-pre leading-tight"
+            style={{ textAlign: 'left' }}
+          >
+            {codeParts.join('\n')}
+          </pre>
+        )}
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen bg-gradient-hero">
       <Header title={`الاختبار - سؤال ${currentIndex + 1} من ${questions.length}`} showBackButton />
       <main className="container mx-auto px-4 py-8">
         <Card>
-          <CardHeader>
+            <CardHeader>
             <CardTitle>
-              <div className="whitespace-pre-line">{q.question}</div>
+              {renderTextWithCode(q.question)}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -326,21 +388,21 @@ export default function Quiz() {
 
             <div className="mt-4">
               <Button onClick={() => setShowHint(s => !s)} className="bg-purple-600 text-white hover:bg-purple-700 dark:bg-purple-600 dark:text-white">{showHint ? 'اخفاء التلميح' : 'عرض التلميح'}</Button>
-              {showHint && (
+                {showHint && (
                 <div className="mt-3 p-3 border rounded bg-gray-50 dark:bg-gray-100 text-right text-black">
                   {rawItem?.hint ? (
-                    <div className="whitespace-pre-line">{rawItem.hint}</div>
+                    renderTextWithCode(rawItem.hint)
                   ) : rawItem?.rationale ? (
                     <div className="space-y-2">
                       {typeof rawItem.rationale === 'object' ? (
                         Object.keys(rawItem.rationale).map(key => (
                           <div key={key} className="text-sm">
                             <div className="font-medium">الخيار {Number(key) + 1}:</div>
-                            <div className="text-black">{rawItem.rationale[key]}</div>
+                            <div className="text-black">{renderTextWithCode(rawItem.rationale[key])}</div>
                           </div>
                         ))
                       ) : (
-                        <div className="text-sm text-black">{String(rawItem.rationale)}</div>
+                        <div className="text-sm text-black">{renderTextWithCode(String(rawItem.rationale))}</div>
                       )}
                     </div>
                   ) : (
