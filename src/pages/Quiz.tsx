@@ -258,6 +258,8 @@ export default function Quiz() {
 
       const attempts = (count ?? 0)
       if (attempts >= 3) {
+        // update UI state so retake is not offered
+        setAttemptsCount(attempts)
         toast({ title: 'تم الوصول للحد', description: 'لا يمكن حفظ نتيجة جديدة لأن الحد الأقصى للمحاولات (3) قد تم الوصول إليه.', variant: 'destructive' })
         return
       }
@@ -274,12 +276,13 @@ export default function Quiz() {
       setAttemptsCount(prev => (prev ?? 0) + 1)
       toast({ title: 'تم حفظ النتيجة', description: `درجتك: ${percentage}%` })
     } catch (error) {
-      toast({ title: 'محصلش حفظ', description: 'تعذر حفظ نتيجة الاختبار تلقائياً', variant: 'destructive' })
+  toast({ title: 'محصلش حفظ', description: 'تعذر حفظ نتيجة الاختبار تلقائياً', variant: 'destructive' })
     }
   }
 
   const retake = () => {
-    // reshuffle and reset
+  if ((attemptsCount ?? 0) >= 3) return
+  // reshuffle and reset
     const shuffled = questions
       .map(q => ({ q, r: Math.random() }))
       .sort((a, b) => a.r - b.r)
@@ -326,7 +329,7 @@ export default function Quiz() {
 
               <div className="flex items-center justify-between mt-6">
                 <div className="space-x-2">
-                  <Button onClick={retake}>إعادة الاختبار</Button>
+                  <Button onClick={retake} disabled={(attemptsCount ?? 0) >= 3}>إعادة الاختبار</Button>
                   <Button onClick={() => navigate('/dashboard')} className="btn-gradient">الذهاب للوحة التحكم</Button>
                 </div>
               </div>
