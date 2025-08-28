@@ -13,6 +13,8 @@ interface ChatMessage {
   message_type: 'user' | 'assistant'
   message: string
   response?: string
+  truncated?: boolean
+  cursor?: number
   timestamp: Date
 }
 
@@ -29,6 +31,7 @@ export function Chat() {
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+  const sendingRef = useRef(false)
   const { toast } = useToast()
 
   useEffect(() => {
@@ -72,22 +75,14 @@ export function Chat() {
       if (!user) return
       // load messages for current thread if selected, otherwise recent messages
       let resp
-      if (currentThread) {
-        resp = await (supabase as any)
-          .from('chat_history')
-          .select('*')
-          .eq('user_id', user.id)
-          .eq('thread_id', currentThread.id)
-          .order('created_at', { ascending: true })
-          .limit(100)
-      } else {
-        resp = await (supabase as any)
-          .from('chat_history')
-          .select('*')
-          .eq('user_id', user.id)
-          .order('created_at', { ascending: true })
-          .limit(100)
-      }
+      // chat_history table does not include thread_id in this project's schema,
+      // so always load by user_id only.
+      resp = await (supabase as any)
+        .from('chat_history')
+        .select('*')
+        .eq('user_id', user.id)
+        .order('created_at', { ascending: true })
+        .limit(100)
 
       const { data, error } = resp
 
@@ -103,7 +98,16 @@ export function Chat() {
         timestamp: new Date(msg.created_at || '')
       }))
 
-      setMessages(formattedMessages)
+      // Remove consecutive duplicate messages (same type + same content)
+      const deduped: ChatMessage[] = []
+      for (const m of formattedMessages) {
+        const prev = deduped[deduped.length - 1]
+        if (!prev || prev.message_type !== m.message_type || prev.message !== m.message || (prev.response || '') !== (m.response || '')) {
+          deduped.push(m)
+        }
+      }
+
+      setMessages(deduped)
     } catch (error) {
       console.error('Error loading chat history:', error)
     }
@@ -131,7 +135,10 @@ export function Chat() {
   }
 
   const sendMessage = async () => {
-    if (!input.trim() || loading) return
+    if (!input.trim() || loading || sendingRef.current) return
+
+    // Prevent re-entrant sends from rapid clicks/keypresses
+    sendingRef.current = true
 
     const userMessage: ChatMessage = {
       id: Date.now().toString(),
@@ -140,47 +147,106 @@ export function Chat() {
       timestamp: new Date()
     }
 
-    setMessages(prev => [...prev, userMessage])
-    setInput('')
-    setLoading(true)
+  // Optimistically render the user message
+  setMessages(prev => [...prev, userMessage])
+  setInput('')
+  setLoading(true)
 
     try {
       const { data: { user } } = await supabase.auth.getUser()
       if (!user) throw new Error('User not authenticated')
 
-      // استدعاء دالة الـ Edge Function
-      const { data, error } = await supabase.functions.invoke('chat-bot', {
-        body: { message: userMessage.message, userId: user.id }
+      // حفظ رسالة المستخدم أولا حتى تكون متاحة كسياق للوظيفة
+      await supabase.from('chat_history').insert({
+        user_id: user.id,
+        message_type: 'user',
+        message: userMessage.message
       })
 
+      // استدعاء دالة الـ Edge Function بعد حفظ رسالة المستخدم
+      const { data, error } = await supabase.functions.invoke('chat-bot', {
+        body: { message: userMessage.message, userId: user.id, threadId: currentThread?.id }
+      })
+
+      // Debug: log full function response and sizes to browser console
+      try {
+        console.debug('chat-bot response raw:', data)
+        const maybeText = (data as any)?.response || (data as any)?.message || ''
+        console.debug('chat-bot response length:', (maybeText as string).length)
+      } catch (e) {
+        console.debug('error logging chat-bot response', e)
+      }
+
       if (error) throw error
+
+      const assistantText = (data as any)?.response || (data as any)?.message || ''
+      const truncated = !!(data as any)?.truncated
+      const cursor = typeof (data as any)?.cursor === 'number' ? (data as any).cursor : 0
 
       const assistantMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         message_type: 'assistant',
         // Edge function returns { response: string, success: boolean }
-        message: (data as any)?.response || (data as any)?.message || '',
+        message: assistantText,
+        truncated,
+        cursor,
         timestamp: new Date()
       }
 
-      setMessages(prev => [...prev, assistantMessage])
+  // Render assistant message locally. Then fetch the server-saved assistant
+  // response (if any) and replace the optimistic message when the DB text
+  // is longer (this handles server-side continuations that arrived after
+  // the function returned a partial string).
+  setMessages(prev => [...prev, assistantMessage])
 
-      // حفظ رسالة المستخدم في قاعدة البيانات
-      await supabase.from('chat_history').insert({
-        user_id: user.id,
-        thread_id: currentThread?.id,
-        message_type: 'user',
-        message: userMessage.message
-      })
+      // After rendering optimistic assistant message, poll the DB a few times
+      // to catch any late writes or continuations saved by the server.
+      const pollLatest = async (attempts = 3, delayMs = 800) => {
+        try {
+          const { data: { user } } = await supabase.auth.getUser()
+          if (!user) return
 
-      // حفظ رد المساعد في قاعدة البيانات
-      await supabase.from('chat_history').insert({
-        user_id: user.id,
-        thread_id: currentThread?.id,
-        message_type: 'bot',
-        message: assistantMessage.message,
-        response: assistantMessage.message
-      })
+          let prevLen = assistantText.length
+          for (let i = 0; i < attempts; i++) {
+            const q = await (supabase as any)
+              .from('chat_history')
+              .select('id, response, message, created_at')
+              .eq('user_id', user.id)
+              .eq('message_type', 'bot')
+              .order('created_at', { ascending: false })
+              .limit(1)
+
+            const latest = q.data && q.data[0]
+            const latestText = latest ? (latest.response || latest.message || '') : ''
+
+            if (latestText && latestText.length > prevLen) {
+              // Replace last assistant message in state with the DB text
+              setMessages(prev => {
+                const copy = [...prev]
+                for (let j = copy.length - 1; j >= 0; j--) {
+                  if (copy[j].message_type === 'assistant') {
+                    copy[j] = { ...copy[j], message: latestText }
+                    break
+                  }
+                }
+                return copy
+              })
+              prevLen = latestText.length
+            }
+
+            // stop early if we've grown and the latest ends with terminal punctuation
+            if (latestText && /[.؟!…]$/u.test(latestText.trim())) break
+
+            // wait before next attempt
+            await new Promise(res => setTimeout(res, delayMs))
+          }
+        } catch (e) {
+          console.error('Error polling latest bot response:', e)
+        }
+      }
+
+      // fire-and-forget poll (don't block UI)
+      void pollLatest(4, 700)
 
     } catch (error) {
       console.error('Error sending message:', error)
@@ -191,6 +257,45 @@ export function Chat() {
       })
     } finally {
       setLoading(false)
+      // clear the synchronous guard
+      sendingRef.current = false
+    }
+  }
+
+  // Continue a truncated assistant message by calling the chat-bot function
+  // with { continue: true, cursor } and appending the returned chunk.
+  const continueAssistant = async (msgIndex: number) => {
+    if (sendingRef.current) return
+    sendingRef.current = true
+    try {
+      const target = messages[msgIndex]
+      if (!target || target.message_type !== 'assistant' || !target.truncated) return
+
+      const { data: { user } } = await supabase.auth.getUser()
+      if (!user) throw new Error('User not authenticated')
+
+      const { data, error } = await supabase.functions.invoke('chat-bot', {
+        body: { continue: true, cursor: target.cursor || 0, userId: user.id }
+      })
+
+      if (error) throw error
+
+      const chunk = (data as any)?.response || ''
+      const truncated = !!(data as any)?.truncated
+      const newCursor = typeof (data as any)?.cursor === 'number' ? (data as any).cursor : (target.cursor || 0)
+
+      // append chunk to message
+      setMessages(prev => {
+        const copy = [...prev]
+        if (copy[msgIndex] && copy[msgIndex].message_type === 'assistant') {
+          copy[msgIndex] = { ...copy[msgIndex], message: `${copy[msgIndex].message}\n${chunk}`, truncated, cursor: newCursor }
+        }
+        return copy
+      })
+    } catch (e) {
+      console.error('Error continuing assistant message:', e)
+    } finally {
+      sendingRef.current = false
     }
   }
 
@@ -199,32 +304,17 @@ export function Chat() {
       const { data: { user } } = await supabase.auth.getUser()
       if (!user) return
 
-      if (currentThread) {
-        // delete only messages in the current thread
-        await supabase
-          .from('chat_history')
-          .delete()
-          .eq('user_id', user.id)
-          .eq('thread_id', currentThread.id)
+      // delete all messages for this user (schema has no thread_id column)
+      await supabase
+        .from('chat_history')
+        .delete()
+        .eq('user_id', user.id)
 
-        setMessages([])
-        toast({
-          title: "تم مسح المححادثة الحالية",
-          description: "تم حذف رسائل هذه المحادثة بنجاح",
-        })
-      } else {
-        // fallback: delete all user's messages
-        await supabase
-          .from('chat_history')
-          .delete()
-          .eq('user_id', user.id)
-
-        setMessages([])
-        toast({
-          title: "تم مسح المحادثات",
-          description: "تم حذف جميع الرسائل بنجاح",
-        })
-      }
+      setMessages([])
+      toast({
+        title: "تم مسح المحادثات",
+        description: "تم حذف جميع الرسائل بنجاح",
+      })
     } catch (error) {
       toast({
         title: "خطأ في المسح",
@@ -396,7 +486,7 @@ export function Chat() {
                 </div>
               ) : (
                 <>
-                  {messages.map((message) => {
+                  {messages.map((message, idx) => {
                     return (
                       <div
                         key={message.id}
@@ -414,12 +504,17 @@ export function Chat() {
                           <div className={`inline-block px-4 py-3 rounded-lg max-w-[80%] ${message.message_type === 'user' ? 'bg-primary text-primary-foreground' : 'bg-muted text-foreground'}`}>
                             {renderMessageContent(message.message_type === 'user' ? message.message : (message.response || message.message))}
                           </div>
-                          <p className="text-xs text-muted-foreground mt-1">
-                            {message.timestamp.toLocaleTimeString('ar-SA', {
-                              hour: '2-digit',
-                              minute: '2-digit'
-                            })}
-                          </p>
+                          <div className="flex items-center gap-2 mt-1">
+                            <p className="text-xs text-muted-foreground">
+                              {message.timestamp.toLocaleTimeString('ar-SA', {
+                                hour: '2-digit',
+                                minute: '2-digit'
+                              })}
+                            </p>
+                            {message.message_type === 'assistant' && message.truncated && (
+                              <Button size="sm" variant="outline" onClick={() => continueAssistant(idx)}>أكمل</Button>
+                            )}
+                          </div>
                         </div>
                       </div>
                     )
