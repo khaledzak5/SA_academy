@@ -30,6 +30,19 @@ export function Lessons() {
     fetchLessons()
   }, [])
 
+  useEffect(() => {
+    const completed = JSON.parse(localStorage.getItem('completedLessons') || '[]')
+    setCompletedLessons(completed)
+    // لتحديث القائمة عند العودة للصفحة من درس مكتمل
+    window.addEventListener('focus', () => {
+      const comp = JSON.parse(localStorage.getItem('completedLessons') || '[]')
+      setCompletedLessons(comp)
+    })
+    return () => {
+      window.removeEventListener('focus', () => {})
+    }
+  }, [])
+
   const fetchLessons = async () => {
     try {
       setFetchError(null)
@@ -93,7 +106,10 @@ export function Lessons() {
         {/* شريط التقدم */}
         <Card className="card-modern">
           <CardHeader>
-            <CardTitle className="text-center">تقدمك في الدروس</CardTitle>
+            <CardTitle className="text-center flex items-center justify-center gap-2">
+              <span>تقدمك في المنهج</span>
+              <Progress value={completionRate} className="w-16 h-2 ml-2" />
+            </CardTitle>
             <CardDescription className="text-center">
               أكملت {completedLessons.length} من {lessons.length} درس
             </CardDescription>

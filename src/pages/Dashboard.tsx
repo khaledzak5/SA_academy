@@ -45,10 +45,28 @@ export default function Dashboard() {
   const [quizDialogOpen, setQuizDialogOpen] = useState(false)
   const [quizResultsList, setQuizResultsList] = useState<any[] | null>(null)
   const [loadingQuizResults, setLoadingQuizResults] = useState(false)
+  const [completedLessonsList, setCompletedLessonsList] = useState<string[]>([]);
 
   useEffect(() => {
     fetchUserData()
   }, [])
+
+  useEffect(() => {
+    const completed = JSON.parse(localStorage.getItem('completedLessons') || '[]')
+    setCompletedLessonsList(completed)
+    // للتحديث عند تركيز الصفحة
+    const handler = () => {
+      const comp = JSON.parse(localStorage.getItem('completedLessons') || '[]')
+      setCompletedLessonsList(comp)
+    }
+    window.addEventListener('focus', handler)
+    return () => {
+      window.removeEventListener('focus', handler);
+    }
+  }, []);
+
+  const lessonsCount = 6; // عدل إذا كان هناك دروس أكثر
+  const dashboardCompletion = (completedLessonsList.length / lessonsCount) * 100;
 
   const fetchUserData = async () => {
     try {
@@ -286,14 +304,14 @@ export default function Dashboard() {
             <div className="space-y-4">
               <div className="flex justify-between text-sm">
                 <span>نسبة إكمال الدروس</span>
-                <span>{Math.round((stats.completedLessons / 6) * 100)}%</span>
+                <span>{Math.round(dashboardCompletion)}%</span>
               </div>
               <Progress 
-                value={(stats.completedLessons / 6) * 100} 
+                value={dashboardCompletion} 
                 className="h-3"
               />
               <p className="text-xs text-muted-foreground text-center">
-                استمر في التعلم! لديك {6 - stats.completedLessons} دروس أخرى لتكمل المنهج
+                أكملت {completedLessonsList.length} من {lessonsCount} درس — {lessonsCount - completedLessonsList.length} دروس متبقية
               </p>
             </div>
           </CardContent>

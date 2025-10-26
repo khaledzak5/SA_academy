@@ -28,6 +28,13 @@ export function LessonDetail() {
   useEffect(() => {
     if (id) {
       fetchLesson()
+      // تحقق إذا الدرس مكتمل في localStorage
+      const completed = JSON.parse(localStorage.getItem('completedLessons') || '[]')
+      if (completed.includes(id)) {
+        setIsCompleted(true)
+      } else {
+        setIsCompleted(false)
+      }
     }
   }, [id])
 
@@ -58,13 +65,19 @@ export function LessonDetail() {
 
   const markAsCompleted = async () => {
     if (!lesson) return
-
     try {
       setIsCompleted(true)
+      // حفظ التقدم في localStorage
+      let completed = JSON.parse(localStorage.getItem('completedLessons') || '[]')
+      if (!completed.includes(lesson.id.toString())) {
+        completed.push(lesson.id.toString())
+        localStorage.setItem('completedLessons', JSON.stringify(completed))
+      }
       toast({
         title: "تهانينا! 🎉",
         description: "لقد أكملت الدرس بنجاح",
       })
+      // تحديث الحالة فقط ولا تنتقل تلقائياً
     } catch (error) {
       toast({
         title: "خطأ",
@@ -160,16 +173,30 @@ export function LessonDetail() {
                 {lesson.lesson_description || 'ستتعلم في هذا الدرس المفاهيم الأساسية للبرمجة وكيفية تطبيقها عملياً.'}
               </p>
               
-              {lesson.video_url && (
+              {lesson && [1,2,3,4,5,6].includes(lesson.lesson_number) && (
                 <div className="my-6">
                   <h3>فيديو الشرح</h3>
-                  <video 
-                    src={lesson.video_url} 
-                    controls 
-                    className="w-full rounded-lg"
-                  >
-                    متصفحك لا يدعم تشغيل الفيديو
-                  </video>
+                  <div className="w-full aspect-video rounded-lg overflow-hidden">
+                    <iframe
+                      width="100%"
+                      height="400"
+                      src={(() => {
+                        switch(lesson.lesson_number) {
+                          case 1: return 'https://www.youtube.com/embed/zfIVZPD-HfY';
+                          case 2: return 'https://www.youtube.com/embed/Z7pdpOFGFa4';
+                          case 3: return 'https://www.youtube.com/embed/4MNHkuO1fao';
+                          case 4: return 'https://www.youtube.com/embed/Gx60SxSi-p4';
+                          case 5: return 'https://www.youtube.com/embed/SML3rHygJPY';
+                          case 6: return 'https://www.youtube.com/embed/R6HNVETTKCA';
+                          default: return '';
+                        }
+                      })()}
+                      title={`YouTube lesson ${lesson.lesson_number}`}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
                 </div>
               )}
 
